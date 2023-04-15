@@ -1,0 +1,265 @@
+system:exp_example_100000_3
+
+clock:1:zycge100000
+clock:1:xc2
+clock:1:zybge100000
+clock:1:zyc3ge100000
+clock:1:zyc1ge100000
+clock:1:xa
+clock:1:xc1
+clock:1:xc3
+clock:1:xb
+clock:1:zyc2ge100000
+
+event:a
+event:b
+event:c
+event:c1
+event:c2
+event:c3
+
+process:P
+
+location:P:l0000000{initial:}
+location:P:l1100000{}
+location:P:l1100000zybge100000{}
+location:P:l1100000zycge100000{}
+location:P:l1100100zyc1ge100000{}
+location:P:l1100010zyc2ge100000{}
+location:P:l1100001zyc3ge100000{}
+location:P:l2110000{}
+location:P:l1100001zybge100000_zyc3ge100000{}
+location:P:l1100001zycge100000_zyc3ge100000{}
+location:P:l1100101zyc3ge100000_zyc1ge100000{}
+location:P:l1100011zyc3ge100000_zyc2ge100000{}
+location:P:l2110001zyc3ge100000{}
+location:P:l1100011zybge100000_zyc3ge100000_zyc2ge100000{}
+location:P:l1100011zycge100000_zyc3ge100000_zyc2ge100000{}
+location:P:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000{}
+location:P:l2110011zyc3ge100000_zyc2ge100000{}
+location:P:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000{}
+location:P:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000{}
+location:P:l2110111zyc2ge100000_zyc3ge100000_zyc1ge100000{}
+location:P:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000{}
+location:P:l2110111zycge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000{}
+location:P:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000{}
+location:P:l2110011zycge100000_zyc3ge100000_zyc2ge100000{}
+location:P:l1100101zybge100000_zyc3ge100000_zyc1ge100000{}
+location:P:l1100101zycge100000_zyc3ge100000_zyc1ge100000{}
+location:P:l2110101zyc3ge100000_zyc1ge100000{}
+location:P:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000{}
+location:P:l2110101zycge100000_zyc3ge100000_zyc1ge100000{}
+location:P:l1100001zycge100000_zybge100000_zyc3ge100000{}
+location:P:l2110001zycge100000_zyc3ge100000{}
+location:P:l1100010zybge100000_zyc2ge100000{}
+location:P:l1100010zycge100000_zyc2ge100000{}
+location:P:l1100110zyc1ge100000_zyc2ge100000{}
+location:P:l2110010zyc2ge100000{}
+location:P:l1100110zybge100000_zyc2ge100000_zyc1ge100000{}
+location:P:l1100110zycge100000_zyc2ge100000_zyc1ge100000{}
+location:P:l2110110zyc2ge100000_zyc1ge100000{}
+location:P:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000{}
+location:P:l2110110zycge100000_zyc1ge100000_zyc2ge100000{}
+location:P:l1100010zycge100000_zybge100000_zyc2ge100000{}
+location:P:l2110010zycge100000_zyc2ge100000{}
+location:P:l1100100zybge100000_zyc1ge100000{}
+location:P:l1100100zycge100000_zyc1ge100000{}
+location:P:l2110100zyc1ge100000{}
+location:P:l1100100zycge100000_zybge100000_zyc1ge100000{}
+location:P:l2110100zycge100000_zyc1ge100000{}
+location:P:l1100000zycge100000_zybge100000{}
+location:P:l2110000zycge100000{}
+
+edge:P:l0000000:l1100000:a{do: xa=0}
+edge:P:l1100000:l1100000zybge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100000:l1100000zycge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100000:l1100100zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100000:l1100010zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100000:l1100001zyc3ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100000:l2110000:b{do: xb=0}
+edge:P:l1100001zyc3ge100000:l1100001zybge100000_zyc3ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100001zyc3ge100000:l1100001zycge100000_zyc3ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100001zyc3ge100000:l1100101zyc3ge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100001zyc3ge100000:l1100011zyc3ge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100001zyc3ge100000:l1100001zyc3ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100001zyc3ge100000:l2110001zyc3ge100000:b{do: xb=0}
+edge:P:l1100011zyc3ge100000_zyc2ge100000:l1100011zybge100000_zyc3ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100011zyc3ge100000_zyc2ge100000:l1100011zycge100000_zyc3ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100011zyc3ge100000_zyc2ge100000:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100011zyc3ge100000_zyc2ge100000:l1100011zyc3ge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100011zyc3ge100000_zyc2ge100000:l1100011zyc3ge100000_zyc2ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100011zyc3ge100000_zyc2ge100000:l2110011zyc3ge100000_zyc2ge100000:b{do: xb=0}
+edge:P:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:l2110111zyc2ge100000_zyc3ge100000_zyc1ge100000:b{do: xb=0}
+edge:P:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:l2110111zycge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:b{do: xb=0}
+edge:P:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:l2110111zycge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:l2110111zyc2ge100000_zyc3ge100000_zyc1ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100011zycge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100011zycge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zyc3ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100011zycge100000_zyc3ge100000_zyc2ge100000:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100011zycge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zyc3ge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100011zycge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zyc3ge100000_zyc2ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100011zycge100000_zyc3ge100000_zyc2ge100000:l2110011zycge100000_zyc3ge100000_zyc2ge100000:b{do: xb=0}
+edge:P:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:l2110011zycge100000_zyc3ge100000_zyc2ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100011zybge100000_zyc3ge100000_zyc2ge100000:l1100011zybge100000_zyc3ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100011zybge100000_zyc3ge100000_zyc2ge100000:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100011zybge100000_zyc3ge100000_zyc2ge100000:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100011zybge100000_zyc3ge100000_zyc2ge100000:l1100011zybge100000_zyc3ge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100011zybge100000_zyc3ge100000_zyc2ge100000:l1100011zybge100000_zyc3ge100000_zyc2ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100011zybge100000_zyc3ge100000_zyc2ge100000:l2110011zyc3ge100000_zyc2ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100101zyc3ge100000_zyc1ge100000:l1100101zybge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100101zyc3ge100000_zyc1ge100000:l1100101zycge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100101zyc3ge100000_zyc1ge100000:l1100101zyc3ge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100101zyc3ge100000_zyc1ge100000:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100101zyc3ge100000_zyc1ge100000:l1100101zyc3ge100000_zyc1ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100101zyc3ge100000_zyc1ge100000:l2110101zyc3ge100000_zyc1ge100000:b{do: xb=0}
+edge:P:l1100101zycge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100101zycge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100101zycge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100101zycge100000_zyc3ge100000_zyc1ge100000:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100101zycge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100101zycge100000_zyc3ge100000_zyc1ge100000:l2110101zycge100000_zyc3ge100000_zyc1ge100000:b{do: xb=0}
+edge:P:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:l2110101zycge100000_zyc3ge100000_zyc1ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100101zybge100000_zyc3ge100000_zyc1ge100000:l1100101zybge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100101zybge100000_zyc3ge100000_zyc1ge100000:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100101zybge100000_zyc3ge100000_zyc1ge100000:l1100101zybge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100101zybge100000_zyc3ge100000_zyc1ge100000:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100101zybge100000_zyc3ge100000_zyc1ge100000:l1100101zybge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100101zybge100000_zyc3ge100000_zyc1ge100000:l2110101zyc3ge100000_zyc1ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100001zycge100000_zyc3ge100000:l1100001zycge100000_zybge100000_zyc3ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100001zycge100000_zyc3ge100000:l1100001zycge100000_zyc3ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100001zycge100000_zyc3ge100000:l1100101zycge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100001zycge100000_zyc3ge100000:l1100011zycge100000_zyc3ge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100001zycge100000_zyc3ge100000:l1100001zycge100000_zyc3ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100001zycge100000_zyc3ge100000:l2110001zycge100000_zyc3ge100000:b{do: xb=0}
+edge:P:l1100001zycge100000_zybge100000_zyc3ge100000:l1100001zycge100000_zybge100000_zyc3ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100001zycge100000_zybge100000_zyc3ge100000:l1100001zycge100000_zybge100000_zyc3ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100001zycge100000_zybge100000_zyc3ge100000:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100001zycge100000_zybge100000_zyc3ge100000:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100001zycge100000_zybge100000_zyc3ge100000:l1100001zycge100000_zybge100000_zyc3ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100001zycge100000_zybge100000_zyc3ge100000:l2110001zycge100000_zyc3ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100001zybge100000_zyc3ge100000:l1100001zybge100000_zyc3ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100001zybge100000_zyc3ge100000:l1100001zycge100000_zybge100000_zyc3ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100001zybge100000_zyc3ge100000:l1100101zybge100000_zyc3ge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100001zybge100000_zyc3ge100000:l1100011zybge100000_zyc3ge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100001zybge100000_zyc3ge100000:l1100001zybge100000_zyc3ge100000:c3{provided:xa==1 && zyc3ge100000>=100000 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100001zybge100000_zyc3ge100000:l2110001zyc3ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100010zyc2ge100000:l1100010zybge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100010zyc2ge100000:l1100010zycge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100010zyc2ge100000:l1100110zyc1ge100000_zyc2ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100010zyc2ge100000:l1100010zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100010zyc2ge100000:l1100011zyc3ge100000_zyc2ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100010zyc2ge100000:l2110010zyc2ge100000:b{do: xb=0}
+edge:P:l1100110zyc1ge100000_zyc2ge100000:l1100110zybge100000_zyc2ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100110zyc1ge100000_zyc2ge100000:l1100110zycge100000_zyc2ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100110zyc1ge100000_zyc2ge100000:l1100110zyc1ge100000_zyc2ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100110zyc1ge100000_zyc2ge100000:l1100110zyc1ge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100110zyc1ge100000_zyc2ge100000:l1100111zyc3ge100000_zyc1ge100000_zyc2ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100110zyc1ge100000_zyc2ge100000:l2110110zyc2ge100000_zyc1ge100000:b{do: xb=0}
+edge:P:l1100110zycge100000_zyc2ge100000_zyc1ge100000:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100110zycge100000_zyc2ge100000_zyc1ge100000:l1100110zycge100000_zyc2ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100110zycge100000_zyc2ge100000_zyc1ge100000:l1100110zycge100000_zyc2ge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100110zycge100000_zyc2ge100000_zyc1ge100000:l1100110zycge100000_zyc2ge100000_zyc1ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100110zycge100000_zyc2ge100000_zyc1ge100000:l1100111zycge100000_zyc2ge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100110zycge100000_zyc2ge100000_zyc1ge100000:l2110110zycge100000_zyc1ge100000_zyc2ge100000:b{do: xb=0}
+edge:P:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:l1100111zycge100000_zybge100000_zyc3ge100000_zyc1ge100000_zyc2ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:l2110110zycge100000_zyc1ge100000_zyc2ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100110zybge100000_zyc2ge100000_zyc1ge100000:l1100110zybge100000_zyc2ge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100110zybge100000_zyc2ge100000_zyc1ge100000:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100110zybge100000_zyc2ge100000_zyc1ge100000:l1100110zybge100000_zyc2ge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100110zybge100000_zyc2ge100000_zyc1ge100000:l1100110zybge100000_zyc2ge100000_zyc1ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100110zybge100000_zyc2ge100000_zyc1ge100000:l1100111zyc2ge100000_zybge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100110zybge100000_zyc2ge100000_zyc1ge100000:l2110110zyc2ge100000_zyc1ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100010zycge100000_zyc2ge100000:l1100010zycge100000_zybge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100010zycge100000_zyc2ge100000:l1100010zycge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100010zycge100000_zyc2ge100000:l1100110zycge100000_zyc2ge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100010zycge100000_zyc2ge100000:l1100010zycge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100010zycge100000_zyc2ge100000:l1100011zycge100000_zyc3ge100000_zyc2ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100010zycge100000_zyc2ge100000:l2110010zycge100000_zyc2ge100000:b{do: xb=0}
+edge:P:l1100010zycge100000_zybge100000_zyc2ge100000:l1100010zycge100000_zybge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100010zycge100000_zybge100000_zyc2ge100000:l1100010zycge100000_zybge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100010zycge100000_zybge100000_zyc2ge100000:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100010zycge100000_zybge100000_zyc2ge100000:l1100010zycge100000_zybge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100010zycge100000_zybge100000_zyc2ge100000:l1100011zycge100000_zybge100000_zyc3ge100000_zyc2ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100010zycge100000_zybge100000_zyc2ge100000:l2110010zycge100000_zyc2ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100010zybge100000_zyc2ge100000:l1100010zybge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100010zybge100000_zyc2ge100000:l1100010zycge100000_zybge100000_zyc2ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100010zybge100000_zyc2ge100000:l1100110zybge100000_zyc2ge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100010zybge100000_zyc2ge100000:l1100010zybge100000_zyc2ge100000:c2{provided:xa==1 && zyc2ge100000>=100000 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100010zybge100000_zyc2ge100000:l1100011zybge100000_zyc3ge100000_zyc2ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100010zybge100000_zyc2ge100000:l2110010zyc2ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100100zyc1ge100000:l1100100zybge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100100zyc1ge100000:l1100100zycge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100100zyc1ge100000:l1100100zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100100zyc1ge100000:l1100110zyc1ge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100100zyc1ge100000:l1100101zyc3ge100000_zyc1ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100100zyc1ge100000:l2110100zyc1ge100000:b{do: xb=0}
+edge:P:l1100100zycge100000_zyc1ge100000:l1100100zycge100000_zybge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100100zycge100000_zyc1ge100000:l1100100zycge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100100zycge100000_zyc1ge100000:l1100100zycge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100100zycge100000_zyc1ge100000:l1100110zycge100000_zyc2ge100000_zyc1ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100100zycge100000_zyc1ge100000:l1100101zycge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100100zycge100000_zyc1ge100000:l2110100zycge100000_zyc1ge100000:b{do: xb=0}
+edge:P:l1100100zycge100000_zybge100000_zyc1ge100000:l1100100zycge100000_zybge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100100zycge100000_zybge100000_zyc1ge100000:l1100100zycge100000_zybge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100100zycge100000_zybge100000_zyc1ge100000:l1100100zycge100000_zybge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100100zycge100000_zybge100000_zyc1ge100000:l1100110zycge100000_zybge100000_zyc1ge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100100zycge100000_zybge100000_zyc1ge100000:l1100101zycge100000_zybge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100100zycge100000_zybge100000_zyc1ge100000:l2110100zycge100000_zyc1ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100100zybge100000_zyc1ge100000:l1100100zybge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100100zybge100000_zyc1ge100000:l1100100zycge100000_zybge100000_zyc1ge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100100zybge100000_zyc1ge100000:l1100100zybge100000_zyc1ge100000:c1{provided:xa==1 && zyc1ge100000>=100000 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100100zybge100000_zyc1ge100000:l1100110zybge100000_zyc2ge100000_zyc1ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100100zybge100000_zyc1ge100000:l1100101zybge100000_zyc3ge100000_zyc1ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100100zybge100000_zyc1ge100000:l2110100zyc1ge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100000zycge100000:l1100000zycge100000_zybge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100000zycge100000:l1100000zycge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100000zycge100000:l1100100zycge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100000zycge100000:l1100010zycge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100000zycge100000:l1100001zycge100000_zyc3ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100000zycge100000:l2110000zycge100000:b{do: xb=0}
+edge:P:l1100000zycge100000_zybge100000:l1100000zycge100000_zybge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100000zycge100000_zybge100000:l1100000zycge100000_zybge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100000zycge100000_zybge100000:l1100100zycge100000_zybge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100000zycge100000_zybge100000:l1100010zycge100000_zybge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100000zycge100000_zybge100000:l1100001zycge100000_zybge100000_zyc3ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100000zycge100000_zybge100000:l2110000zycge100000:b{provided:zybge100000>=100000 : do: xb=0}
+edge:P:l1100000zybge100000:l1100000zybge100000:a{provided:xa==1 : do: xa=0; zybge100000=0}
+edge:P:l1100000zybge100000:l1100000zycge100000_zybge100000:a{provided:xa==1 : do: xa=0; zycge100000=0}
+edge:P:l1100000zybge100000:l1100100zybge100000_zyc1ge100000:c1{provided:xa==1 : do: xc1=0; zyc1ge100000=0}
+edge:P:l1100000zybge100000:l1100010zybge100000_zyc2ge100000:c2{provided:xa==1 : do: xc2=0; zyc2ge100000=0}
+edge:P:l1100000zybge100000:l1100001zybge100000_zyc3ge100000:c3{provided:xa==1 : do: xc3=0; zyc3ge100000=0}
+edge:P:l1100000zybge100000:l2110000:b{provided:zybge100000>=100000 : do: xb=0}

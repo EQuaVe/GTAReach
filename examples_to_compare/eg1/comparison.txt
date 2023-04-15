@@ -1,0 +1,540 @@
+_________________________________________
+constant:10 extra_edges:0
+
+Converting ECA to TA
+COVERED_STATES 34
+RUNNING_TIME_SECONDS 0.000159287
+STORED_STATES 7
+VISITED_STATES 16
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 7.105e-05
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100 extra_edges:0
+
+Converting ECA to TA
+COVERED_STATES 304
+RUNNING_TIME_SECONDS 0.000996902
+STORED_STATES 7
+VISITED_STATES 106
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 7.1971e-05
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000 extra_edges:0
+
+Converting ECA to TA
+COVERED_STATES 3004
+RUNNING_TIME_SECONDS 0.00955445
+STORED_STATES 7
+VISITED_STATES 1006
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 7.0835e-05
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:5000 extra_edges:0
+
+Converting ECA to TA
+COVERED_STATES 15004
+RUNNING_TIME_SECONDS 0.0488353
+STORED_STATES 7
+VISITED_STATES 5006
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 7.141e-05
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10000 extra_edges:0
+
+Converting ECA to TA
+COVERED_STATES 30004
+RUNNING_TIME_SECONDS 0.116008
+STORED_STATES 7
+VISITED_STATES 10006
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 7.0523e-05
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100000 extra_edges:0
+
+Converting ECA to TA
+COVERED_STATES 300004
+RUNNING_TIME_SECONDS 1.01575
+STORED_STATES 7
+VISITED_STATES 100006
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 0.000118813
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000000 extra_edges:0
+
+Converting ECA to TA
+COVERED_STATES 3000004
+RUNNING_TIME_SECONDS 9.6714
+STORED_STATES 7
+VISITED_STATES 1000006
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 7.1421e-05
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10 extra_edges:1
+
+Converting ECA to TA
+COVERED_STATES 184
+RUNNING_TIME_SECONDS 0.000917764
+STORED_STATES 13
+VISITED_STATES 61
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 3
+RUNNING_TIME_SECONDS 0.000171398
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100 extra_edges:1
+
+Converting ECA to TA
+COVERED_STATES 1714
+RUNNING_TIME_SECONDS 0.00879126
+STORED_STATES 13
+VISITED_STATES 511
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 3
+RUNNING_TIME_SECONDS 0.000100562
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000 extra_edges:1
+
+Converting ECA to TA
+COVERED_STATES 17014
+RUNNING_TIME_SECONDS 0.0849167
+STORED_STATES 13
+VISITED_STATES 5011
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 3
+RUNNING_TIME_SECONDS 9.8865e-05
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:5000 extra_edges:1
+
+Converting ECA to TA
+COVERED_STATES 85014
+RUNNING_TIME_SECONDS 0.420526
+STORED_STATES 13
+VISITED_STATES 25011
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 3
+RUNNING_TIME_SECONDS 0.000101838
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10000 extra_edges:1
+
+Converting ECA to TA
+COVERED_STATES 170014
+RUNNING_TIME_SECONDS 0.838294
+STORED_STATES 13
+VISITED_STATES 50011
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 3
+RUNNING_TIME_SECONDS 0.000186798
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100000 extra_edges:1
+
+Converting ECA to TA
+COVERED_STATES 1700014
+RUNNING_TIME_SECONDS 8.98787
+STORED_STATES 13
+VISITED_STATES 500011
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 3
+RUNNING_TIME_SECONDS 0.000107415
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000000 extra_edges:1
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 3
+RUNNING_TIME_SECONDS 0.000100118
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10 extra_edges:2
+
+Converting ECA to TA
+COVERED_STATES 541
+RUNNING_TIME_SECONDS 0.0032504
+STORED_STATES 25
+VISITED_STATES 141
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 4
+RUNNING_TIME_SECONDS 0.000139333
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100 extra_edges:2
+
+Converting ECA to TA
+COVERED_STATES 5041
+RUNNING_TIME_SECONDS 0.0307457
+STORED_STATES 25
+VISITED_STATES 1221
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 4
+RUNNING_TIME_SECONDS 0.000137983
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000 extra_edges:2
+
+Converting ECA to TA
+COVERED_STATES 50041
+RUNNING_TIME_SECONDS 0.318312
+STORED_STATES 25
+VISITED_STATES 12021
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 4
+RUNNING_TIME_SECONDS 0.000139955
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:5000 extra_edges:2
+
+Converting ECA to TA
+COVERED_STATES 250041
+RUNNING_TIME_SECONDS 1.56711
+STORED_STATES 25
+VISITED_STATES 60021
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 4
+RUNNING_TIME_SECONDS 0.000137062
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10000 extra_edges:2
+
+Converting ECA to TA
+COVERED_STATES 500041
+RUNNING_TIME_SECONDS 3.06871
+STORED_STATES 25
+VISITED_STATES 120021
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 4
+RUNNING_TIME_SECONDS 0.00013723
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100000 extra_edges:2
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 4
+RUNNING_TIME_SECONDS 0.000136859
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000000 extra_edges:2
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 4
+RUNNING_TIME_SECONDS 0.000309453
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10 extra_edges:3
+
+Converting ECA to TA
+COVERED_STATES 1339
+RUNNING_TIME_SECONDS 0.00882451
+STORED_STATES 49
+VISITED_STATES 291
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 0.000187892
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100 extra_edges:3
+
+Converting ECA to TA
+COVERED_STATES 12409
+RUNNING_TIME_SECONDS 0.0855202
+STORED_STATES 49
+VISITED_STATES 2541
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 0.000218414
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000 extra_edges:3
+
+Converting ECA to TA
+COVERED_STATES 123109
+RUNNING_TIME_SECONDS 0.844204
+STORED_STATES 49
+VISITED_STATES 25041
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 0.000183518
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:5000 extra_edges:3
+
+Converting ECA to TA
+COVERED_STATES 615109
+RUNNING_TIME_SECONDS 4.2697
+STORED_STATES 49
+VISITED_STATES 125041
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 0.000186339
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10000 extra_edges:3
+
+Converting ECA to TA
+COVERED_STATES 1230109
+RUNNING_TIME_SECONDS 8.29343
+STORED_STATES 49
+VISITED_STATES 250041
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 0.00018703
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100000 extra_edges:3
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 0.000191454
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000000 extra_edges:3
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 0.000189611
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10 extra_edges:4
+
+Converting ECA to TA
+COVERED_STATES 3093
+RUNNING_TIME_SECONDS 0.0217883
+STORED_STATES 97
+VISITED_STATES 581
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 6
+RUNNING_TIME_SECONDS 0.000250293
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100 extra_edges:4
+
+Converting ECA to TA
+COVERED_STATES 28473
+RUNNING_TIME_SECONDS 0.212546
+STORED_STATES 97
+VISITED_STATES 5081
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 6
+RUNNING_TIME_SECONDS 0.000249094
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000 extra_edges:4
+
+Converting ECA to TA
+COVERED_STATES 282273
+RUNNING_TIME_SECONDS 2.07489
+STORED_STATES 97
+VISITED_STATES 50081
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 6
+RUNNING_TIME_SECONDS 0.000248785
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:5000 extra_edges:4
+
+Converting ECA to TA
+COVERED_STATES 1410273
+RUNNING_TIME_SECONDS 10.9735
+STORED_STATES 97
+VISITED_STATES 250081
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 6
+RUNNING_TIME_SECONDS 0.000431126
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10000 extra_edges:4
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 6
+RUNNING_TIME_SECONDS 0.00026238
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100000 extra_edges:4
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 6
+RUNNING_TIME_SECONDS 0.00025125
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000000 extra_edges:4
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 6
+RUNNING_TIME_SECONDS 0.000253394
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10 extra_edges:5
+
+Converting ECA to TA
+COVERED_STATES 6927
+RUNNING_TIME_SECONDS 0.0749416
+STORED_STATES 193
+VISITED_STATES 1151
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 7
+RUNNING_TIME_SECONDS 0.000425564
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100 extra_edges:5
+
+Converting ECA to TA
+COVERED_STATES 63357
+RUNNING_TIME_SECONDS 0.624494
+STORED_STATES 193
+VISITED_STATES 10061
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 7
+RUNNING_TIME_SECONDS 0.000332853
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000 extra_edges:5
+
+Converting ECA to TA
+COVERED_STATES 627657
+RUNNING_TIME_SECONDS 5.14844
+STORED_STATES 193
+VISITED_STATES 99161
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 7
+RUNNING_TIME_SECONDS 0.000334192
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:5000 extra_edges:5
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 7
+RUNNING_TIME_SECONDS 0.000335602
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:10000 extra_edges:5
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 7
+RUNNING_TIME_SECONDS 0.0003375
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:100000 extra_edges:5
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 7
+RUNNING_TIME_SECONDS 0.00051924
+STORED_STATES 3
+VISITED_STATES 3
+_________________________________________
+constant:1000000 extra_edges:5
+
+Converting ECA to TA
+-----------------------------------------
+Zone graph exploration on ECA
+COVERED_STATES 7
+RUNNING_TIME_SECONDS 0.000333128
+STORED_STATES 3
+VISITED_STATES 3

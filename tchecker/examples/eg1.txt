@@ -1,0 +1,14 @@
+system:figure3
+
+event:a:1:1
+event:b:1:1
+
+process:P
+location:P:l0{initial:}
+location:P:l1{}
+location:P:l2{}
+
+edge:P:l0:l1:b{provided: a_p>=-10}
+edge:P:l1:l1:a{provided: a_p>=-11}
+edge:P:l1:l2:a{}
+

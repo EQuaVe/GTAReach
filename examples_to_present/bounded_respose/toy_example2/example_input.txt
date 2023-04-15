@@ -1,0 +1,34 @@
+system:toy_model2
+
+
+event:a:1:1
+event:b:0:1
+event:a2
+event:b2
+
+clock:normal:x
+clock:normal:y
+
+
+process:P
+location:P:l0{initial:}
+location:P:l1{labels: green}
+
+
+
+edge:P:l0:l0:a{{}}
+edge:P:l0:l0:b{{}}
+
+edge:P:l0:l1:a{{provided:a_p>-INF && b_p < -30;}}
+
+edge:P:l1:l1:a{{}}
+edge:P:l1:l1:b{{}}
+
+process:toy2
+location:toy2:q0{initial:}
+
+edge:toy2:q0:q0:a2{{provided:x==10; do:x;}}
+edge:toy2:q0:q0:b2{{provided:y==40; do:y;}}
+
+sync:P@a:toy2@a2
+sync:P@b:toy2@b2

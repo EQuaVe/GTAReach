@@ -1,0 +1,106 @@
+system:train_gate_4
+
+event:lower:1:0
+event:raise:1:0
+event:down:0:0
+event:up:0:0
+event:approach:1:0
+event:exit:1:0
+
+event:approach1:1:0
+event:in1:0:0
+event:out1:0:0
+event:exit1:1:0
+
+event:approach2:1:0
+event:in2:0:0
+event:out2:0:0
+event:exit2:1:0
+
+event:approach3:1:0
+event:in3:0:0
+event:out3:0:0
+event:exit3:1:0
+
+event:approach4:1:0
+event:in4:0:0
+event:out4:0:0
+event:exit4:1:0
+
+process:T1
+location:T1:t0{initial:}
+location:T1:t1{invariant: approach1_h<=5}
+location:T1:t2{invariant: approach1_h<=5}
+location:T1:t3{invariant: approach1_h<=5}
+
+edge:T1:t0:t1:approach1{{}}
+edge:T1:t1:t2:in1{{ provided: approach1_h>2;}}
+edge:T1:t2:t3:out1{{}}
+edge:T1:t3:t0:exit1{{}}
+
+process:T2
+location:T2:t0{initial:}
+location:T2:t1{invariant: approach2_h<=5}
+location:T2:t2{invariant: approach2_h<=5}
+location:T2:t3{invariant: approach2_h<=5}
+
+edge:T2:t0:t1:approach2{{}}
+edge:T2:t1:t2:in2{{ provided: approach2_h>2;}}
+edge:T2:t2:t3:out2{{}}
+edge:T2:t3:t0:exit2{{}}
+
+process:T3
+location:T3:t0{initial:}
+location:T3:t1{invariant: approach3_h<=5}
+location:T3:t2{invariant: approach3_h<=5}
+location:T3:t3{invariant: approach3_h<=5}
+
+edge:T3:t0:t1:approach3{{}}
+edge:T3:t1:t2:in3{{ provided: approach3_h>2;}}
+edge:T3:t2:t3:out3{{}}
+edge:T3:t3:t0:exit3{{}}
+
+process:T4
+location:T4:t0{initial:}
+location:T4:t1{invariant: approach4_h<=5}
+location:T4:t2{invariant: approach4_h<=5}
+location:T4:t3{invariant: approach4_h<=5}
+
+edge:T4:t0:t1:approach4{{}}
+edge:T4:t1:t2:in4{{ provided: approach4_h>2;}}
+edge:T4:t2:t3:out4{{}}
+edge:T4:t3:t0:exit4{{}}
+
+process:G
+location:G:g0{initial:}
+location:G:g1{invariant: lower_h<=5}
+location:G:g2{}
+location:G:g3{invariant: raise_h<=2}
+
+process:C
+location:C:c0{initial:}
+location:C:c1{invariant: approach_h<=1}
+location:C:c2{}
+location:C:c3{invariant: exit_h<=2}
+
+edge:G:g0:g1:lower{{}}
+edge:G:g1:g2:down{{}}
+edge:G:g2:g3:raise{{}}
+edge:G:g3:g0:up{{provided: raise_h>=1; }}
+
+edge:C:c0:c1:approach{{}}
+edge:C:c1:c2:lower{{ provided:approach_h==1; }}
+edge:C:c2:c3:exit{{}}
+edge:C:c3:c0:raise{{}}
+
+sync:G@lower:C@lower
+sync:G@raise:C@raise
+
+sync:T1@approach1:C@approach
+sync:T1@exit1:C@exit
+sync:T2@approach2:C@approach
+sync:T2@exit2:C@exit
+sync:T3@approach3:C@approach
+sync:T3@exit3:C@exit
+sync:T4@approach4:C@approach
+sync:T4@exit4:C@exit

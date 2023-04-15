@@ -1,0 +1,41 @@
+#clock:size:name
+#int:size:min:max:init:name
+#process:name
+#event:name
+#location:process:name{attributes}
+#edge:process:source:target:event:{attributes}
+#sync:events
+#   where
+#   attributes is a colon-separated list of key:value
+
+system:fig_3_3
+
+event:tau
+
+process:P1
+clock:1:x1
+clock:1:y1
+location:P1:q0{initial:}
+location:P1:q1
+location:P1:q2{labels:green1}
+edge:P1:q0:q1:tau{provided: x1<=3 : do: x1=-1+x1}
+edge:P1:q1:q0:tau{}
+edge:P1:q1:q2:tau{provided: x1-y1<=1}
+process:P2
+clock:1:x2
+clock:1:y2
+location:P2:q0{initial:}
+location:P2:q1
+location:P2:q2{labels:green2}
+edge:P2:q0:q1:tau{provided: x2<=3 : do: x2=-1+x2}
+edge:P2:q1:q0:tau{}
+edge:P2:q1:q2:tau{provided: x2-y2<=1}
+process:P3
+clock:1:x3
+clock:1:y3
+location:P3:q0{initial:}
+location:P3:q1
+location:P3:q2{labels:green3}
+edge:P3:q0:q1:tau{provided: x3<=3 : do: x3=-1+x3}
+edge:P3:q1:q0:tau{}
+edge:P3:q1:q2:tau{provided: x3-y3<=1}

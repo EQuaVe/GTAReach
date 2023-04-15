@@ -1,0 +1,216 @@
+#labels=scheduled
+#clock:size:name
+#int:size:min:max:init:name
+#process:name
+#event:name
+#location:process:name{attributes}
+#edge:process:source:target:event:{attributes}
+#sync:events
+#   where
+#   attributes is a colon-separated list of key:value
+#   events is a colon-separated list of process@event
+
+system:job_shop_2_10_10_10
+
+# Events
+event:tau
+event:count
+event:get1
+event:rel1
+event:get2
+event:rel2
+event:done1
+event:done2
+event:done3
+event:done4
+event:done5
+event:done6
+event:done7
+event:done8
+event:done9
+event:done10
+
+# Machine 1
+process:M1
+location:M1:idle{initial:}
+location:M1:busy
+edge:M1:idle:busy:get1
+edge:M1:busy:idle:rel1
+
+# Machine 2
+process:M2
+location:M2:idle{initial:}
+location:M2:busy
+edge:M2:idle:busy:get2
+edge:M2:busy:idle:rel2
+
+# Job 1
+process:J1
+clock:1:x1
+location:J1:i1{initial:}
+location:J1:w1
+location:J1:i2{committed:}
+location:J1:done
+edge:J1:i1:w1:get2{do: x1=0}
+edge:J1:w1:i2:rel2{provided: x1>=4}
+edge:J1:i2:done:done1
+
+# Job 2
+process:J2
+clock:1:x2
+location:J2:i1{initial:}
+location:J2:w1
+location:J2:i2{committed:}
+location:J2:done
+edge:J2:i1:w1:get2{do: x2=0}
+edge:J2:w1:i2:rel2{provided: x2>=6}
+edge:J2:i2:done:done2
+
+# Job 3
+process:J3
+clock:1:x3
+location:J3:i1{initial:}
+location:J3:w1
+location:J3:i2{committed:}
+location:J3:done
+edge:J3:i1:w1:get2{do: x3=0}
+edge:J3:w1:i2:rel2{provided: x3>=10}
+edge:J3:i2:done:done3
+
+# Job 4
+process:J4
+clock:1:x4
+location:J4:i1{initial:}
+location:J4:w1
+location:J4:i2{committed:}
+location:J4:done
+edge:J4:i1:w1:get2{do: x4=0}
+edge:J4:w1:i2:rel2{provided: x4>=6}
+edge:J4:i2:done:done4
+
+# Job 5
+process:J5
+clock:1:x5
+location:J5:i1{initial:}
+location:J5:w1
+location:J5:i2{committed:}
+location:J5:done
+edge:J5:i1:w1:get1{do: x5=0}
+edge:J5:w1:i2:rel1{provided: x5>=9}
+edge:J5:i2:done:done5
+
+# Job 6
+process:J6
+clock:1:x6
+location:J6:i1{initial:}
+location:J6:w1
+location:J6:i2{committed:}
+location:J6:done
+edge:J6:i1:w1:get2{do: x6=0}
+edge:J6:w1:i2:rel2{provided: x6>=10}
+edge:J6:i2:done:done6
+
+# Job 7
+process:J7
+clock:1:x7
+location:J7:i1{initial:}
+location:J7:w1
+location:J7:i2{committed:}
+location:J7:done
+edge:J7:i1:w1:get1{do: x7=0}
+edge:J7:w1:i2:rel1{provided: x7>=1}
+edge:J7:i2:done:done7
+
+# Job 8
+process:J8
+clock:1:x8
+location:J8:i1{initial:}
+location:J8:w1
+location:J8:i2{committed:}
+location:J8:done
+edge:J8:i1:w1:get2{do: x8=0}
+edge:J8:w1:i2:rel2{provided: x8>=8}
+edge:J8:i2:done:done8
+
+# Job 9
+process:J9
+clock:1:x9
+location:J9:i1{initial:}
+location:J9:w1
+location:J9:i2{committed:}
+location:J9:done
+edge:J9:i1:w1:get1{do: x9=0}
+edge:J9:w1:i2:rel1{provided: x9>=6}
+edge:J9:i2:done:done9
+
+# Job 10
+process:J10
+clock:1:x10
+location:J10:i1{initial:}
+location:J10:w1
+location:J10:i2{committed:}
+location:J10:done
+edge:J10:i1:w1:get2{do: x10=0}
+edge:J10:w1:i2:rel2{provided: x10>=1}
+edge:J10:i2:done:done10
+
+# Controller
+process:C
+clock:1:z
+int:1:0:10:0:n
+location:C:idle{initial:}
+location:C:done{labels: scheduled}
+edge:C:idle:idle:count{do: n=n+1}
+edge:C:idle:done:count{provided: n==9 && z <= 10 : do: n=n+1}
+
+sync:J1@done1:C@count
+sync:J1@get1:M1@get1
+sync:J1@rel1:M1@rel1
+sync:J1@get2:M2@get2
+sync:J1@rel2:M2@rel2
+sync:J2@done2:C@count
+sync:J2@get1:M1@get1
+sync:J2@rel1:M1@rel1
+sync:J2@get2:M2@get2
+sync:J2@rel2:M2@rel2
+sync:J3@done3:C@count
+sync:J3@get1:M1@get1
+sync:J3@rel1:M1@rel1
+sync:J3@get2:M2@get2
+sync:J3@rel2:M2@rel2
+sync:J4@done4:C@count
+sync:J4@get1:M1@get1
+sync:J4@rel1:M1@rel1
+sync:J4@get2:M2@get2
+sync:J4@rel2:M2@rel2
+sync:J5@done5:C@count
+sync:J5@get1:M1@get1
+sync:J5@rel1:M1@rel1
+sync:J5@get2:M2@get2
+sync:J5@rel2:M2@rel2
+sync:J6@done6:C@count
+sync:J6@get1:M1@get1
+sync:J6@rel1:M1@rel1
+sync:J6@get2:M2@get2
+sync:J6@rel2:M2@rel2
+sync:J7@done7:C@count
+sync:J7@get1:M1@get1
+sync:J7@rel1:M1@rel1
+sync:J7@get2:M2@get2
+sync:J7@rel2:M2@rel2
+sync:J8@done8:C@count
+sync:J8@get1:M1@get1
+sync:J8@rel1:M1@rel1
+sync:J8@get2:M2@get2
+sync:J8@rel2:M2@rel2
+sync:J9@done9:C@count
+sync:J9@get1:M1@get1
+sync:J9@rel1:M1@rel1
+sync:J9@get2:M2@get2
+sync:J9@rel2:M2@rel2
+sync:J10@done10:C@count
+sync:J10@get1:M1@get1
+sync:J10@rel1:M1@rel1
+sync:J10@get2:M2@get2
+sync:J10@rel2:M2@rel2
+

@@ -1,0 +1,48 @@
+#labels=error1,error2,error1
+#clock:size:name
+#int:size:min:max:init:name
+#process:name
+#event:name
+#location:process:name{attributes}
+#edge:process:source:target:event:{attributes}
+#sync:events
+#   where
+#   attributes is a colon-separated list of key:value
+#   events is a colon-separated list of process@event
+
+system:reynier_example_1
+
+event:a
+event:b
+event:c
+event:d
+event:e
+event:f
+event:g
+event:h
+
+int:1:0:1:0:id
+
+# Process 1
+process:P1
+clock:1:x11
+clock:1:x21
+clock:1:x31
+clock:1:x41
+location:P1:l0{initial:}
+location:P1:l1{}
+location:P1:l2{}
+location:P1:l3{}
+location:P1:l4{}
+location:P1:l5{}
+location:P1:l6{}
+location:P1:l7{labels:error1}
+edge:P1:l0:l1:a{provided: x31<=3 : do:x31=0;x11=0}
+edge:P1:l1:l2:b{provided: x21==3 : do:x21=0}
+edge:P1:l2:l3:c{provided: x11==2&&id==0 : do:x11=0;id=1}
+edge:P1:l3:l2:d{provided: x21==2 : do:x21=0;id=0}
+edge:P1:l2:l4:e{provided: x11==2 : do:x11=0}
+edge:P1:l4:l5:f{provided: x21==2 : do:x21=0}
+edge:P1:l5:l6:g{provided: x11==3 : do:x11=0}
+edge:P1:l6:l7:h{provided: x21-x11>2&&x41-x31<2}
+

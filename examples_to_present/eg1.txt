@@ -1,0 +1,14 @@
+system:example1
+
+clock:normal:x
+clock:normal:y
+
+event:a
+event:b
+
+process:P
+location:P:q0{initial:}
+location:P:q1{label:green}
+
+edge:P:q0:q0:a{{ provided:x==1;do:x;}}
+edge:P:q0:q1:b{{ provided:x-y<=-300;do:;}}

@@ -1,0 +1,21 @@
+system:toy11_toy9
+
+event:a:1:1
+event:b:1:1
+
+process:P
+location:P:l0{initial:}
+location:P:l1{}
+location:P:l2{}
+location:P:l3{}
+location:P:l4{}
+
+edge:P:l0:l1:a{}
+edge:P:l1:l2:b{}
+
+
+edge:P:l2:l3:a{provided: a_h==0 && b_h==0}
+edge:P:l3:l3:a{provided: b_p>=-10000 && a_h==1}
+edge:P:l3:l4:b{provided: b_h==1000 && a_h==0}
+
+#size of zone graph is a function of bounds occuring in the history and the prophecy guard(S) = min(b_p>=-10000,b_h==10000)!

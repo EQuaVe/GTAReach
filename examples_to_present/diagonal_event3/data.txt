@@ -1,0 +1,111 @@
+============================+++++==============================
+diagonal_event_10.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 265
+RUNNING_TIME_SECONDS 0.118432
+STORED_STATES 32
+VISITED_STATES 277
+============================+++++==============================
+diagonal_event_12.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 354
+RUNNING_TIME_SECONDS 0.331129
+STORED_STATES 38
+VISITED_STATES 368
+============================+++++==============================
+diagonal_event_15.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 510
+RUNNING_TIME_SECONDS 0.590241
+STORED_STATES 47
+VISITED_STATES 527
+============================+++++==============================
+diagonal_event_17.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 629
+RUNNING_TIME_SECONDS 0.968206
+STORED_STATES 53
+VISITED_STATES 648
+============================+++++==============================
+diagonal_event_20.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 830
+RUNNING_TIME_SECONDS 2.3707
+STORED_STATES 62
+VISITED_STATES 852
+============================+++++==============================
+diagonal_event_25.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 1225
+RUNNING_TIME_SECONDS 5.75089
+STORED_STATES 77
+VISITED_STATES 1252
+============================+++++==============================
+diagonal_event_30.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 1695
+RUNNING_TIME_SECONDS 11.5376
+STORED_STATES 92
+VISITED_STATES 1727
+============================+++++==============================
+diagonal_event_3.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 48
+RUNNING_TIME_SECONDS 0.0144606
+STORED_STATES 11
+VISITED_STATES 53
+============================+++++==============================
+diagonal_event_5.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 95
+RUNNING_TIME_SECONDS 0.0526544
+STORED_STATES 17
+VISITED_STATES 102
+============================+++++==============================
+diagonal_event_6.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 123
+RUNNING_TIME_SECONDS 0.0664951
+STORED_STATES 20
+VISITED_STATES 131
+============================+++++==============================
+diagonal_event_7.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 154
+RUNNING_TIME_SECONDS 0.0794724
+STORED_STATES 23
+VISITED_STATES 163
+============================+++++==============================

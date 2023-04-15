@@ -1,0 +1,20 @@
+system:toy20
+
+event:a:1:1
+event:b:1:1
+event:c:0:0
+
+process:P
+location:P:l0{initial:}
+location:P:l1{}
+location:P:l2{}
+location:P:l3{}
+location:P:l4{}
+location:P:l5{labels: green}
+
+edge:P:l0:l1:a{}
+edge:P:l1:l2:c{provided: b_p<=-2 && a_h>=1}
+edge:P:l2:l3:a{provided: b_p==-1}
+edge:P:l3:l4:b{}
+edge:P:l2:l5:a{}
+

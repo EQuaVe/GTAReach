@@ -1,0 +1,379 @@
+#clock:size:name
+#int:size:min:max:init:name
+#process:name
+#event:name
+#location:process:name{attributes}
+#edge:process:source:target:event:{attributes}
+#sync:events
+#   where
+#   attributes is a colon-separated list of key:value
+#   events is a colon-separated list of process@event
+
+system:schedulability
+
+# 4 tasks: (1,10) (1,10) (1,10) (1,4)
+
+# Events
+
+event:tau
+event:release1
+event:run1
+event:done1
+event:error1
+event:release2
+event:run2
+event:done2
+event:error2
+event:release3
+event:run3
+event:done3
+event:error3
+event:release4
+event:run4
+event:done4
+event:error4
+
+
+# EDF Scheduler
+
+process:scheduler
+clock:1:dpr1
+clock:1:dpr2
+clock:1:dpr3
+clock:1:dpr4
+clock:1:dpr0
+int:1:0:4:0:queuedtasks
+int:1:0:1:0:queued1
+int:1:0:1:0:queued2
+int:1:0:1:0:queued3
+int:1:0:1:0:queued4
+location:scheduler:qempty{initial:}
+location:scheduler:qnonempty{committed:}
+location:scheduler:taskrunning{}
+location:scheduler:temp10{committed:}
+location:scheduler:temp11{committed:}
+location:scheduler:temp20{committed:}
+location:scheduler:temp21{committed:}
+location:scheduler:temp22{committed:}
+location:scheduler:temp30{committed:}
+location:scheduler:temp31{committed:}
+location:scheduler:temp32{committed:}
+location:scheduler:temp33{committed:}
+location:scheduler:temp40{committed:}
+location:scheduler:temp41{committed:}
+location:scheduler:temp42{committed:}
+location:scheduler:temp43{committed:}
+location:scheduler:temp44{committed:}
+edge:scheduler:qempty:temp41:release1{do: dpr1=0;queuedtasks=1}
+edge:scheduler:qempty:temp42:release2{do: dpr2=0;queuedtasks=1}
+edge:scheduler:qempty:temp43:release3{do: dpr3=0;queuedtasks=1}
+edge:scheduler:qempty:temp44:release4{do: dpr4=0;queuedtasks=1}
+edge:scheduler:qnonempty:temp10:tau{provided: queued1==0}
+edge:scheduler:qnonempty:temp11:tau{provided: queued1==1}
+edge:scheduler:temp10:temp20:tau{provided: queued2==0}
+edge:scheduler:temp10:temp22:tau{provided: queued2==1}
+edge:scheduler:temp11:temp21:tau{provided: queued2==0}
+edge:scheduler:temp11:temp21:tau{provided: queued2==1&&dpr2-dpr1<0}
+edge:scheduler:temp11:temp22:tau{provided: queued2==1&&dpr1-dpr2<=0}
+edge:scheduler:temp20:temp30:tau{provided: queued3==0}
+edge:scheduler:temp20:temp33:tau{provided: queued3==1}
+edge:scheduler:temp21:temp31:tau{provided: queued3==0}
+edge:scheduler:temp21:temp31:tau{provided: queued3==1&&dpr3-dpr1<0}
+edge:scheduler:temp22:temp32:tau{provided: queued3==0}
+edge:scheduler:temp22:temp32:tau{provided: queued3==1&&dpr3-dpr2<0}
+edge:scheduler:temp21:temp33:tau{provided: queued3==1&&dpr1-dpr3<=0}
+edge:scheduler:temp22:temp33:tau{provided: queued3==1&&dpr2-dpr3<=0}
+edge:scheduler:temp30:temp40:tau{provided: queued4==0}
+edge:scheduler:temp30:temp44:tau{provided: queued4==1}
+edge:scheduler:temp31:temp41:tau{provided: queued4==0}
+edge:scheduler:temp31:temp41:tau{provided: queued4==1&&dpr4-dpr1<-6}
+edge:scheduler:temp32:temp42:tau{provided: queued4==0}
+edge:scheduler:temp32:temp42:tau{provided: queued4==1&&dpr4-dpr2<-6}
+edge:scheduler:temp33:temp43:tau{provided: queued4==0}
+edge:scheduler:temp33:temp43:tau{provided: queued4==1&&dpr4-dpr3<-6}
+edge:scheduler:temp31:temp44:tau{provided: queued4==1&&dpr1-dpr4<=6}
+edge:scheduler:temp32:temp44:tau{provided: queued4==1&&dpr2-dpr4<=6}
+edge:scheduler:temp33:temp44:tau{provided: queued4==1&&dpr3-dpr4<=6}
+edge:scheduler:temp41:taskrunning:run1{}
+edge:scheduler:temp42:taskrunning:run2{}
+edge:scheduler:temp43:taskrunning:run3{}
+edge:scheduler:temp44:taskrunning:run4{}
+edge:scheduler:taskrunning:qnonempty:release1{do: dpr1=0;queuedtasks=1+queuedtasks}
+edge:scheduler:taskrunning:qnonempty:done1{provided: queuedtasks>1 : do: queuedtasks=-1+queuedtasks}
+edge:scheduler:taskrunning:qempty:done1{provided: queuedtasks==1 : do: queuedtasks=0}
+edge:scheduler:taskrunning:qnonempty:release2{do: dpr2=0;queuedtasks=1+queuedtasks}
+edge:scheduler:taskrunning:qnonempty:done2{provided: queuedtasks>1 : do: queuedtasks=-1+queuedtasks}
+edge:scheduler:taskrunning:qempty:done2{provided: queuedtasks==1 : do: queuedtasks=0}
+edge:scheduler:taskrunning:qnonempty:release3{do: dpr3=0;queuedtasks=1+queuedtasks}
+edge:scheduler:taskrunning:qnonempty:done3{provided: queuedtasks>1 : do: queuedtasks=-1+queuedtasks}
+edge:scheduler:taskrunning:qempty:done3{provided: queuedtasks==1 : do: queuedtasks=0}
+edge:scheduler:taskrunning:qnonempty:release4{do: dpr4=0;queuedtasks=1+queuedtasks}
+edge:scheduler:taskrunning:qnonempty:done4{provided: queuedtasks>1 : do: queuedtasks=-1+queuedtasks}
+edge:scheduler:taskrunning:qempty:done4{provided: queuedtasks==1 : do: queuedtasks=0}
+
+# Automata for Tasks
+
+# Task 1
+
+process:task1
+clock:1:c1
+clock:1:d1
+location:task1:free{initial:}
+location:task1:queued{}
+location:task1:running{invariant: c1<=1&&d1<=10}
+location:task1:preempted{invariant: d1<=10}
+location:task1:errorstate{}
+edge:task1:free:queued:release1{do: d1=0;queued1=1 }
+edge:task1:queued:running:run1{do: c1=0}
+edge:task1:running:preempted:release2{provided: c1<1}
+edge:task1:preempted:preempted:run2{}
+edge:task1:preempted:preempted:done2{provided: c1<=10&&c1>=1 : do: c1=-1+c1}
+edge:task1:running:preempted:release3{provided: c1<1}
+edge:task1:preempted:preempted:run3{}
+edge:task1:preempted:preempted:done3{provided: c1<=10&&c1>=1 : do: c1=-1+c1}
+edge:task1:running:preempted:release4{provided: c1<1}
+edge:task1:preempted:preempted:run4{}
+edge:task1:preempted:preempted:done4{provided: c1<=10&&c1>=1 : do: c1=-1+c1}
+edge:task1:preempted:running:run1{}
+edge:task1:running:errorstate:error1{provided: d1>=10&&c1<1}
+edge:task1:preempted:errorstate:error1{provided: d1>=10}
+edge:task1:running:free:done1{provided: c1>=1 : do: queued1=0}
+edge:task1:free:free:run2{}
+edge:task1:free:free:done2{}
+edge:task1:free:free:release2{}
+edge:task1:queued:queued:run2{}
+edge:task1:queued:queued:done2{}
+edge:task1:queued:queued:release2{}
+edge:task1:preempted:preempted:run2{}
+edge:task1:preempted:preempted:release2{}
+edge:task1:free:free:run3{}
+edge:task1:free:free:done3{}
+edge:task1:free:free:release3{}
+edge:task1:queued:queued:run3{}
+edge:task1:queued:queued:done3{}
+edge:task1:queued:queued:release3{}
+edge:task1:preempted:preempted:run3{}
+edge:task1:preempted:preempted:release3{}
+edge:task1:free:free:run4{}
+edge:task1:free:free:done4{}
+edge:task1:free:free:release4{}
+edge:task1:queued:queued:run4{}
+edge:task1:queued:queued:done4{}
+edge:task1:queued:queued:release4{}
+edge:task1:preempted:preempted:run4{}
+edge:task1:preempted:preempted:release4{}
+
+# Task 2
+
+process:task2
+clock:1:c2
+clock:1:d2
+location:task2:free{initial:}
+location:task2:queued{}
+location:task2:running{invariant: c2<=1&&d2<=10}
+location:task2:preempted{invariant: d2<=10}
+location:task2:errorstate{}
+edge:task2:free:queued:release2{do: d2=0;queued2=1 }
+edge:task2:queued:running:run2{do: c2=0}
+edge:task2:running:preempted:release1{provided: c2<1}
+edge:task2:preempted:preempted:run1{}
+edge:task2:preempted:preempted:done1{provided: c2<=10&&c2>=1 : do: c2=-1+c2}
+edge:task2:running:preempted:release3{provided: c2<1}
+edge:task2:preempted:preempted:run3{}
+edge:task2:preempted:preempted:done3{provided: c2<=10&&c2>=1 : do: c2=-1+c2}
+edge:task2:running:preempted:release4{provided: c2<1}
+edge:task2:preempted:preempted:run4{}
+edge:task2:preempted:preempted:done4{provided: c2<=10&&c2>=1 : do: c2=-1+c2}
+edge:task2:preempted:running:run2{}
+edge:task2:running:errorstate:error2{provided: d2>=10&&c2<1}
+edge:task2:preempted:errorstate:error2{provided: d2>=10}
+edge:task2:running:free:done2{provided: c2>=1 : do: queued2=0}
+edge:task2:free:free:run1{}
+edge:task2:free:free:done1{}
+edge:task2:free:free:release1{}
+edge:task2:queued:queued:run1{}
+edge:task2:queued:queued:done1{}
+edge:task2:queued:queued:release1{}
+edge:task2:preempted:preempted:run1{}
+edge:task2:preempted:preempted:release1{}
+edge:task2:free:free:run3{}
+edge:task2:free:free:done3{}
+edge:task2:free:free:release3{}
+edge:task2:queued:queued:run3{}
+edge:task2:queued:queued:done3{}
+edge:task2:queued:queued:release3{}
+edge:task2:preempted:preempted:run3{}
+edge:task2:preempted:preempted:release3{}
+edge:task2:free:free:run4{}
+edge:task2:free:free:done4{}
+edge:task2:free:free:release4{}
+edge:task2:queued:queued:run4{}
+edge:task2:queued:queued:done4{}
+edge:task2:queued:queued:release4{}
+edge:task2:preempted:preempted:run4{}
+edge:task2:preempted:preempted:release4{}
+
+# Task 3
+
+process:task3
+clock:1:c3
+clock:1:d3
+location:task3:free{initial:}
+location:task3:queued{}
+location:task3:running{invariant: c3<=1&&d3<=10}
+location:task3:preempted{invariant: d3<=10}
+location:task3:errorstate{}
+edge:task3:free:queued:release3{do: d3=0;queued3=1 }
+edge:task3:queued:running:run3{do: c3=0}
+edge:task3:running:preempted:release1{provided: c3<1}
+edge:task3:preempted:preempted:run1{}
+edge:task3:preempted:preempted:done1{provided: c3<=10&&c3>=1 : do: c3=-1+c3}
+edge:task3:running:preempted:release2{provided: c3<1}
+edge:task3:preempted:preempted:run2{}
+edge:task3:preempted:preempted:done2{provided: c3<=10&&c3>=1 : do: c3=-1+c3}
+edge:task3:running:preempted:release4{provided: c3<1}
+edge:task3:preempted:preempted:run4{}
+edge:task3:preempted:preempted:done4{provided: c3<=10&&c3>=1 : do: c3=-1+c3}
+edge:task3:preempted:running:run3{}
+edge:task3:running:errorstate:error3{provided: d3>=10&&c3<1}
+edge:task3:preempted:errorstate:error3{provided: d3>=10}
+edge:task3:running:free:done3{provided: c3>=1 : do: queued3=0}
+edge:task3:free:free:run1{}
+edge:task3:free:free:done1{}
+edge:task3:free:free:release1{}
+edge:task3:queued:queued:run1{}
+edge:task3:queued:queued:done1{}
+edge:task3:queued:queued:release1{}
+edge:task3:preempted:preempted:run1{}
+edge:task3:preempted:preempted:release1{}
+edge:task3:free:free:run2{}
+edge:task3:free:free:done2{}
+edge:task3:free:free:release2{}
+edge:task3:queued:queued:run2{}
+edge:task3:queued:queued:done2{}
+edge:task3:queued:queued:release2{}
+edge:task3:preempted:preempted:run2{}
+edge:task3:preempted:preempted:release2{}
+edge:task3:free:free:run4{}
+edge:task3:free:free:done4{}
+edge:task3:free:free:release4{}
+edge:task3:queued:queued:run4{}
+edge:task3:queued:queued:done4{}
+edge:task3:queued:queued:release4{}
+edge:task3:preempted:preempted:run4{}
+edge:task3:preempted:preempted:release4{}
+
+# Task 4
+
+process:task4
+clock:1:c4
+clock:1:d4
+location:task4:free{initial:}
+location:task4:queued{}
+location:task4:running{invariant: c4<=1&&d4<=4}
+location:task4:preempted{invariant: d4<=4}
+location:task4:errorstate{}
+edge:task4:free:queued:release4{do: d4=0;queued4=1 }
+edge:task4:queued:running:run4{do: c4=0}
+edge:task4:running:preempted:release1{provided: c4<1}
+edge:task4:preempted:preempted:run1{}
+edge:task4:preempted:preempted:done1{provided: c4<=4&&c4>=1 : do: c4=-1+c4}
+edge:task4:running:preempted:release2{provided: c4<1}
+edge:task4:preempted:preempted:run2{}
+edge:task4:preempted:preempted:done2{provided: c4<=4&&c4>=1 : do: c4=-1+c4}
+edge:task4:running:preempted:release3{provided: c4<1}
+edge:task4:preempted:preempted:run3{}
+edge:task4:preempted:preempted:done3{provided: c4<=4&&c4>=1 : do: c4=-1+c4}
+edge:task4:preempted:running:run4{}
+edge:task4:running:errorstate:error4{provided: d4>=4&&c4<1}
+edge:task4:preempted:errorstate:error4{provided: d4>=4}
+edge:task4:running:free:done4{provided: c4>=1 : do: queued4=0}
+edge:task4:free:free:run1{}
+edge:task4:free:free:done1{}
+edge:task4:free:free:release1{}
+edge:task4:queued:queued:run1{}
+edge:task4:queued:queued:done1{}
+edge:task4:queued:queued:release1{}
+edge:task4:preempted:preempted:run1{}
+edge:task4:preempted:preempted:release1{}
+edge:task4:free:free:run2{}
+edge:task4:free:free:done2{}
+edge:task4:free:free:release2{}
+edge:task4:queued:queued:run2{}
+edge:task4:queued:queued:done2{}
+edge:task4:queued:queued:release2{}
+edge:task4:preempted:preempted:run2{}
+edge:task4:preempted:preempted:release2{}
+edge:task4:free:free:run3{}
+edge:task4:free:free:done3{}
+edge:task4:free:free:release3{}
+edge:task4:queued:queued:run3{}
+edge:task4:queued:queued:done3{}
+edge:task4:queued:queued:release3{}
+edge:task4:preempted:preempted:run3{}
+edge:task4:preempted:preempted:release3{}
+# Task Automaton
+
+process:taskautomaton
+clock:1:zerotime
+location:taskautomaton:init{initial:}
+location:taskautomaton:released1{}
+location:taskautomaton:tasktemp1{}
+location:taskautomaton:released2{}
+location:taskautomaton:tasktemp2{}
+location:taskautomaton:released3{}
+location:taskautomaton:tasktemp3{}
+location:taskautomaton:released4{}
+location:taskautomaton:tasktemp4{}
+edge:taskautomaton:init:released1:release1{provided: zerotime<=0}
+edge:taskautomaton:released1:released2:release2{provided: zerotime<=0}
+edge:taskautomaton:released2:released3:release3{provided: zerotime<=0}
+edge:taskautomaton:released3:released4:release4{provided: zerotime<=0}
+edge:taskautomaton:released4:tasktemp1:done1{do: zerotime=0}
+edge:taskautomaton:tasktemp1:released4:release1{provided: zerotime<=0}
+edge:taskautomaton:released4:tasktemp2:done2{do: zerotime=0}
+edge:taskautomaton:tasktemp2:released4:release2{provided: zerotime<=0}
+edge:taskautomaton:released4:tasktemp3:done3{do: zerotime=0}
+edge:taskautomaton:tasktemp3:released4:release3{provided: zerotime<=0}
+edge:taskautomaton:released4:tasktemp4:done4{do: zerotime=0}
+edge:taskautomaton:tasktemp4:released4:release4{provided: zerotime<=0}
+
+# ERROR automaton
+
+process:errorautomaton
+location:errorautomaton:init{initial:}
+location:errorautomaton:final{labels: error}
+edge:errorautomaton:init:final:error1{}
+edge:errorautomaton:final:final:error1{}
+edge:errorautomaton:init:final:error2{}
+edge:errorautomaton:final:final:error2{}
+edge:errorautomaton:init:final:error3{}
+edge:errorautomaton:final:final:error3{}
+edge:errorautomaton:init:final:error4{}
+edge:errorautomaton:final:final:error4{}
+
+# Timing automaton
+
+process:timingautomaton
+location:timingautomaton:timeinit{initial:}
+clock:1:t
+
+# Synchronizations
+
+sync:taskautomaton@release1:scheduler@release1:task1@release1:task2@release1:task3@release1:task4@release1
+sync:taskautomaton@release2:scheduler@release2:task1@release2:task2@release2:task3@release2:task4@release2
+sync:taskautomaton@release3:scheduler@release3:task1@release3:task2@release3:task3@release3:task4@release3
+sync:taskautomaton@release4:scheduler@release4:task1@release4:task2@release4:task3@release4:task4@release4
+sync:scheduler@run1:task1@run1:task2@run1:task3@run1:task4@run1
+sync:scheduler@run2:task2@run2:task1@run2:task3@run2:task4@run2
+sync:scheduler@run3:task3@run3:task1@run3:task2@run3:task4@run3
+sync:scheduler@run4:task4@run4:task1@run4:task2@run4:task3@run4
+sync:task1@done1:scheduler@done1:taskautomaton@done1:task2@done1:task3@done1:task4@done1
+sync:task2@done2:scheduler@done2:taskautomaton@done2:task1@done2:task3@done2:task4@done2
+sync:task3@done3:scheduler@done3:taskautomaton@done3:task1@done3:task2@done3:task4@done3
+sync:task4@done4:scheduler@done4:taskautomaton@done4:task1@done4:task2@done4:task3@done4
+sync:task1@error1:errorautomaton@error1
+sync:task2@error2:errorautomaton@error2
+sync:task3@error3:errorautomaton@error3
+sync:task4@error4:errorautomaton@error4
+

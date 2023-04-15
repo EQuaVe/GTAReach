@@ -1,0 +1,146 @@
+digraph csmacd_3_808_26 {
+node [shape="box",style="rounded"];
+n0 [label="<Idle,Wait,Wait,Wait> j=1 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n1 [label="<Active,Start,Wait,Wait> j=1 (0<=y<=808 & 0<=x1<=808 & 0<=x2 & 0<=x3 & y=x1 & y-x2<=808 & y-x3<=808 & x1-x2<=808 & x1-x3<=808)"]
+n0 -> n1
+n2 [label="<Active,Wait,Start,Wait> j=1 (0<=y<=808 & 0<=x1 & 0<=x2<=808 & 0<=x3 & y-x1<=808 & y=x2 & y-x3<=808 & -808<=x1-x2 & x2-x3<=808)"]
+n0 -> n2
+n3 [label="<Active,Wait,Wait,Start> j=1 (0<=y<=808 & 0<=x1 & 0<=x2 & 0<=x3<=808 & y-x1<=808 & y-x2<=808 & y=x3 & -808<=x1-x3 & -808<=x2-x3)"]
+n0 -> n3
+n4 [label="<Collision,Start,Wait,Start> j=1 (0<=y & 0<=x1<26 & 0<=x2 & 0<=x3<52 & 0<=y-x1 & -26<y-x3 & x1-x2<26 & -26<x1-x3<=0 & -52<x2-x3)"]
+n3 -> n4
+n5 [label="<Active,Retry,Wait,Start> j=1 (26<=y<=808 & 0<=x1 & 0<=x2 & 26<=x3<=808 & y-x1<=808 & y-x2<=808 & y=x3 & -808<=x1-x3 & -808<=x2-x3)"]
+n3 -> n5
+n6 [label="<Collision,Wait,Start,Start> j=1 (0<=y & 0<=x1 & 0<=x2<26 & 0<=x3<52 & 0<=y-x2 & -26<y-x3 & -26<x1-x2 & -52<x1-x3 & -26<x2-x3<=0)"]
+n3 -> n6
+n7 [label="<Active,Wait,Retry,Start> j=1 (26<=y<=808 & 0<=x1 & 0<=x2 & 26<=x3<=808 & y-x1<=808 & y-x2<=808 & y=x3 & -808<=x1-x3 & -808<=x2-x3)"]
+n3 -> n7
+n3 -> n0
+n8 [label="<Active,Retry,Retry,Start> j=1 (26<=y<=808 & 0<=x1 & 0<=x2 & 26<=x3<=808 & y-x1<=808 & y-x2<=808 & y=x3 & -808<=x1-x3 & -808<=x2-x3)"]
+n7 -> n8
+n7 -> n7
+n9 [label="<Idle,Wait,Retry,Wait> j=1 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n7 -> n9
+n10 [label="<Active,Start,Retry,Wait> j=1 (0<=y<52 & 0<=x1<52 & 0<=x2 & 0<=x3 & y=x1 & y-x2<=0 & y-x3<52 & x1-x2<=0 & x1-x3<52)"]
+n9 -> n10
+n9 -> n2
+n9 -> n7
+n11 [label="<Collision,Start,Start,Wait> j=1 (0<=y & 0<=x1<52 & 0<=x2<26 & 0<=x3 & -26<y-x1 & 0<=y-x2 & 0<=x1-x2<26 & x1-x3<52 & x2-x3<26)"]
+n10 -> n11
+n10 -> n10
+n12 [label="<Collision,Start,Retry,Start> j=1 (0<=y & 0<=x1<52 & 0<=x2 & 0<=x3<26 & -26<y-x1 & 0<=y-x3 & x1-x2<=0 & 0<=x1-x3<26 & 0<=x2-x3)"]
+n10 -> n12
+n13 [label="<Active,Start,Retry,Retry> j=1 (26<=y<52 & 26<=x1<52 & 26<=x2 & 0<=x3 & y=x1 & y-x2<=0 & y-x3<52 & x1-x2<=0 & x1-x3<52)"]
+n10 -> n13
+n13 -> n13
+n13 -> n13
+n14 [label="<Loop,Start,Retry,Start> j=1 (0<=y & 0<=x1<52 & 0<=x2 & 0<=x3<26 & -26<y-x1 & 0<=y-x3 & x1-x2<=0 & 0<=x1-x3<26 & 0<=x2-x3)"]
+n12 -> n14
+n15 [label="<Loop,Retry,Retry,Start> j=2 (0<=y & 0<=x1 & 0<=x2 & 0<=x3<26 & 0<=y-x3 & -26<x1-x3 & 0<=x2-x3)"]
+n14 -> n15
+n16 [label="<Loop,Retry,Retry,Start> j=3 (0<=y & 0<=x1 & 0<=x2 & 0<=x3<26 & 0<=y-x3 & -26<x1-x3 & -26<x2-x3)"]
+n15 -> n16
+n17 [label="<Loop,Retry,Retry,Retry> j=4 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n16 -> n17
+n18 [label="<Idle,Retry,Retry,Retry> j=1 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n17 -> n18
+n18 -> n13
+n19 [label="<Active,Retry,Start,Retry> j=1 (0<=y<52 & 0<=x1 & 0<=x2<52 & 0<=x3 & y-x1<=0 & y=x2 & y-x3<=0 & 0<=x1-x2 & x2-x3<=0)"]
+n18 -> n19
+n18 -> n8
+n20 [label="<Collision,Start,Start,Retry> j=1 (0<=y & 0<=x1<26 & 0<=x2<52 & 0<=x3 & 0<=y-x1 & -26<y-x2 & -26<x1-x2<=0 & x1-x3<=0 & x2-x3<=0)"]
+n19 -> n20
+n19 -> n19
+n21 [label="<Collision,Retry,Start,Start> j=1 (0<=y & 0<=x1 & 0<=x2<52 & 0<=x3<26 & -26<y-x2 & 0<=y-x3 & 0<=x1-x2 & 0<=x1-x3 & 0<=x2-x3<26)"]
+n19 -> n21
+n19 -> n19
+n22 [label="<Loop,Retry,Start,Start> j=1 (0<=y & 0<=x1 & 0<=x2<52 & 0<=x3<26 & -26<y-x2 & 0<=y-x3 & 0<=x1-x2 & 0<=x1-x3 & 0<=x2-x3<26)"]
+n21 -> n22
+n23 [label="<Loop,Retry,Start,Start> j=2 (0<=y & 0<=x1 & 0<=x2<52 & 0<=x3<26 & -26<y-x2 & 0<=y-x3 & -52<x1-x2 & -26<x1-x3 & 0<=x2-x3<26)"]
+n22 -> n23
+n23 -> n16
+n24 [label="<Loop,Start,Start,Retry> j=1 (0<=y & 0<=x1<26 & 0<=x2<52 & 0<=x3 & 0<=y-x1 & -26<y-x2 & -26<x1-x2<=0 & x1-x3<=0 & x2-x3<=0)"]
+n20 -> n24
+n25 [label="<Loop,Retry,Start,Retry> j=2 (0<=y & 0<=x1 & 0<=x2<52 & 0<=x3 & -26<y-x2 & -52<x1-x2 & x2-x3<=0)"]
+n24 -> n25
+n26 [label="<Loop,Retry,Retry,Retry> j=3 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n25 -> n26
+n26 -> n17
+n27 [label="<Loop,Start,Start,Wait> j=1 (0<=y & 0<=x1<52 & 0<=x2<26 & 0<=x3 & -26<y-x1 & 0<=y-x2 & 0<=x1-x2<26 & x1-x3<52 & x2-x3<26)"]
+n11 -> n27
+n28 [label="<Loop,Retry,Start,Wait> j=2 (0<=y & 0<=x1 & 0<=x2<26 & 0<=x3 & 0<=y-x2 & -26<x1-x2 & x2-x3<26)"]
+n27 -> n28
+n29 [label="<Loop,Retry,Retry,Wait> j=3 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n28 -> n29
+n30 [label="<Loop,Retry,Retry,Wait> j=4 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n29 -> n30
+n29 -> n17
+n31 [label="<Idle,Retry,Retry,Wait> j=1 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n30 -> n31
+n31 -> n10
+n32 [label="<Active,Retry,Start,Wait> j=1 (0<=y<52 & 0<=x1 & 0<=x2<52 & 0<=x3 & y-x1<=0 & y=x2 & y-x3<52 & 0<=x1-x2 & x2-x3<52)"]
+n31 -> n32
+n31 -> n8
+n32 -> n11
+n32 -> n32
+n32 -> n21
+n32 -> n19
+n8 -> n8
+n8 -> n8
+n8 -> n31
+n33 [label="<Loop,Wait,Start,Start> j=1 (0<=y & 0<=x1 & 0<=x2<26 & 0<=x3<52 & 0<=y-x2 & -26<y-x3 & -26<x1-x2 & -52<x1-x3 & -26<x2-x3<=0)"]
+n6 -> n33
+n34 [label="<Loop,Wait,Start,Start> j=2 (0<=y & 0<=x1 & 0<=x2<26 & 0<=x3<52 & 0<=y-x2 & -26<y-x3 & -26<x1-x2 & -52<x1-x3 & -26<x2-x3<=0)"]
+n33 -> n34
+n33 -> n23
+n35 [label="<Loop,Wait,Retry,Start> j=3 (0<=y & 0<=x1 & 0<=x2 & 0<=x3<52 & -26<y-x3 & -52<x1-x3 & -52<x2-x3)"]
+n34 -> n35
+n36 [label="<Loop,Wait,Retry,Retry> j=4 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n35 -> n36
+n37 [label="<Idle,Wait,Retry,Retry> j=1 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n36 -> n37
+n37 -> n13
+n38 [label="<Active,Wait,Start,Retry> j=1 (0<=y<52 & 0<=x1 & 0<=x2<52 & 0<=x3 & y-x1<52 & y=x2 & y-x3<=0 & -52<x1-x2 & x2-x3<=0)"]
+n37 -> n38
+n37 -> n7
+n38 -> n20
+n38 -> n19
+n38 -> n6
+n38 -> n38
+n5 -> n5
+n5 -> n8
+n39 [label="<Idle,Retry,Wait,Wait> j=1 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n5 -> n39
+n39 -> n1
+n39 -> n32
+n39 -> n5
+n40 [label="<Loop,Start,Wait,Start> j=1 (0<=y & 0<=x1<26 & 0<=x2 & 0<=x3<52 & 0<=y-x1 & -26<y-x3 & x1-x2<26 & -26<x1-x3<=0 & -52<x2-x3)"]
+n4 -> n40
+n41 [label="<Loop,Retry,Wait,Start> j=2 (0<=y & 0<=x1 & 0<=x2 & 0<=x3<52 & -26<y-x3 & -52<x1-x3 & -52<x2-x3)"]
+n40 -> n41
+n42 [label="<Loop,Retry,Wait,Start> j=3 (0<=y & 0<=x1 & 0<=x2 & 0<=x3<52 & -26<y-x3 & -52<x1-x3 & -52<x2-x3)"]
+n41 -> n42
+n41 -> n16
+n43 [label="<Loop,Retry,Wait,Retry> j=4 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n42 -> n43
+n44 [label="<Idle,Retry,Wait,Retry> j=1 (0<=y & 0<=x1 & 0<=x2 & 0<=x3)"]
+n43 -> n44
+n45 [label="<Active,Start,Wait,Retry> j=1 (0<=y<52 & 0<=x1<52 & 0<=x2 & 0<=x3 & y=x1 & y-x2<52 & y-x3<=0 & x1-x2<52 & x1-x3<=0)"]
+n44 -> n45
+n44 -> n19
+n44 -> n5
+n45 -> n20
+n45 -> n13
+n45 -> n4
+n45 -> n45
+n2 -> n11
+n2 -> n32
+n2 -> n0
+n2 -> n6
+n2 -> n38
+n1 -> n0
+n1 -> n11
+n1 -> n10
+n1 -> n4
+n1 -> n45
+}

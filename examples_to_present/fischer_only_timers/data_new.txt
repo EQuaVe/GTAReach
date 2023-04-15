@@ -1,0 +1,31 @@
+============================+++++==============================
+fischer_param_3.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 27
+RUNNING_TIME_SECONDS 0.00629592
+STORED_STATES 46
+VISITED_STATES 46
+============================+++++==============================
+fischer_param_4.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 260
+RUNNING_TIME_SECONDS 0.162804
+STORED_STATES 217
+VISITED_STATES 217
+============================+++++==============================
+fischer_param_5.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+COVERED_STATES 2305
+RUNNING_TIME_SECONDS 4.11683
+STORED_STATES 1166
+VISITED_STATES 1166
+============================+++++==============================

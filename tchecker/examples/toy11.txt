@@ -1,0 +1,26 @@
+system:toy11_toy9
+
+event:a:1:1
+event:b:1:1
+event:c:1:1
+#event:d:1:1
+#event:e:1:1
+
+process:P
+location:P:l0{initial:}
+location:P:l1{}
+location:P:l2{}
+location:P:l3{}
+location:P:l5{labels: green}
+
+
+edge:P:l0:l1:a{}
+edge:P:l1:l1:a{provided: a_h==1 && b_p<=-100000}
+edge:P:l1:l1:a{provided: a_h==1 && c_p<=-100000}
+#edge:P:l1:l1:a{provided: a_h==1 && b_p<=-10}
+#edge:P:l1:l1:a{provided: a_h==1 && c_p<=-10}
+
+edge:P:l1:l2:b{}
+
+#edge:P:l1:l1:a{provided: a_h==1 && d_p<=-100000}
+#edge:P:l1:l1:a{provided: a_h==1 && e_p<=-100000}

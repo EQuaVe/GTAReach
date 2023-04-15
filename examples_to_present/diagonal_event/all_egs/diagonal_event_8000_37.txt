@@ -1,0 +1,19 @@
+system:diagonal_event_8000_37
+
+
+event:a:1:0
+event:b:0:1
+event:c
+
+process:P
+location:P:q0{initial:}
+location:P:q1{}
+location:P:q2{}
+location:P:q3{labels: green}
+
+
+edge:P:q0:q1:a{{}}
+edge:P:q1:q2:c{{provided:a_h-b_p==8000;}}
+
+edge:P:q2:q2:a{{provided:a_h==37;}}
+edge:P:q2:q3:b{{provided:a_h==0;}}

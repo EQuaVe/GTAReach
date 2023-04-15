@@ -1,0 +1,34 @@
+system:exp_example_100_0
+
+clock:1:zycge100
+clock:1:xb
+clock:1:xa
+clock:1:zybge100
+
+event:a
+event:b
+event:c
+
+process:P
+
+location:P:l0000{initial:}
+location:P:l1100{}
+location:P:l1100zybge100{}
+location:P:l1100zycge100{}
+location:P:l2110{}
+location:P:l1100zycge100_zybge100{}
+location:P:l2110zycge100{}
+
+edge:P:l0000:l1100:a{do: xa=0}
+edge:P:l1100:l1100zybge100:a{provided:xa==1 : do: xa=0; zybge100=0}
+edge:P:l1100:l1100zycge100:a{provided:xa==1 : do: xa=0; zycge100=0}
+edge:P:l1100:l2110:b{do: xb=0}
+edge:P:l1100zycge100:l1100zycge100_zybge100:a{provided:xa==1 : do: xa=0; zybge100=0}
+edge:P:l1100zycge100:l1100zycge100:a{provided:xa==1 : do: xa=0; zycge100=0}
+edge:P:l1100zycge100:l2110zycge100:b{do: xb=0}
+edge:P:l1100zycge100_zybge100:l1100zycge100_zybge100:a{provided:xa==1 : do: xa=0; zybge100=0}
+edge:P:l1100zycge100_zybge100:l1100zycge100_zybge100:a{provided:xa==1 : do: xa=0; zycge100=0}
+edge:P:l1100zycge100_zybge100:l2110zycge100:b{provided:zybge100>=100 : do: xb=0}
+edge:P:l1100zybge100:l1100zybge100:a{provided:xa==1 : do: xa=0; zybge100=0}
+edge:P:l1100zybge100:l1100zycge100_zybge100:a{provided:xa==1 : do: xa=0; zycge100=0}
+edge:P:l1100zybge100:l2110:b{provided:zybge100>=100 : do: xb=0}

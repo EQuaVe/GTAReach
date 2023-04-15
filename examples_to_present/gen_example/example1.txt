@@ -1,0 +1,37 @@
+system:eg_syntax
+
+
+event:a1:1:1
+
+event:b
+
+clock:prophecy:p1
+
+clock:timer:t
+
+process:P
+location:P:l0{initial:}
+location:P:l1{labels:green}
+
+
+location:P:p10{}
+location:P:p11{}
+location:P:p12{}
+location:P:p13{}
+
+
+
+edge:P:p10:p11:b{{}}
+edge:P:p11:p12:b{{}}
+edge:P:p12:l0:b{{provided:t==0;do:p1,t;}}
+
+edge:P:l0:p10:b{{provided:t==0 && a1_p==0;do:t=-10;}}
+
+
+edge:P:p11:p13:a1{{provided: p1==0 && a1_p==-1; do:p1;}}
+edge:P:p13:p11:a1{{provided: p1==0;}}
+
+
+
+edge:P:l0:l1:b{{provided: a1_h==0;}}
+

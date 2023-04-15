@@ -1,0 +1,144 @@
+csmacd_3_808_26
+0: <Idle,Wait,Wait,Wait> j=1 (y=0 & x1=0 & x2=0 & x3=0 & y=x1 & y=x2 & y=x3 & x1=x2 & x1=x3 & x2=x3)
+1: <Active,Start,Wait,Wait> j=1 (y=0 & x1=0 & 0<=x2 & 0<=x3 & y=x1 & y-x2<=0 & y-x3<=0 & x1-x2<=0 & x1-x3<=0 & x2=x3)
+0 -> 1  reset: y=0; x1=0 tgt inv: x1<=808
+2: <Active,Wait,Start,Wait> j=1 (y=0 & 0<=x1 & x2=0 & 0<=x3 & y-x1<=0 & y=x2 & y-x3<=0 & 0<=x1-x2 & x1=x3 & x2-x3<=0)
+0 -> 2  reset: y=0; x2=0 tgt inv: x2<=808
+3: <Active,Wait,Wait,Start> j=1 (y=0 & 0<=x1 & 0<=x2 & x3=0 & y-x1<=0 & y-x2<=0 & y=x3 & x1=x2 & 0<=x1-x3 & 0<=x2-x3)
+0 -> 3  reset: y=0; x3=0 tgt inv: x3<=808
+4: <Collision,Start,Wait,Start> j=1 (y=0 & x1=0 & 0<=x2 & 0<=x3<26 & y=x1 & y-x2<=0 & -26<y-x3<=0 & x1-x2<=0 & -26<x1-x3<=0 & 0<=x2-x3)
+3 -> 4 src inv: x3<=808 guard: y<26 reset: y=0; x1=0 tgt inv: y<26 & x1<=808 & x3<=808
+5: <Active,Retry,Wait,Start> j=1 (26<=y<=808 & x1=0 & 26<=x2 & 26<=x3<=808 & 26<=y-x1<=808 & y-x2<=0 & y=x3 & x1-x2<=-26 & -808<=x1-x3<=-26 & 0<=x2-x3)
+3 -> 5 src inv: x3<=808 guard: y>=26 reset: x1=0 tgt inv: x1<52 & x3<=808
+6: <Collision,Wait,Start,Start> j=1 (y=0 & 0<=x1 & x2=0 & 0<=x3<26 & y-x1<=0 & y=x2 & -26<y-x3<=0 & 0<=x1-x2 & 0<=x1-x3 & -26<x2-x3<=0)
+3 -> 6 src inv: x3<=808 guard: y<26 reset: y=0; x2=0 tgt inv: y<26 & x2<=808 & x3<=808
+7: <Active,Wait,Retry,Start> j=1 (26<=y<=808 & 26<=x1 & x2=0 & 26<=x3<=808 & y-x1<=0 & 26<=y-x2<=808 & y=x3 & 26<=x1-x2 & 0<=x1-x3 & -808<=x2-x3<=-26)
+3 -> 7 src inv: x3<=808 guard: y>=26 reset: x2=0 tgt inv: x2<52 & x3<=808
+3 -> 0 src inv: x3<=808 guard: x3<=808 & x3>=808 reset: y=0; x3=0
+8: <Active,Retry,Retry,Start> j=1 (26<=y<=808 & x1=0 & 0<=x2<52 & 26<=x3<=808 & 26<=y-x1<=808 & 26<=y-x2<=808 & y=x3 & -52<x1-x2<=0 & -808<=x1-x3<=-26 & -808<=x2-x3<=-26)
+7 -> 8 src inv: x2<52 & x3<=808 guard: y>=26 reset: x1=0 tgt inv: x1<52 & x2<52 & x3<=808
+7 -> 7 src inv: x2<52 & x3<=808 guard: y>=26 & x2<52 reset: x2=0 tgt inv: x2<52 & x3<=808
+9: <Idle,Wait,Retry,Wait> j=1 (y=0 & 808<=x1 & 0<=x2<52 & x3=0 & y-x1<=-808 & -52<y-x2<=0 & y=x3 & 756<x1-x2 & 808<=x1-x3 & 0<=x2-x3<52)
+7 -> 9 src inv: x2<52 & x3<=808 guard: x3<=808 & x3>=808 reset: y=0; x3=0 tgt inv: x2<52
+10: <Active,Start,Retry,Wait> j=1 (y=0 & x1=0 & 0<=x2<52 & 0<=x3<52 & y=x1 & -52<y-x2<=0 & -52<y-x3<=0 & -52<x1-x2<=0 & -52<x1-x3<=0 & 0<=x2-x3<52)
+9 -> 10 src inv: x2<52 reset: y=0; x1=0 tgt inv: x1<=808 & x2<52
+9 -> 2 src inv: x2<52 guard: x2<52 reset: y=0; x2=0 tgt inv: x2<=808
+9 -> 7 src inv: x2<52 reset: y=0; x3=0 tgt inv: x2<52 & x3<=808
+11: <Collision,Start,Start,Wait> j=1 (y=0 & 0<=x1<26 & x2=0 & 0<=x3<52 & -26<y-x1<=0 & y=x2 & -52<y-x3<=0 & 0<=x1-x2<26 & -52<x1-x3<=0 & -52<x2-x3<=0)
+10 -> 11 src inv: x1<=808 & x2<52 guard: y<26 & x2<52 reset: y=0; x2=0 tgt inv: y<26 & x1<=808 & x2<=808
+10 -> 10 src inv: x1<=808 & x2<52 guard: y>=26 & x2<52 reset: x2=0 tgt inv: x1<=808 & x2<52
+12: <Collision,Start,Retry,Start> j=1 (y=0 & 0<=x1<26 & 0<=x2<52 & x3=0 & -26<y-x1<=0 & -52<y-x2<=0 & y=x3 & -52<x1-x2<=0 & 0<=x1-x3<26 & 0<=x2-x3<52)
+10 -> 12 src inv: x1<=808 & x2<52 guard: y<26 reset: y=0; x3=0 tgt inv: y<26 & x1<=808 & x2<52 & x3<=808
+13: <Active,Start,Retry,Retry> j=1 (26<=y<52 & 26<=x1<52 & 26<=x2<52 & x3=0 & y=x1 & -26<y-x2<=0 & 26<=y-x3<52 & -26<x1-x2<=0 & 26<=x1-x3<52 & 26<=x2-x3<52)
+10 -> 13 src inv: x1<=808 & x2<52 guard: y>=26 reset: x3=0 tgt inv: x1<=808 & x2<52 & x3<52
+13 -> 13 src inv: x1<=808 & x2<52 & x3<52 guard: y>=26 & x2<52 reset: x2=0 tgt inv: x1<=808 & x2<52 & x3<52
+13 -> 13 src inv: x1<=808 & x2<52 & x3<52 guard: y>=26 & x3<52 reset: x3=0 tgt inv: x1<=808 & x2<52 & x3<52
+14: <Loop,Start,Retry,Start> j=1 (0<=y<26 & 0<=x1<52 & 0<=x2<52 & 0<=x3<26 & -26<y-x1<=0 & -52<y-x2<=0 & y=x3 & -52<x1-x2<=0 & 0<=x1-x3<26 & 0<=x2-x3<52)
+12 -> 14 src inv: y<26 & x1<=808 & x2<52 & x3<=808 guard: y<26 tgt inv: x1<=808 & x2<52 & x3<=808
+15: <Loop,Retry,Retry,Start> j=2 (0<=y<26 & x1=0 & 0<=x2<52 & 0<=x3<26 & 0<=y-x1<26 & -52<y-x2<=0 & y=x3 & -52<x1-x2<=0 & -26<x1-x3<=0 & 0<=x2-x3<52)
+14 -> 15 src inv: x1<=808 & x2<52 & x3<=808 guard: x1<26 reset: x1=0 tgt inv: x1<52 & x2<52 & x3<=808
+16: <Loop,Retry,Retry,Start> j=3 (0<=y<26 & x1=0 & x2=0 & 0<=x3<26 & 0<=y-x1<26 & 0<=y-x2<26 & y=x3 & x1=x2 & -26<x1-x3<=0 & -26<x2-x3<=0)
+15 -> 16 src inv: x1<52 & x2<52 & x3<=808 guard: x2<52 reset: x2=0 tgt inv: x1<52 & x2<52 & x3<=808
+17: <Loop,Retry,Retry,Retry> j=4 (0<=y<26 & x1=0 & x2=0 & x3=0 & 0<=y-x1<26 & 0<=y-x2<26 & 0<=y-x3<26 & x1=x2 & x1=x3 & x2=x3)
+16 -> 17 src inv: x1<52 & x2<52 & x3<=808 guard: x3<26 reset: x3=0 tgt inv: x1<52 & x2<52 & x3<52
+18: <Idle,Retry,Retry,Retry> j=1 (y=0 & x1=0 & x2=0 & x3=0 & y=x1 & y=x2 & y=x3 & x1=x2 & x1=x3 & x2=x3)
+17 -> 18 src inv: x1<52 & x2<52 & x3<52 guard: y<26 reset: y=0 tgt inv: x1<52 & x2<52 & x3<52
+18 -> 13 src inv: x1<52 & x2<52 & x3<52 guard: x1<52 reset: y=0; x1=0 tgt inv: x1<=808 & x2<52 & x3<52
+19: <Active,Retry,Start,Retry> j=1 (y=0 & 0<=x1<52 & x2=0 & 0<=x3<52 & -52<y-x1<=0 & y=x2 & -52<y-x3<=0 & 0<=x1-x2<52 & x1=x3 & -52<x2-x3<=0)
+18 -> 19 src inv: x1<52 & x2<52 & x3<52 guard: x2<52 reset: y=0; x2=0 tgt inv: x1<52 & x2<=808 & x3<52
+18 -> 8 src inv: x1<52 & x2<52 & x3<52 guard: x3<52 reset: y=0; x3=0 tgt inv: x1<52 & x2<52 & x3<=808
+20: <Collision,Start,Start,Retry> j=1 (y=0 & x1=0 & 0<=x2<26 & 0<=x3<52 & y=x1 & -26<y-x2<=0 & -52<y-x3<=0 & -26<x1-x2<=0 & -52<x1-x3<=0 & -52<x2-x3<=0)
+19 -> 20 src inv: x1<52 & x2<=808 & x3<52 guard: y<26 & x1<52 reset: y=0; x1=0 tgt inv: y<26 & x1<=808 & x2<=808 & x3<52
+19 -> 19 src inv: x1<52 & x2<=808 & x3<52 guard: y>=26 & x1<52 reset: x1=0 tgt inv: x1<52 & x2<=808 & x3<52
+21: <Collision,Retry,Start,Start> j=1 (y=0 & 0<=x1<52 & 0<=x2<26 & x3=0 & -52<y-x1<=0 & -26<y-x2<=0 & y=x3 & 0<=x1-x2<52 & 0<=x1-x3<52 & 0<=x2-x3<26)
+19 -> 21 src inv: x1<52 & x2<=808 & x3<52 guard: y<26 & x3<52 reset: y=0; x3=0 tgt inv: y<26 & x1<52 & x2<=808 & x3<=808
+19 -> 19 src inv: x1<52 & x2<=808 & x3<52 guard: y>=26 & x3<52 reset: x3=0 tgt inv: x1<52 & x2<=808 & x3<52
+22: <Loop,Retry,Start,Start> j=1 (0<=y<26 & 0<=x1<52 & 0<=x2<52 & 0<=x3<26 & -52<y-x1<=0 & -26<y-x2<=0 & y=x3 & 0<=x1-x2<52 & 0<=x1-x3<52 & 0<=x2-x3<26)
+21 -> 22 src inv: y<26 & x1<52 & x2<=808 & x3<=808 guard: y<26 tgt inv: x1<52 & x2<=808 & x3<=808
+23: <Loop,Retry,Start,Start> j=2 (0<=y<26 & x1=0 & 0<=x2<52 & 0<=x3<26 & 0<=y-x1<26 & -26<y-x2<=0 & y=x3 & -52<x1-x2<=0 & -26<x1-x3<=0 & 0<=x2-x3<26)
+22 -> 23 src inv: x1<52 & x2<=808 & x3<=808 guard: x1<52 reset: x1=0 tgt inv: x1<52 & x2<=808 & x3<=808
+23 -> 16 src inv: x1<52 & x2<=808 & x3<=808 guard: x2<26 reset: x2=0 tgt inv: x1<52 & x2<52 & x3<=808
+24: <Loop,Start,Start,Retry> j=1 (0<=y<26 & 0<=x1<26 & 0<=x2<52 & 0<=x3<52 & y=x1 & -26<y-x2<=0 & -52<y-x3<=0 & -26<x1-x2<=0 & -52<x1-x3<=0 & -52<x2-x3<=0)
+20 -> 24 src inv: y<26 & x1<=808 & x2<=808 & x3<52 guard: y<26 tgt inv: x1<=808 & x2<=808 & x3<52
+25: <Loop,Retry,Start,Retry> j=2 (0<=y<26 & x1=0 & 0<=x2<52 & 0<=x3<52 & 0<=y-x1<26 & -26<y-x2<=0 & -52<y-x3<=0 & -52<x1-x2<=0 & -52<x1-x3<=0 & -52<x2-x3<=0)
+24 -> 25 src inv: x1<=808 & x2<=808 & x3<52 guard: x1<26 reset: x1=0 tgt inv: x1<52 & x2<=808 & x3<52
+26: <Loop,Retry,Retry,Retry> j=3 (0<=y<26 & x1=0 & x2=0 & 0<=x3<52 & 0<=y-x1<26 & 0<=y-x2<26 & -52<y-x3<=0 & x1=x2 & -52<x1-x3<=0 & -52<x2-x3<=0)
+25 -> 26 src inv: x1<52 & x2<=808 & x3<52 guard: x2<26 reset: x2=0 tgt inv: x1<52 & x2<52 & x3<52
+26 -> 17 src inv: x1<52 & x2<52 & x3<52 guard: x3<52 reset: x3=0 tgt inv: x1<52 & x2<52 & x3<52
+27: <Loop,Start,Start,Wait> j=1 (0<=y<26 & 0<=x1<52 & 0<=x2<26 & 0<=x3<78 & -26<y-x1<=0 & y=x2 & -52<y-x3<=0 & 0<=x1-x2<26 & -52<x1-x3<=0 & -52<x2-x3<=0)
+11 -> 27 src inv: y<26 & x1<=808 & x2<=808 guard: y<26 tgt inv: x1<=808 & x2<=808
+28: <Loop,Retry,Start,Wait> j=2 (0<=y<26 & x1=0 & 0<=x2<26 & 0<=x3<78 & 0<=y-x1<26 & y=x2 & -52<y-x3<=0 & -26<x1-x2<=0 & -78<x1-x3<=0 & -52<x2-x3<=0)
+27 -> 28 src inv: x1<=808 & x2<=808 guard: x1<26 reset: x1=0 tgt inv: x1<52 & x2<=808
+29: <Loop,Retry,Retry,Wait> j=3 (0<=y<26 & x1=0 & x2=0 & 0<=x3<78 & 0<=y-x1<26 & 0<=y-x2<26 & -52<y-x3<=0 & x1=x2 & -78<x1-x3<=0 & -78<x2-x3<=0)
+28 -> 29 src inv: x1<52 & x2<=808 guard: x2<26 reset: x2=0 tgt inv: x1<52 & x2<52
+30: <Loop,Retry,Retry,Wait> j=4 (0<=y<26 & x1=0 & x2=0 & x3=0 & 0<=y-x1<26 & 0<=y-x2<26 & 0<=y-x3<26 & x1=x2 & x1=x3 & x2=x3)
+29 -> 30 src inv: x1<52 & x2<52 reset: x3=0 tgt inv: x1<52 & x2<52
+29 -> 17 src inv: x1<52 & x2<52 reset: x3=0 tgt inv: x1<52 & x2<52 & x3<52
+31: <Idle,Retry,Retry,Wait> j=1 (y=0 & x1=0 & x2=0 & x3=0 & y=x1 & y=x2 & y=x3 & x1=x2 & x1=x3 & x2=x3)
+30 -> 31 src inv: x1<52 & x2<52 guard: y<26 reset: y=0 tgt inv: x1<52 & x2<52
+31 -> 10 src inv: x1<52 & x2<52 guard: x1<52 reset: y=0; x1=0 tgt inv: x1<=808 & x2<52
+32: <Active,Retry,Start,Wait> j=1 (y=0 & 0<=x1<52 & x2=0 & 0<=x3<52 & -52<y-x1<=0 & y=x2 & -52<y-x3<=0 & 0<=x1-x2<52 & x1=x3 & -52<x2-x3<=0)
+31 -> 32 src inv: x1<52 & x2<52 guard: x2<52 reset: y=0; x2=0 tgt inv: x1<52 & x2<=808
+31 -> 8 src inv: x1<52 & x2<52 reset: y=0; x3=0 tgt inv: x1<52 & x2<52 & x3<=808
+32 -> 11 src inv: x1<52 & x2<=808 guard: y<26 & x1<52 reset: y=0; x1=0 tgt inv: y<26 & x1<=808 & x2<=808
+32 -> 32 src inv: x1<52 & x2<=808 guard: y>=26 & x1<52 reset: x1=0 tgt inv: x1<52 & x2<=808
+32 -> 21 src inv: x1<52 & x2<=808 guard: y<26 reset: y=0; x3=0 tgt inv: y<26 & x1<52 & x2<=808 & x3<=808
+32 -> 19 src inv: x1<52 & x2<=808 guard: y>=26 reset: x3=0 tgt inv: x1<52 & x2<=808 & x3<52
+8 -> 8 src inv: x1<52 & x2<52 & x3<=808 guard: y>=26 & x1<52 reset: x1=0 tgt inv: x1<52 & x2<52 & x3<=808
+8 -> 8 src inv: x1<52 & x2<52 & x3<=808 guard: y>=26 & x2<52 reset: x2=0 tgt inv: x1<52 & x2<52 & x3<=808
+8 -> 31 src inv: x1<52 & x2<52 & x3<=808 guard: x3<=808 & x3>=808 reset: y=0; x3=0 tgt inv: x1<52 & x2<52
+33: <Loop,Wait,Start,Start> j=1 (0<=y<26 & 0<=x1 & 0<=x2<26 & 0<=x3<52 & y-x1<=0 & y=x2 & -26<y-x3<=0 & 0<=x1-x2 & 0<=x1-x3 & -26<x2-x3<=0)
+6 -> 33 src inv: y<26 & x2<=808 & x3<=808 guard: y<26 tgt inv: x2<=808 & x3<=808
+34: <Loop,Wait,Start,Start> j=2 (0<=y<26 & x1=0 & 0<=x2<26 & 0<=x3<52 & 0<=y-x1<26 & y=x2 & -26<y-x3<=0 & -26<x1-x2<=0 & -52<x1-x3<=0 & -26<x2-x3<=0)
+33 -> 34 src inv: x2<=808 & x3<=808 reset: x1=0 tgt inv: x2<=808 & x3<=808
+33 -> 23 src inv: x2<=808 & x3<=808 reset: x1=0 tgt inv: x1<52 & x2<=808 & x3<=808
+35: <Loop,Wait,Retry,Start> j=3 (0<=y<26 & x1=0 & x2=0 & 0<=x3<52 & 0<=y-x1<26 & 0<=y-x2<26 & -26<y-x3<=0 & x1=x2 & -52<x1-x3<=0 & -52<x2-x3<=0)
+34 -> 35 src inv: x2<=808 & x3<=808 guard: x2<26 reset: x2=0 tgt inv: x2<52 & x3<=808
+36: <Loop,Wait,Retry,Retry> j=4 (0<=y<26 & x1=0 & x2=0 & x3=0 & 0<=y-x1<26 & 0<=y-x2<26 & 0<=y-x3<26 & x1=x2 & x1=x3 & x2=x3)
+35 -> 36 src inv: x2<52 & x3<=808 guard: x3<26 reset: x3=0 tgt inv: x2<52 & x3<52
+37: <Idle,Wait,Retry,Retry> j=1 (y=0 & x1=0 & x2=0 & x3=0 & y=x1 & y=x2 & y=x3 & x1=x2 & x1=x3 & x2=x3)
+36 -> 37 src inv: x2<52 & x3<52 guard: y<26 reset: y=0 tgt inv: x2<52 & x3<52
+37 -> 13 src inv: x2<52 & x3<52 reset: y=0; x1=0 tgt inv: x1<=808 & x2<52 & x3<52
+38: <Active,Wait,Start,Retry> j=1 (y=0 & 0<=x1<52 & x2=0 & 0<=x3<52 & -52<y-x1<=0 & y=x2 & -52<y-x3<=0 & 0<=x1-x2<52 & x1=x3 & -52<x2-x3<=0)
+37 -> 38 src inv: x2<52 & x3<52 guard: x2<52 reset: y=0; x2=0 tgt inv: x2<=808 & x3<52
+37 -> 7 src inv: x2<52 & x3<52 guard: x3<52 reset: y=0; x3=0 tgt inv: x2<52 & x3<=808
+38 -> 20 src inv: x2<=808 & x3<52 guard: y<26 reset: y=0; x1=0 tgt inv: y<26 & x1<=808 & x2<=808 & x3<52
+38 -> 19 src inv: x2<=808 & x3<52 guard: y>=26 reset: x1=0 tgt inv: x1<52 & x2<=808 & x3<52
+38 -> 6 src inv: x2<=808 & x3<52 guard: y<26 & x3<52 reset: y=0; x3=0 tgt inv: y<26 & x2<=808 & x3<=808
+38 -> 38 src inv: x2<=808 & x3<52 guard: y>=26 & x3<52 reset: x3=0 tgt inv: x2<=808 & x3<52
+5 -> 5 src inv: x1<52 & x3<=808 guard: y>=26 & x1<52 reset: x1=0 tgt inv: x1<52 & x3<=808
+5 -> 8 src inv: x1<52 & x3<=808 guard: y>=26 reset: x2=0 tgt inv: x1<52 & x2<52 & x3<=808
+39: <Idle,Retry,Wait,Wait> j=1 (y=0 & 0<=x1<52 & 808<=x2 & x3=0 & -52<y-x1<=0 & y-x2<=-808 & y=x3 & x1-x2<-756 & 0<=x1-x3<52 & 808<=x2-x3)
+5 -> 39 src inv: x1<52 & x3<=808 guard: x3<=808 & x3>=808 reset: y=0; x3=0 tgt inv: x1<52
+39 -> 1 src inv: x1<52 guard: x1<52 reset: y=0; x1=0 tgt inv: x1<=808
+39 -> 32 src inv: x1<52 reset: y=0; x2=0 tgt inv: x1<52 & x2<=808
+39 -> 5 src inv: x1<52 reset: y=0; x3=0 tgt inv: x1<52 & x3<=808
+40: <Loop,Start,Wait,Start> j=1 (0<=y<26 & 0<=x1<26 & 0<=x2 & 0<=x3<52 & y=x1 & y-x2<=0 & -26<y-x3<=0 & x1-x2<=0 & -26<x1-x3<=0 & 0<=x2-x3)
+4 -> 40 src inv: y<26 & x1<=808 & x3<=808 guard: y<26 tgt inv: x1<=808 & x3<=808
+41: <Loop,Retry,Wait,Start> j=2 (0<=y<26 & x1=0 & 0<=x2 & 0<=x3<52 & 0<=y-x1<26 & y-x2<=0 & -26<y-x3<=0 & x1-x2<=0 & -52<x1-x3<=0 & 0<=x2-x3)
+40 -> 41 src inv: x1<=808 & x3<=808 guard: x1<26 reset: x1=0 tgt inv: x1<52 & x3<=808
+42: <Loop,Retry,Wait,Start> j=3 (0<=y<26 & x1=0 & x2=0 & 0<=x3<52 & 0<=y-x1<26 & 0<=y-x2<26 & -26<y-x3<=0 & x1=x2 & -52<x1-x3<=0 & -52<x2-x3<=0)
+41 -> 42 src inv: x1<52 & x3<=808 reset: x2=0 tgt inv: x1<52 & x3<=808
+41 -> 16 src inv: x1<52 & x3<=808 reset: x2=0 tgt inv: x1<52 & x2<52 & x3<=808
+43: <Loop,Retry,Wait,Retry> j=4 (0<=y<26 & x1=0 & x2=0 & x3=0 & 0<=y-x1<26 & 0<=y-x2<26 & 0<=y-x3<26 & x1=x2 & x1=x3 & x2=x3)
+42 -> 43 src inv: x1<52 & x3<=808 guard: x3<26 reset: x3=0 tgt inv: x1<52 & x3<52
+44: <Idle,Retry,Wait,Retry> j=1 (y=0 & x1=0 & x2=0 & x3=0 & y=x1 & y=x2 & y=x3 & x1=x2 & x1=x3 & x2=x3)
+43 -> 44 src inv: x1<52 & x3<52 guard: y<26 reset: y=0 tgt inv: x1<52 & x3<52
+45: <Active,Start,Wait,Retry> j=1 (y=0 & x1=0 & 0<=x2<52 & 0<=x3<52 & y=x1 & -52<y-x2<=0 & -52<y-x3<=0 & -52<x1-x2<=0 & -52<x1-x3<=0 & x2=x3)
+44 -> 45 src inv: x1<52 & x3<52 guard: x1<52 reset: y=0; x1=0 tgt inv: x1<=808 & x3<52
+44 -> 19 src inv: x1<52 & x3<52 reset: y=0; x2=0 tgt inv: x1<52 & x2<=808 & x3<52
+44 -> 5 src inv: x1<52 & x3<52 guard: x3<52 reset: y=0; x3=0 tgt inv: x1<52 & x3<=808
+45 -> 20 src inv: x1<=808 & x3<52 guard: y<26 reset: y=0; x2=0 tgt inv: y<26 & x1<=808 & x2<=808 & x3<52
+45 -> 13 src inv: x1<=808 & x3<52 guard: y>=26 reset: x2=0 tgt inv: x1<=808 & x2<52 & x3<52
+45 -> 4 src inv: x1<=808 & x3<52 guard: y<26 & x3<52 reset: y=0; x3=0 tgt inv: y<26 & x1<=808 & x3<=808
+45 -> 45 src inv: x1<=808 & x3<52 guard: y>=26 & x3<52 reset: x3=0 tgt inv: x1<=808 & x3<52
+2 -> 11 src inv: x2<=808 guard: y<26 reset: y=0; x1=0 tgt inv: y<26 & x1<=808 & x2<=808
+2 -> 32 src inv: x2<=808 guard: y>=26 reset: x1=0 tgt inv: x1<52 & x2<=808
+2 -> 0 src inv: x2<=808 guard: x2<=808 & x2>=808 reset: y=0; x2=0
+2 -> 6 src inv: x2<=808 guard: y<26 reset: y=0; x3=0 tgt inv: y<26 & x2<=808 & x3<=808
+2 -> 38 src inv: x2<=808 guard: y>=26 reset: x3=0 tgt inv: x2<=808 & x3<52
+1 -> 0 src inv: x1<=808 guard: x1<=808 & x1>=808 reset: y=0; x1=0
+1 -> 11 src inv: x1<=808 guard: y<26 reset: y=0; x2=0 tgt inv: y<26 & x1<=808 & x2<=808
+1 -> 10 src inv: x1<=808 guard: y>=26 reset: x2=0 tgt inv: x1<=808 & x2<52
+1 -> 4 src inv: x1<=808 guard: y<26 reset: y=0; x3=0 tgt inv: y<26 & x1<=808 & x3<=808
+1 -> 45 src inv: x1<=808 guard: y>=26 reset: x3=0 tgt inv: x1<=808 & x3<52

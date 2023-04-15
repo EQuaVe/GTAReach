@@ -1,0 +1,1000 @@
+system parsed: 
+system:example_inf
+clock:1:tmp
+clock:1:p1
+clock:1:p2
+event:a
+event:b
+process:P
+location:P:q0{initial: }
+edge:P:q0:q0:a{provided: p1-p2<=0&& tmp<=0 : do: tmp=0;}
+
+System parsing error count: 0
+Normal_clock_ids: 
+Prophecy_clock_ids: 0, 1, 2, 
+History_clock_ids: 
+
+Printing Amap:
+0: G=[p1-p2<=0,] Gdf=[p1<=0,p1>=0,p2<=0,p2>=0,]
+
+
+ani:guards:1-2<=0
+ani:guards:0-2147483647<=0
+ani:-1118 outputting current zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+ani:-1119 outputted current zone
+ani:-221 conjoining guard 1-2<=0
+ani:-224 after conjoining guard:
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2118 outputting after executing program zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted after executing program zone
+ani:-2118 outputting next zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted next zone
+
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani: 1842 returning 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1988 0
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=inf	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+
+ani:guards:1-2<=0
+ani:guards:0-2147483647<=0
+ani:-1118 outputting current zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-1119 outputted current zone
+ani:-221 conjoining guard 1-2<=0
+ani:-224 after conjoining guard:
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2118 outputting after executing program zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted after executing program zone
+ani:-2118 outputting next zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted next zone
+
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani: 1842 returning 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1988 0
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=inf	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+
+ani:guards:1-2<=0
+ani:guards:0-2147483647<=0
+ani:-1118 outputting current zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-1119 outputted current zone
+ani:-221 conjoining guard 1-2<=0
+ani:-224 after conjoining guard:
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2118 outputting after executing program zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted after executing program zone
+ani:-2118 outputting next zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted next zone
+
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani: 1842 returning 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1988 0
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=inf	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+
+ani:guards:1-2<=0
+ani:guards:0-2147483647<=0
+ani:-1118 outputting current zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-1119 outputted current zone
+ani:-221 conjoining guard 1-2<=0
+ani:-224 after conjoining guard:
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2118 outputting after executing program zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted after executing program zone
+ani:-2118 outputting next zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted next zone
+
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani: 1842 returning 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1988 0
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=inf	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+
+ani:guards:1-2<=0
+ani:guards:0-2147483647<=0
+ani:-1118 outputting current zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-1119 outputted current zone
+ani:-221 conjoining guard 1-2<=0
+ani:-224 after conjoining guard:
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2118 outputting after executing program zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted after executing program zone
+ani:-2118 outputting next zone
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani:-2119 outputted next zone
+
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani: 1842 returning 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1988 0
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=inf	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=inf	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+ani: 1514 inside g le nd
+ani:1682 condition 3 for prop-prop clocks2 1
+ani: 1842 returning 0
+ani: 1939 returning prop-prop diagonal guard =-inf =-inf false
+inside eca_g_le
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+-----
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=0	<=inf	<=0	<=0	
+<=0	<=inf	<=inf	<=0	
+
+ani:1839 inside eca_g_le_star: p1-p2<=0, 
+ani:1894 1
+ani:1839 inside eca_g_le_star: 
+ani: 1510 inside g le nd
+<=0	<=inf	<=inf	<=inf	
+<=0	<=0	<=inf	<=inf	
+<=-inf	<=inf	<=0	<=0	
+<=-inf	<=inf	<=inf	<=0	
+

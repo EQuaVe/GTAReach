@@ -1,0 +1,17 @@
+system:example_exp
+
+clock:prophecy:c
+
+event:a:1:1
+event:b:1:1
+
+process:P
+location:P:q0{initial:}
+location:P:q2{label:green}
+location:P:q1{label:green}
+
+edge:P:q0:q1:a{{ }}
+edge:P:q1:q1:a{{ provided:a_h==1 && c<=-100; }}
+edge:P:q1:q1:a{{ provided:a_h==1 && b_h<=100; }}
+edge:P:q1:q2:b{{  }}
+

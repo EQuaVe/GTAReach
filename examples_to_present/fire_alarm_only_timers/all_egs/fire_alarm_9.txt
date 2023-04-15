@@ -1,0 +1,273 @@
+#clock:size:name
+#int:size:min:max:init:name
+#process:name
+#event:name
+#location:process:name{attributes}
+#edge:process:source:target:event:{attributes}
+#sync:events
+#   where
+#   attributes is a colon-separated list of key:value
+#   events is a colon-separated list of process@event
+
+system:fire_alarm_9_10_450
+
+# Events
+event:tau
+event:alive
+event:ack
+
+event:sensor_sync
+
+
+
+    
+# Sensor processes
+process:sensor1
+
+clock:timer:x1
+
+
+location:sensor1:init{initial:}
+
+location:sensor1:ini{}
+location:sensor1:wait{}
+location:sensor1:sent{}
+location:sensor1:fin{}
+
+edge:sensor1:init:ini:sensor_sync{{provided: x1==-450;}}
+
+edge:sensor1:ini:wait:tau{{provided: x1==-440;}}
+edge:sensor1:wait:sent:alive{{provided: x1<=-435;}}
+edge:sensor1:sent:fin:ack{{provided: x1<=-430;}}
+edge:sensor1:sent:fin:tau{{provided: x1==-430;}}
+edge:sensor1:fin:ini:tau{{provided: x1==0; do: x1=-450;}}
+
+
+
+
+    
+# Sensor processes
+process:sensor2
+
+clock:timer:x2
+
+
+location:sensor2:init{initial:}
+
+location:sensor2:ini{}
+location:sensor2:wait{}
+location:sensor2:sent{}
+location:sensor2:fin{}
+
+edge:sensor2:init:ini:sensor_sync{{provided: x2==-450;}}
+
+edge:sensor2:ini:wait:tau{{provided: x2==-420;}}
+edge:sensor2:wait:sent:alive{{provided: x2<=-415;}}
+edge:sensor2:sent:fin:ack{{provided: x2<=-410;}}
+edge:sensor2:sent:fin:tau{{provided: x2==-410;}}
+edge:sensor2:fin:ini:tau{{provided: x2==0; do: x2=-450;}}
+
+
+
+
+    
+# Sensor processes
+process:sensor3
+
+clock:timer:x3
+
+
+location:sensor3:init{initial:}
+
+location:sensor3:ini{}
+location:sensor3:wait{}
+location:sensor3:sent{}
+location:sensor3:fin{}
+
+edge:sensor3:init:ini:sensor_sync{{provided: x3==-450;}}
+
+edge:sensor3:ini:wait:tau{{provided: x3==-400;}}
+edge:sensor3:wait:sent:alive{{provided: x3<=-395;}}
+edge:sensor3:sent:fin:ack{{provided: x3<=-390;}}
+edge:sensor3:sent:fin:tau{{provided: x3==-390;}}
+edge:sensor3:fin:ini:tau{{provided: x3==0; do: x3=-450;}}
+
+
+
+
+    
+# Sensor processes
+process:sensor4
+
+clock:timer:x4
+
+
+location:sensor4:init{initial:}
+
+location:sensor4:ini{}
+location:sensor4:wait{}
+location:sensor4:sent{}
+location:sensor4:fin{}
+
+edge:sensor4:init:ini:sensor_sync{{provided: x4==-450;}}
+
+edge:sensor4:ini:wait:tau{{provided: x4==-380;}}
+edge:sensor4:wait:sent:alive{{provided: x4<=-375;}}
+edge:sensor4:sent:fin:ack{{provided: x4<=-370;}}
+edge:sensor4:sent:fin:tau{{provided: x4==-370;}}
+edge:sensor4:fin:ini:tau{{provided: x4==0; do: x4=-450;}}
+
+
+
+
+    
+# Sensor processes
+process:sensor5
+
+clock:timer:x5
+
+
+location:sensor5:init{initial:}
+
+location:sensor5:ini{}
+location:sensor5:wait{}
+location:sensor5:sent{}
+location:sensor5:fin{}
+
+edge:sensor5:init:ini:sensor_sync{{provided: x5==-450;}}
+
+edge:sensor5:ini:wait:tau{{provided: x5==-360;}}
+edge:sensor5:wait:sent:alive{{provided: x5<=-355;}}
+edge:sensor5:sent:fin:ack{{provided: x5<=-350;}}
+edge:sensor5:sent:fin:tau{{provided: x5==-350;}}
+edge:sensor5:fin:ini:tau{{provided: x5==0; do: x5=-450;}}
+
+
+
+
+    
+# Sensor processes
+process:sensor6
+
+clock:timer:x6
+
+
+location:sensor6:init{initial:}
+
+location:sensor6:ini{}
+location:sensor6:wait{}
+location:sensor6:sent{}
+location:sensor6:fin{}
+
+edge:sensor6:init:ini:sensor_sync{{provided: x6==-450;}}
+
+edge:sensor6:ini:wait:tau{{provided: x6==-340;}}
+edge:sensor6:wait:sent:alive{{provided: x6<=-335;}}
+edge:sensor6:sent:fin:ack{{provided: x6<=-330;}}
+edge:sensor6:sent:fin:tau{{provided: x6==-330;}}
+edge:sensor6:fin:ini:tau{{provided: x6==0; do: x6=-450;}}
+
+
+
+
+    
+# Sensor processes
+process:sensor7
+
+clock:timer:x7
+
+
+location:sensor7:init{initial:}
+
+location:sensor7:ini{}
+location:sensor7:wait{}
+location:sensor7:sent{}
+location:sensor7:fin{}
+
+edge:sensor7:init:ini:sensor_sync{{provided: x7==-450;}}
+
+edge:sensor7:ini:wait:tau{{provided: x7==-320;}}
+edge:sensor7:wait:sent:alive{{provided: x7<=-315;}}
+edge:sensor7:sent:fin:ack{{provided: x7<=-310;}}
+edge:sensor7:sent:fin:tau{{provided: x7==-310;}}
+edge:sensor7:fin:ini:tau{{provided: x7==0; do: x7=-450;}}
+
+
+
+
+    
+# Sensor processes
+process:sensor8
+
+clock:timer:x8
+
+
+location:sensor8:init{initial:}
+
+location:sensor8:ini{}
+location:sensor8:wait{}
+location:sensor8:sent{}
+location:sensor8:fin{}
+
+edge:sensor8:init:ini:sensor_sync{{provided: x8==-450;}}
+
+edge:sensor8:ini:wait:tau{{provided: x8==-300;}}
+edge:sensor8:wait:sent:alive{{provided: x8<=-295;}}
+edge:sensor8:sent:fin:ack{{provided: x8<=-290;}}
+edge:sensor8:sent:fin:tau{{provided: x8==-290;}}
+edge:sensor8:fin:ini:tau{{provided: x8==0; do: x8=-450;}}
+
+
+
+
+    
+# Sensor processes
+process:sensor9
+
+clock:timer:x9
+
+
+location:sensor9:init{initial:}
+
+location:sensor9:ini{}
+location:sensor9:wait{}
+location:sensor9:sent{}
+location:sensor9:fin{}
+
+edge:sensor9:init:ini:sensor_sync{{provided: x9==-450;}}
+
+edge:sensor9:ini:wait:tau{{provided: x9==-280;}}
+edge:sensor9:wait:sent:alive{{provided: x9<=-275;}}
+edge:sensor9:sent:fin:ack{{provided: x9<=-270;}}
+edge:sensor9:sent:fin:tau{{provided: x9==-270;}}
+edge:sensor9:fin:ini:tau{{provided: x9==0; do: x9=-450;}}
+
+
+# Central process
+process:C
+location:C:I{initial:}
+edge:C:I:I:ack{}
+edge:C:I:I:alive{}
+
+# Synchronizations
+sync:sensor1@alive:C@alive
+sync:sensor1@ack:C@ack
+sync:sensor2@alive:C@alive
+sync:sensor2@ack:C@ack
+sync:sensor3@alive:C@alive
+sync:sensor3@ack:C@ack
+sync:sensor4@alive:C@alive
+sync:sensor4@ack:C@ack
+sync:sensor5@alive:C@alive
+sync:sensor5@ack:C@ack
+sync:sensor6@alive:C@alive
+sync:sensor6@ack:C@ack
+sync:sensor7@alive:C@alive
+sync:sensor7@ack:C@ack
+sync:sensor8@alive:C@alive
+sync:sensor8@ack:C@ack
+sync:sensor9@alive:C@alive
+sync:sensor9@ack:C@ack
+
+sync:sensor1@sensor_sync:sensor2@sensor_sync:sensor3@sensor_sync:sensor4@sensor_sync:sensor5@sensor_sync:sensor6@sensor_sync:sensor7@sensor_sync:sensor8@sensor_sync:sensor9@sensor_sync
+

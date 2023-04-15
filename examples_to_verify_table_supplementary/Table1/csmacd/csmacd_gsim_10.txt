@@ -1,0 +1,254 @@
+#clock:size:name
+#int:size:min:max:init:name
+#process:name
+#event:name
+#location:process:name{attributes}
+#edge:process:source:target:event:{attributes}
+#sync:events
+#   where
+#   attributes is a colon-separated list of key:value
+#   events is a colon-separated list of process@event
+
+system:csmacd_10_808_26
+
+event:tau
+event:begin
+event:busy
+event:end
+event:cd
+event:cd1
+event:cd2
+event:cd3
+event:cd4
+event:cd5
+event:cd6
+event:cd7
+event:cd8
+event:cd9
+event:cd10
+
+# Bus
+process:Bus
+int:1:1:11:1:j
+clock:1:y
+location:Bus:Idle{initial:}
+location:Bus:Active{}
+location:Bus:Collision{invariant:y<26}
+location:Bus:Loop{committed:}
+edge:Bus:Idle:Active:begin{do:y=0}
+edge:Bus:Active:Collision:begin{provided:y<26 : do:y=0}
+edge:Bus:Active:Active:busy{provided:y>=26}
+edge:Bus:Active:Idle:end{do:y=0}
+edge:Bus:Collision:Loop:tau{provided:y<26 : do:j=1}
+edge:Bus:Loop:Idle:tau{provided:j==10+1 &&y<26 : do:y=0;j=1}
+edge:Bus:Loop:Loop:cd1{provided:j==1 : do:j=j+1}
+edge:Bus:Loop:Loop:cd2{provided:j==2 : do:j=j+1}
+edge:Bus:Loop:Loop:cd3{provided:j==3 : do:j=j+1}
+edge:Bus:Loop:Loop:cd4{provided:j==4 : do:j=j+1}
+edge:Bus:Loop:Loop:cd5{provided:j==5 : do:j=j+1}
+edge:Bus:Loop:Loop:cd6{provided:j==6 : do:j=j+1}
+edge:Bus:Loop:Loop:cd7{provided:j==7 : do:j=j+1}
+edge:Bus:Loop:Loop:cd8{provided:j==8 : do:j=j+1}
+edge:Bus:Loop:Loop:cd9{provided:j==9 : do:j=j+1}
+edge:Bus:Loop:Loop:cd10{provided:j==10 : do:j=j+1}
+
+# Station 1
+process:Station1
+clock:1:x1
+location:Station1:Wait{initial:}
+location:Station1:Start{invariant:x1<=808}
+location:Station1:Retry{invariant:x1<2*26}
+edge:Station1:Wait:Start:begin{do:x1=0}
+edge:Station1:Wait:Retry:busy{do:x1=0}
+edge:Station1:Wait:Wait:cd{do:x1=0}
+edge:Station1:Wait:Retry:cd{do:x1=0}
+edge:Station1:Start:Wait:end{provided:x1==808 : do:x1=0}
+edge:Station1:Start:Retry:cd{provided:x1<26 : do:x1=0}
+edge:Station1:Retry:Start:begin{provided:x1<2*26 : do:x1=0}
+edge:Station1:Retry:Retry:busy{provided:x1<2*26 : do:x1=0}
+edge:Station1:Retry:Retry:cd{provided:x1<2*26 : do:x1=0}
+sync:Bus@begin:Station1@begin
+sync:Bus@busy:Station1@busy
+sync:Bus@cd1:Station1@cd
+sync:Bus@end:Station1@end
+
+# Station 2
+process:Station2
+clock:1:x2
+location:Station2:Wait{initial:}
+location:Station2:Start{invariant:x2<=808}
+location:Station2:Retry{invariant:x2<2*26}
+edge:Station2:Wait:Start:begin{do:x2=0}
+edge:Station2:Wait:Retry:busy{do:x2=0}
+edge:Station2:Wait:Wait:cd{do:x2=0}
+edge:Station2:Wait:Retry:cd{do:x2=0}
+edge:Station2:Start:Wait:end{provided:x2==808 : do:x2=0}
+edge:Station2:Start:Retry:cd{provided:x2<26 : do:x2=0}
+edge:Station2:Retry:Start:begin{provided:x2<2*26 : do:x2=0}
+edge:Station2:Retry:Retry:busy{provided:x2<2*26 : do:x2=0}
+edge:Station2:Retry:Retry:cd{provided:x2<2*26 : do:x2=0}
+sync:Bus@begin:Station2@begin
+sync:Bus@busy:Station2@busy
+sync:Bus@cd2:Station2@cd
+sync:Bus@end:Station2@end
+
+# Station 3
+process:Station3
+clock:1:x3
+location:Station3:Wait{initial:}
+location:Station3:Start{invariant:x3<=808}
+location:Station3:Retry{invariant:x3<2*26}
+edge:Station3:Wait:Start:begin{do:x3=0}
+edge:Station3:Wait:Retry:busy{do:x3=0}
+edge:Station3:Wait:Wait:cd{do:x3=0}
+edge:Station3:Wait:Retry:cd{do:x3=0}
+edge:Station3:Start:Wait:end{provided:x3==808 : do:x3=0}
+edge:Station3:Start:Retry:cd{provided:x3<26 : do:x3=0}
+edge:Station3:Retry:Start:begin{provided:x3<2*26 : do:x3=0}
+edge:Station3:Retry:Retry:busy{provided:x3<2*26 : do:x3=0}
+edge:Station3:Retry:Retry:cd{provided:x3<2*26 : do:x3=0}
+sync:Bus@begin:Station3@begin
+sync:Bus@busy:Station3@busy
+sync:Bus@cd3:Station3@cd
+sync:Bus@end:Station3@end
+
+# Station 4
+process:Station4
+clock:1:x4
+location:Station4:Wait{initial:}
+location:Station4:Start{invariant:x4<=808}
+location:Station4:Retry{invariant:x4<2*26}
+edge:Station4:Wait:Start:begin{do:x4=0}
+edge:Station4:Wait:Retry:busy{do:x4=0}
+edge:Station4:Wait:Wait:cd{do:x4=0}
+edge:Station4:Wait:Retry:cd{do:x4=0}
+edge:Station4:Start:Wait:end{provided:x4==808 : do:x4=0}
+edge:Station4:Start:Retry:cd{provided:x4<26 : do:x4=0}
+edge:Station4:Retry:Start:begin{provided:x4<2*26 : do:x4=0}
+edge:Station4:Retry:Retry:busy{provided:x4<2*26 : do:x4=0}
+edge:Station4:Retry:Retry:cd{provided:x4<2*26 : do:x4=0}
+sync:Bus@begin:Station4@begin
+sync:Bus@busy:Station4@busy
+sync:Bus@cd4:Station4@cd
+sync:Bus@end:Station4@end
+
+# Station 5
+process:Station5
+clock:1:x5
+location:Station5:Wait{initial:}
+location:Station5:Start{invariant:x5<=808}
+location:Station5:Retry{invariant:x5<2*26}
+edge:Station5:Wait:Start:begin{do:x5=0}
+edge:Station5:Wait:Retry:busy{do:x5=0}
+edge:Station5:Wait:Wait:cd{do:x5=0}
+edge:Station5:Wait:Retry:cd{do:x5=0}
+edge:Station5:Start:Wait:end{provided:x5==808 : do:x5=0}
+edge:Station5:Start:Retry:cd{provided:x5<26 : do:x5=0}
+edge:Station5:Retry:Start:begin{provided:x5<2*26 : do:x5=0}
+edge:Station5:Retry:Retry:busy{provided:x5<2*26 : do:x5=0}
+edge:Station5:Retry:Retry:cd{provided:x5<2*26 : do:x5=0}
+sync:Bus@begin:Station5@begin
+sync:Bus@busy:Station5@busy
+sync:Bus@cd5:Station5@cd
+sync:Bus@end:Station5@end
+
+# Station 6
+process:Station6
+clock:1:x6
+location:Station6:Wait{initial:}
+location:Station6:Start{invariant:x6<=808}
+location:Station6:Retry{invariant:x6<2*26}
+edge:Station6:Wait:Start:begin{do:x6=0}
+edge:Station6:Wait:Retry:busy{do:x6=0}
+edge:Station6:Wait:Wait:cd{do:x6=0}
+edge:Station6:Wait:Retry:cd{do:x6=0}
+edge:Station6:Start:Wait:end{provided:x6==808 : do:x6=0}
+edge:Station6:Start:Retry:cd{provided:x6<26 : do:x6=0}
+edge:Station6:Retry:Start:begin{provided:x6<2*26 : do:x6=0}
+edge:Station6:Retry:Retry:busy{provided:x6<2*26 : do:x6=0}
+edge:Station6:Retry:Retry:cd{provided:x6<2*26 : do:x6=0}
+sync:Bus@begin:Station6@begin
+sync:Bus@busy:Station6@busy
+sync:Bus@cd6:Station6@cd
+sync:Bus@end:Station6@end
+
+# Station 7
+process:Station7
+clock:1:x7
+location:Station7:Wait{initial:}
+location:Station7:Start{invariant:x7<=808}
+location:Station7:Retry{invariant:x7<2*26}
+edge:Station7:Wait:Start:begin{do:x7=0}
+edge:Station7:Wait:Retry:busy{do:x7=0}
+edge:Station7:Wait:Wait:cd{do:x7=0}
+edge:Station7:Wait:Retry:cd{do:x7=0}
+edge:Station7:Start:Wait:end{provided:x7==808 : do:x7=0}
+edge:Station7:Start:Retry:cd{provided:x7<26 : do:x7=0}
+edge:Station7:Retry:Start:begin{provided:x7<2*26 : do:x7=0}
+edge:Station7:Retry:Retry:busy{provided:x7<2*26 : do:x7=0}
+edge:Station7:Retry:Retry:cd{provided:x7<2*26 : do:x7=0}
+sync:Bus@begin:Station7@begin
+sync:Bus@busy:Station7@busy
+sync:Bus@cd7:Station7@cd
+sync:Bus@end:Station7@end
+
+# Station 8
+process:Station8
+clock:1:x8
+location:Station8:Wait{initial:}
+location:Station8:Start{invariant:x8<=808}
+location:Station8:Retry{invariant:x8<2*26}
+edge:Station8:Wait:Start:begin{do:x8=0}
+edge:Station8:Wait:Retry:busy{do:x8=0}
+edge:Station8:Wait:Wait:cd{do:x8=0}
+edge:Station8:Wait:Retry:cd{do:x8=0}
+edge:Station8:Start:Wait:end{provided:x8==808 : do:x8=0}
+edge:Station8:Start:Retry:cd{provided:x8<26 : do:x8=0}
+edge:Station8:Retry:Start:begin{provided:x8<2*26 : do:x8=0}
+edge:Station8:Retry:Retry:busy{provided:x8<2*26 : do:x8=0}
+edge:Station8:Retry:Retry:cd{provided:x8<2*26 : do:x8=0}
+sync:Bus@begin:Station8@begin
+sync:Bus@busy:Station8@busy
+sync:Bus@cd8:Station8@cd
+sync:Bus@end:Station8@end
+
+# Station 9
+process:Station9
+clock:1:x9
+location:Station9:Wait{initial:}
+location:Station9:Start{invariant:x9<=808}
+location:Station9:Retry{invariant:x9<2*26}
+edge:Station9:Wait:Start:begin{do:x9=0}
+edge:Station9:Wait:Retry:busy{do:x9=0}
+edge:Station9:Wait:Wait:cd{do:x9=0}
+edge:Station9:Wait:Retry:cd{do:x9=0}
+edge:Station9:Start:Wait:end{provided:x9==808 : do:x9=0}
+edge:Station9:Start:Retry:cd{provided:x9<26 : do:x9=0}
+edge:Station9:Retry:Start:begin{provided:x9<2*26 : do:x9=0}
+edge:Station9:Retry:Retry:busy{provided:x9<2*26 : do:x9=0}
+edge:Station9:Retry:Retry:cd{provided:x9<2*26 : do:x9=0}
+sync:Bus@begin:Station9@begin
+sync:Bus@busy:Station9@busy
+sync:Bus@cd9:Station9@cd
+sync:Bus@end:Station9@end
+
+# Station 10
+process:Station10
+clock:1:x10
+location:Station10:Wait{initial:}
+location:Station10:Start{invariant:x10<=808}
+location:Station10:Retry{invariant:x10<2*26}
+edge:Station10:Wait:Start:begin{do:x10=0}
+edge:Station10:Wait:Retry:busy{do:x10=0}
+edge:Station10:Wait:Wait:cd{do:x10=0}
+edge:Station10:Wait:Retry:cd{do:x10=0}
+edge:Station10:Start:Wait:end{provided:x10==808 : do:x10=0}
+edge:Station10:Start:Retry:cd{provided:x10<26 : do:x10=0}
+edge:Station10:Retry:Start:begin{provided:x10<2*26 : do:x10=0}
+edge:Station10:Retry:Retry:busy{provided:x10<2*26 : do:x10=0}
+edge:Station10:Retry:Retry:cd{provided:x10<2*26 : do:x10=0}
+sync:Bus@begin:Station10@begin
+sync:Bus@busy:Station10@busy
+sync:Bus@cd10:Station10@cd
+sync:Bus@end:Station10@end
+

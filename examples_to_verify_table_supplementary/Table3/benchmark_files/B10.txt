@@ -1,0 +1,19 @@
+system:B10
+
+
+event:a
+event:b
+
+clock:prophecy:w
+clock:prophecy:y
+
+process:P
+location:P:l0{initial:}
+location:P:l1{}
+
+
+edge:P:l0:l1:a{{provided:w==0 && y==0;}}
+edge:P:l1:l1:a{{provided:; do:w; provided:w-y==0; do:y; provided:w-y==1;}}
+
+
+

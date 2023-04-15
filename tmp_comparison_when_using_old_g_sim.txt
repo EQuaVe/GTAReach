@@ -1,0 +1,538 @@
+============================+++++==============================
+dining_philosophers_4_7_10_2.txt
+G-Sim
+COVERED_STATES 494
+RUNNING_TIME_SECONDS 0.0186924
+STORED_STATES 211
+VISITED_STATES 211
+---------------------------
+GEN-MODEL
+COVERED_STATES 494
+RUNNING_TIME_SECONDS 0.0101917
+STORED_STATES 211
+VISITED_STATES 211
+============================+++++==============================
+dining_philosophers_4_7_4_2.txt
+G-Sim
+COVERED_STATES 562
+RUNNING_TIME_SECONDS 0.01053
+STORED_STATES 287
+VISITED_STATES 287
+---------------------------
+GEN-MODEL
+COVERED_STATES 562
+RUNNING_TIME_SECONDS 0.0122836
+STORED_STATES 287
+VISITED_STATES 287
+============================+++++==============================
+dining_philosophers_4_7_6_2.txt
+G-Sim
+COVERED_STATES 654
+RUNNING_TIME_SECONDS 0.0105256
+STORED_STATES 287
+VISITED_STATES 287
+---------------------------
+GEN-MODEL
+COVERED_STATES 654
+RUNNING_TIME_SECONDS 0.0128605
+STORED_STATES 287
+VISITED_STATES 287
+============================+++++==============================
+dining_philosophers_4_7_7_2.txt
+G-Sim
+COVERED_STATES 518
+RUNNING_TIME_SECONDS 0.00776284
+STORED_STATES 211
+VISITED_STATES 211
+---------------------------
+GEN-MODEL
+COVERED_STATES 518
+RUNNING_TIME_SECONDS 0.00988478
+STORED_STATES 211
+VISITED_STATES 211
+============================+++++==============================
+dining_philosophers_5_7_10_2.txt
+G-Sim
+COVERED_STATES 3655
+RUNNING_TIME_SECONDS 0.177393
+STORED_STATES 1206
+VISITED_STATES 1206
+---------------------------
+GEN-MODEL
+COVERED_STATES 3655
+RUNNING_TIME_SECONDS 0.197592
+STORED_STATES 1206
+VISITED_STATES 1206
+============================+++++==============================
+dining_philosophers_5_7_4_2.txt
+G-Sim
+COVERED_STATES 4810
+RUNNING_TIME_SECONDS 0.277358
+STORED_STATES 2091
+VISITED_STATES 2091
+---------------------------
+GEN-MODEL
+COVERED_STATES 4810
+RUNNING_TIME_SECONDS 0.331731
+STORED_STATES 2091
+VISITED_STATES 2091
+============================+++++==============================
+dining_philosophers_5_7_6_2.txt
+G-Sim
+COVERED_STATES 6035
+RUNNING_TIME_SECONDS 0.302375
+STORED_STATES 2091
+VISITED_STATES 2091
+---------------------------
+GEN-MODEL
+COVERED_STATES 6035
+RUNNING_TIME_SECONDS 0.358498
+STORED_STATES 2091
+VISITED_STATES 2091
+============================+++++==============================
+dining_philosophers_5_7_7_2.txt
+G-Sim
+COVERED_STATES 3870
+RUNNING_TIME_SECONDS 0.169336
+STORED_STATES 1206
+VISITED_STATES 1206
+---------------------------
+GEN-MODEL
+COVERED_STATES 3870
+RUNNING_TIME_SECONDS 0.205655
+STORED_STATES 1206
+VISITED_STATES 1206
+============================+++++==============================
+dining_philosophers_6_7_10_2.txt
+G-Sim
+COVERED_STATES 29587
+RUNNING_TIME_SECONDS 5.86142
+STORED_STATES 7974
+VISITED_STATES 7974
+---------------------------
+GEN-MODEL
+COVERED_STATES 29587
+RUNNING_TIME_SECONDS 6.63458
+STORED_STATES 7974
+VISITED_STATES 7974
+============================+++++==============================
+dining_philosophers_6_7_4_2.txt
+G-Sim
+COVERED_STATES 46591
+RUNNING_TIME_SECONDS 12.7916
+STORED_STATES 18156
+VISITED_STATES 18156
+---------------------------
+GEN-MODEL
+COVERED_STATES 46591
+RUNNING_TIME_SECONDS 15.1306
+STORED_STATES 18156
+VISITED_STATES 18156
+============================+++++==============================
+dining_philosophers_6_7_6_2.txt
+G-Sim
+COVERED_STATES 62515
+RUNNING_TIME_SECONDS 14.2943
+STORED_STATES 18156
+VISITED_STATES 18156
+---------------------------
+GEN-MODEL
+COVERED_STATES 62515
+RUNNING_TIME_SECONDS 16.6483
+STORED_STATES 18156
+VISITED_STATES 18156
+============================+++++==============================
+dining_philosophers_6_7_7_2.txt
+G-Sim
+COVERED_STATES 31423
+RUNNING_TIME_SECONDS 5.92726
+STORED_STATES 7974
+VISITED_STATES 7974
+---------------------------
+GEN-MODEL
+COVERED_STATES 31423
+RUNNING_TIME_SECONDS 6.49848
+STORED_STATES 7974
+VISITED_STATES 7974
+============================+++++==============================
+dining_philosophers_7_7_10_2.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+dining_philosophers_7_7_4_2.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+dining_philosophers_7_7_6_2.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+dining_philosophers_7_7_7_2.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+fddi_7_10_7_2.txt
+G-Sim
+COVERED_STATES 1
+RUNNING_TIME_SECONDS 0.000390871
+STORED_STATES 32
+VISITED_STATES 32
+---------------------------
+GEN-MODEL
+COVERED_STATES 1
+RUNNING_TIME_SECONDS 0.00431123
+STORED_STATES 32
+VISITED_STATES 32
+============================+++++==============================
+fddi_7_4_7_2.txt
+G-Sim
+COVERED_STATES 1
+RUNNING_TIME_SECONDS 0.000362519
+STORED_STATES 31
+VISITED_STATES 31
+---------------------------
+GEN-MODEL
+COVERED_STATES 1
+RUNNING_TIME_SECONDS 0.00397083
+STORED_STATES 31
+VISITED_STATES 31
+============================+++++==============================
+fddi_7_6_7_2.txt
+G-Sim
+COVERED_STATES 1
+RUNNING_TIME_SECONDS 0.000359015
+STORED_STATES 31
+VISITED_STATES 31
+---------------------------
+GEN-MODEL
+COVERED_STATES 1
+RUNNING_TIME_SECONDS 0.00420232
+STORED_STATES 31
+VISITED_STATES 31
+============================+++++==============================
+fddi_7_7_7_2.txt
+G-Sim
+COVERED_STATES 1
+RUNNING_TIME_SECONDS 0.00035825
+STORED_STATES 31
+VISITED_STATES 31
+---------------------------
+GEN-MODEL
+COVERED_STATES 1
+RUNNING_TIME_SECONDS 0.00399607
+STORED_STATES 31
+VISITED_STATES 31
+============================+++++==============================
+fire-alarm_7_7_10.txt
+G-Sim
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 0.00037949
+STORED_STATES 18
+VISITED_STATES 18
+---------------------------
+GEN-MODEL
+COVERED_STATES 2
+RUNNING_TIME_SECONDS 0.000494644
+STORED_STATES 18
+VISITED_STATES 18
+============================+++++==============================
+fire-alarm_7_7_4.txt
+G-Sim
+COVERED_STATES 0
+RUNNING_TIME_SECONDS 7.9836e-05
+STORED_STATES 3
+VISITED_STATES 3
+---------------------------
+GEN-MODEL
+COVERED_STATES 0
+RUNNING_TIME_SECONDS 0.000100721
+STORED_STATES 3
+VISITED_STATES 3
+============================+++++==============================
+fire-alarm_7_7_6.txt
+G-Sim
+COVERED_STATES 0
+RUNNING_TIME_SECONDS 7.8868e-05
+STORED_STATES 3
+VISITED_STATES 3
+---------------------------
+GEN-MODEL
+COVERED_STATES 0
+RUNNING_TIME_SECONDS 0.000101647
+STORED_STATES 3
+VISITED_STATES 3
+============================+++++==============================
+fire-alarm_7_7_7.txt
+G-Sim
+COVERED_STATES 8
+RUNNING_TIME_SECONDS 0.000700788
+STORED_STATES 29
+VISITED_STATES 29
+---------------------------
+GEN-MODEL
+COVERED_STATES 8
+RUNNING_TIME_SECONDS 0.00115488
+STORED_STATES 29
+VISITED_STATES 29
+============================+++++==============================
+fischer_5_10.txt
+G-Sim
+COVERED_STATES 1564
+RUNNING_TIME_SECONDS 0.0115083
+STORED_STATES 727
+VISITED_STATES 977
+---------------------------
+GEN-MODEL
+COVERED_STATES 973
+RUNNING_TIME_SECONDS 0.00918751
+STORED_STATES 243
+VISITED_STATES 243
+============================+++++==============================
+fischer_5_4.txt
+G-Sim
+COVERED_STATES 1564
+RUNNING_TIME_SECONDS 0.0111674
+STORED_STATES 727
+VISITED_STATES 977
+---------------------------
+GEN-MODEL
+COVERED_STATES 973
+RUNNING_TIME_SECONDS 0.00901835
+STORED_STATES 243
+VISITED_STATES 243
+============================+++++==============================
+fischer_5_6.txt
+G-Sim
+COVERED_STATES 1564
+RUNNING_TIME_SECONDS 0.0112345
+STORED_STATES 727
+VISITED_STATES 977
+---------------------------
+GEN-MODEL
+COVERED_STATES 973
+RUNNING_TIME_SECONDS 0.0092064
+STORED_STATES 243
+VISITED_STATES 243
+============================+++++==============================
+fischer_5_7.txt
+G-Sim
+COVERED_STATES 1564
+RUNNING_TIME_SECONDS 0.0111574
+STORED_STATES 727
+VISITED_STATES 977
+---------------------------
+GEN-MODEL
+COVERED_STATES 973
+RUNNING_TIME_SECONDS 0.0092333
+STORED_STATES 243
+VISITED_STATES 243
+============================+++++==============================
+parallel_3.txt
+G-Sim
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 6.0619e-05
+STORED_STATES 9
+VISITED_STATES 9
+---------------------------
+GEN-MODEL
+COVERED_STATES 5
+RUNNING_TIME_SECONDS 9.7486e-05
+STORED_STATES 9
+VISITED_STATES 9
+============================+++++==============================
+parallel_4.txt
+G-Sim
+COVERED_STATES 17
+RUNNING_TIME_SECONDS 9.4916e-05
+STORED_STATES 17
+VISITED_STATES 17
+---------------------------
+GEN-MODEL
+COVERED_STATES 17
+RUNNING_TIME_SECONDS 0.000173226
+STORED_STATES 17
+VISITED_STATES 17
+============================+++++==============================
+parallel_5.txt
+G-Sim
+COVERED_STATES 49
+RUNNING_TIME_SECONDS 0.000250604
+STORED_STATES 33
+VISITED_STATES 33
+---------------------------
+GEN-MODEL
+COVERED_STATES 49
+RUNNING_TIME_SECONDS 0.000467776
+STORED_STATES 33
+VISITED_STATES 33
+============================+++++==============================
+parallel_6.txt
+G-Sim
+COVERED_STATES 129
+RUNNING_TIME_SECONDS 0.000422227
+STORED_STATES 65
+VISITED_STATES 65
+---------------------------
+GEN-MODEL
+COVERED_STATES 129
+RUNNING_TIME_SECONDS 0.00132202
+STORED_STATES 65
+VISITED_STATES 65
+============================+++++==============================
+parallel_7.txt
+G-Sim
+COVERED_STATES 321
+RUNNING_TIME_SECONDS 0.00100431
+STORED_STATES 129
+VISITED_STATES 129
+---------------------------
+GEN-MODEL
+COVERED_STATES 321
+RUNNING_TIME_SECONDS 0.00392635
+STORED_STATES 129
+VISITED_STATES 129
+============================+++++==============================
+parallel_8.txt
+G-Sim
+COVERED_STATES 769
+RUNNING_TIME_SECONDS 0.00242454
+STORED_STATES 257
+VISITED_STATES 257
+---------------------------
+GEN-MODEL
+COVERED_STATES 769
+RUNNING_TIME_SECONDS 0.0109379
+STORED_STATES 257
+VISITED_STATES 257
+============================+++++==============================
+parallel_b_3.txt
+G-Sim
+COVERED_STATES 258
+RUNNING_TIME_SECONDS 0.00293949
+STORED_STATES 79
+VISITED_STATES 79
+---------------------------
+GEN-MODEL
+COVERED_STATES 258
+RUNNING_TIME_SECONDS 0.00335757
+STORED_STATES 79
+VISITED_STATES 79
+============================+++++==============================
+parallel_b_4.txt
+G-Sim
+COVERED_STATES 3008
+RUNNING_TIME_SECONDS 0.115521
+STORED_STATES 633
+VISITED_STATES 633
+---------------------------
+GEN-MODEL
+COVERED_STATES 3008
+RUNNING_TIME_SECONDS 0.131234
+STORED_STATES 633
+VISITED_STATES 633
+============================+++++==============================
+parallel_b_5.txt
+G-Sim
+COVERED_STATES 39570
+RUNNING_TIME_SECONDS 7.63587
+STORED_STATES 6331
+VISITED_STATES 6331
+---------------------------
+GEN-MODEL
+COVERED_STATES 39570
+RUNNING_TIME_SECONDS 7.82587
+STORED_STATES 6331
+VISITED_STATES 6331
+============================+++++==============================
+parallel_b_6.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+parallel_b_7.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+parallel_b_8.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+parallel_c_3.txt
+G-Sim
+COVERED_STATES 132
+RUNNING_TIME_SECONDS 0.00141599
+STORED_STATES 49
+VISITED_STATES 49
+---------------------------
+GEN-MODEL
+COVERED_STATES 132
+RUNNING_TIME_SECONDS 0.00271106
+STORED_STATES 49
+VISITED_STATES 49
+============================+++++==============================
+parallel_c_4.txt
+G-Sim
+COVERED_STATES 980
+RUNNING_TIME_SECONDS 0.0287817
+STORED_STATES 261
+VISITED_STATES 261
+---------------------------
+GEN-MODEL
+COVERED_STATES 980
+RUNNING_TIME_SECONDS 0.0330543
+STORED_STATES 261
+VISITED_STATES 261
+============================+++++==============================
+parallel_c_5.txt
+G-Sim
+COVERED_STATES 7830
+RUNNING_TIME_SECONDS 0.876289
+STORED_STATES 1631
+VISITED_STATES 1631
+---------------------------
+GEN-MODEL
+COVERED_STATES 7830
+RUNNING_TIME_SECONDS 0.999619
+STORED_STATES 1631
+VISITED_STATES 1631
+============================+++++==============================
+parallel_c_6.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+parallel_c_7.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+
+============================+++++==============================
+parallel_c_8.txt
+G-Sim
+
+---------------------------
+GEN-MODEL
+

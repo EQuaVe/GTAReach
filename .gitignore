@@ -1,0 +1,4 @@
+install_dir/*
+build_dir/*
+*dot
+
