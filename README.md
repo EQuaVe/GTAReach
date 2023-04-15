@@ -4,11 +4,13 @@
 	* g++ (version >=9.3.0)
 	* flex (version >=2.6.4)
 	* bison (version >=3.5.1)
+        * SOME OTHER TCHECKER REQUIREMENTS SUCH AS BOOST ETC...WILL ADD LATER
 
 ## Compile
         To compile run the following command 
-        `make`
+        `./compile.sh`
 
+        The command should create a `build_dir` directory and an `install_dir` directory.
 
 # Input Format
 
@@ -31,3 +33,7 @@ Write a program: A program is a sequence of provided and do operations. It must 
                     every provided and do operation end with ";"
                     
                     See examples for more details.
+
+
+# Benchmarks:
+        TODO: Add file mapping corresponding to the benchmarks used in the paper.
