@@ -1,4 +1,19 @@
-For examples see example1_gen.txt, example2_gen.txt, ..., example9_gen.txt.
+
+# Installation
+## Requirements
+	* g++ (version >=9.3.0)
+	* flex (version >=2.6.4)
+	* bison (version >=3.5.1)
+
+## Compile
+        To compile run the following command 
+        `make`
+
+
+# Input Format
+
+## Examples
+ For examples see example1_gen.txt, example2_gen.txt, ..., example9_gen.txt.
 
 Declare system: same as standard tchecker
 Declare clock: format: <clock:clock_type:clock_name>
