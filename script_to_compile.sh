@@ -1,39 +1,22 @@
 
 if [[ $1 == "c" ]]; then
     reset
-    	touch install_dir
+    
+    touch install_dir
 	rm -rf install_dir
 	mkdir install_dir
 	
 	touch build_dir
 	rm -rf build_dir
 	mkdir build_dir
+	
 	cd build_dir
 	cmake ../tchecker -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../install_dir -DCMAKE_CXX_FLAGS=-pthread
 	make -j2
 	make doc
 	make install
 	cd ../
-	#cd ../install_2/bin/
-	echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-	echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-	echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"    
-	exit
-fi
-if [[ $1 == "d" ]]; then
-    reset
-	rm -rf install_dir/
-	mkdir install_dir
 	
-	rm -rf build_dir/
-	mkdir build_dir
-	cd build_dir
-	cmake ../tchecker -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../install_dir -DCMAKE_CXX_FLAGS=-pthread
-	make -j2
-	make doc
-	make install
-	cd ../
-	#cd ../install_2/bin/
 	echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 	echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 	echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"    
@@ -41,11 +24,7 @@ if [[ $1 == "d" ]]; then
 fi
 if [ $# -lt 1 ]; then
 	reset
-	#rm -rf install_dir/
-	#mkdir install_dir
-	
-	#rm -rf build_dir/
-	#mkdir build_dir
+
 	cd build_dir
 	cmake ../tchecker -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../install_dir -DCMAKE_CXX_FLAGS=-pthread
 	make -j2

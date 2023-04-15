@@ -1,4 +1,7 @@
 install_dir/*
 build_dir/*
 *dot
-
+script_to_compare.sh
+script_to_debug.sh
+script_to_run_gen_model_on_benchmarks.sh
+tmp.sh
