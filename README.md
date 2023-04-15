@@ -1,22 +1,24 @@
 
 # Installation
 ## Requirements
-	* g++ (version >=9.3.0)
-	* flex (version >=2.6.4)
-	* bison (version >=3.5.1)
-        * SOME OTHER TCHECKER REQUIREMENTS SUCH AS BOOST ETC...WILL ADD LATER
+* g++ (version >=9.3.0)
+* flex (version >=2.6.4)
+* bison (version >=3.5.1)
+* SOME OTHER TCHECKER REQUIREMENTS SUCH AS BOOST ETC...WILL ADD LATER
 
 ## Compile
-        To compile run the following command 
-        `./compile.sh`
+   
+To compile run the following command 
+`./compile.sh`
 
-        The command should create a `build_dir` directory and an `install_dir` directory.
+The command should create a `build_dir` directory and an `install_dir` directory.
 
+---
 # Run
-        To run the tool on a `file` exectute the following command:
-                `./run.sh file_path`
-        
-        Simply executing `./run.sh` will run the tool on `example1_gen.txt` file.
+To run the tool on a `file` exectute the following command:
+        `./run.sh file_path`
+
+Simply executing `./run.sh` will run the tool on `example1_gen.txt` file.
 
 
 # Input Format
