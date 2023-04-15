@@ -12,8 +12,15 @@
 
         The command should create a `build_dir` directory and an `install_dir` directory.
 
-# Input Format
+# Run
+        To run the tool on a `file` exectute the following command:
+                `./run.sh file_path`
+        
+        Simply executing `./run.sh` will run the tool on `example1_gen.txt` file.
 
+
+# Input Format
+        TODO: Complete this section
 ## Examples
  For examples see example1_gen.txt, example2_gen.txt, ..., example9_gen.txt.
 
