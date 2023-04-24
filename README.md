@@ -14,9 +14,11 @@ To run with an input example use the command:
 # Installation without Docker
 ## Requirements
 * g++ (version >=9.3.0)
+* CMake (version >=2.8)
 * flex (version >=2.6.4)
 * bison (version >=3.5.1)
-* SOME OTHER TCHECKER REQUIREMENTS SUCH AS BOOST ETC...WILL ADD LATER
+* boost library (version >=1.65.0) 
+* Catch2 (version 2)
 
 ## Compile
    
