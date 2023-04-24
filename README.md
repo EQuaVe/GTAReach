@@ -1,7 +1,15 @@
 # Installation using Docker
 To install using docker run the command:
 `sudo docker build --progress=plain -t gta:1 .`
+
+# Run using Docker
+To run use the following command:
 `sudo docker run gta:1`
+
+To run with an input example use the command:
+`sudo docker run gta:1 [local file path]`
+
+
 
 # Installation without Docker
 ## Requirements
