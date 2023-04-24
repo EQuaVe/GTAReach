@@ -19,6 +19,7 @@ To run with an input example use the command:
 * bison (version >=3.5.1)
 * boost library (version >=1.65.0) 
 * Catch2 (version 2)
+
 Catch2 version 2 can be obtained from [Catch2 github repository](https://github.com/catchorg/Catch2). Please download the `v2.x` branch or use the command: `$ git clone https://github.com/catchorg/Catch2.git -b v2.x`.
 
 Please, refer to Catch2 tutorial for [installation instructions](https://github.com/catchorg/Catch2/blob/master/docs/cmake-integration.md#installing-catch2-from-git-repository).
