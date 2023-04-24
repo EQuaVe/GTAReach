@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ $# -lt 1 ]; then
  ./install_dir/bin/tck-reach -a eca_gsim_gen example1_gen.txt
 fi

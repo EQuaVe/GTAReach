@@ -1,5 +1,9 @@
+# Installation using Docker
+To install using docker run the command:
+`sudo docker build --progress=plain -t gta:1 .`
+`sudo docker run gta:1`
 
-# Installation
+# Installation without Docker
 ## Requirements
 * g++ (version >=9.3.0)
 * flex (version >=2.6.4)
