@@ -18,28 +18,65 @@ Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22
 ## Instructions to load the docker image:
 Run the following command to load the docker image:
 
-    `sudo docker load < gta_v3.tar`
+    sudo docker load < gta_v3.tar
 
 
 The terminal should then display:
 
-    `Loaded image: gta:3`
+    Loaded image: gta:3
 
 
 ## Running the image on a test file
-We will show how to run our tool on `./table_verify_gta/ABP-prop1.txt` which is the 11<sup>th</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
+---
+We will show how to run our tool on `./examples_from_the_paper/table_verify_gta/ABP-prop1.txt` which is the 11<sup>th</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
 
-To run the tool on the file `./examples_from_the_paper/table_verify_gta/ABP-prop1.txt`, run the command: 
+To run the tool on the file `./examples_from_the_paper/table_verify_gta/ABP-prop1.txt` that contains a GTA model, run the command: 
 
-    `sudo docker run -v ./examples_from_the_paper/table_verify_gta/ABP-prop1.txt:/usr/src/ABP1.txt -t gta:3 gta_gsim /usr/src/ABP1.txt`
+    sudo docker run -v ./examples_from_the_paper/table_verify_gta/ABP-prop1.txt:/usr/src/ABP1.txt -t gta:3 gta_gsim /usr/src/ABP1.txt
 
-In general, to run a file with name `file_name` that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
+In general, to run a file with name `file_name` (containing a GTA) that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
 
     `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 gta_gsim /usr/src/file_name`
 
-
 ---
+We will show how to run our tool on `./examples_from_the_paper/table_verify_gsim/Dining_Phi_6.txt` which is the 1<sup>st</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
 
+To run the tool on the file `./examples_from_the_paper/table_verify_gsim/Dining_Phi_6.txt` that contains a TA model, run the command: 
+
+    sudo docker run -v ./examples_from_the_paper/table_verify_gsim/Dining_Phi_6.txt:/usr/src/Dining_Phi_6.txt -t gta:3 gsim /usr/src/Dining_Phi_6.txt
+
+In general, to run a file with name `file_name` (containing a TA) that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
+
+    `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 gsim /usr/src/file_name`
+---
+We will show how to run our tool on `./examples_from_the_paper/toyECA_ECA/toyECA_ECA_5000_6.txt` which is the 5<sup>th</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
+
+To run the tool on the file `./examples_from_the_paper/toyECA_ECA/toyECA_ECA_5000_6.txt` that contains a ECA model, run the command: 
+
+    sudo docker run -v ./examples_from_the_paper/toyECA_ECA/toyECA_ECA_5000_6.txt:/usr/src/toyECA_ECA_5000_6.txt -t gta:3 eca /usr/src/toyECA_ECA_5000_6.txt
+
+This command prints a TA equivalent (according to alur and dill to the ECA)
+
+In general, to run a file with name `file_name` (containing a ECA) that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
+
+    `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 eca /usr/src/file_name`
+---
+## Testing Table 1 using the Docker Image
+### Commands to verify the `GTA reach` column
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Dining_Phi_6.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/FDDI_10.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Fischer_10.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/toy_ECA_10000_4.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/toy_ECA_5000_6.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/toy_ECA_1000_100.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/toy_ECA_50000_120.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Fire-alarm-pattern_5.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/CSMACD-bounded_1.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/CSMACD-bounded_4.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Dining_Phi_6.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop1.txt`
+  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop2.txt`
+---
 <!-- sudo docker run -v ./examples_from_the_paper/table_verify_gta/ABP-prop1.txt:/usr/src/abp_prop1.txt -t gta:2 gta_gsim /usr/src/abp_prop1.txt -->
 
 <!-- sudo docker run -v ./examples_from_the_paper/table_verify_gsim/FDDI_10.txt:/usr/src/fddi_10.txt -t gta:2 gsim /usr/src/fddi_10.txt -->
