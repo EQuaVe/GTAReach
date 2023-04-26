@@ -23,7 +23,8 @@ The terminal should then display:
 
 
 ## Running the image on a test file
-We will show how to run our tool on `./table_verify_gta/ABP-prop1.txt` which is the i<sup>th</sup> entry in Table .... in the paper ...
+We will show how to run our tool on `./table_verify_gta/ABP-prop1.txt` which is the 11<sup>th</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems:
+Symbolic Techniques and Implementation`
 
 To run the tool on the file `./table_verify_gta/ABP-prop1.txt`, run the command: 
 
