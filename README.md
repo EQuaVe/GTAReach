@@ -53,6 +53,22 @@ The terminal should then display:
   * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop1.txt`
   
   * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop2.txt`
+
+### Commands to verify the `G-sim` column
+  * `sudo docker run gta:3 gsim examples_from_the_paper/table_verify_gsim/Dining_Phi_6.txt`
+
+  * `sudo docker run gta:3 gsim examples_from_the_paper/table_verify_gsim/FDDI_10.txt`
+  
+  * `sudo docker run gta:3 gsim examples_from_the_paper/table_verify_gsim/Fischer_10.txt`
+
+  * `sudo docker run gta:3 gsim examples_from_the_paper/table_verify_gsim/toyECA_10000_4.txt`
+
+  * `sudo docker run gta:3 gsim examples_from_the_paper/table_verify_gsim/toyECA_5000_6.txt`
+
+  * `sudo docker run gta:3 eca examples_from_the_paper/toyECA_ECA/toyECA_ECA_1000_100.txt`
+
+  * `sudo docker run gta:3 eca examples_from_the_paper/toyECA_ECA/toyECA_ECA_50000_120.txt`
+
   
 ---
 ## Running the image on a test file
