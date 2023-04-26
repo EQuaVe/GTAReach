@@ -26,6 +26,35 @@ The terminal should then display:
     Loaded image: gta:3
 
 
+
+---
+## Testing Table 1 using the Docker Image
+### Commands to verify the `GTA reach` column
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/Dining_Phi_6.txt`
+
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/FDDI_10.txt`
+  
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/Fischer_10.txt`
+
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/toyECA_10000_4.txt`
+
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/toyECA_5000_6.txt`
+
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/toyECA_1000_100.txt`
+
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/toyECA_50000_120.txt`
+
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/Fire-alarm-pattern_5.txt`
+  
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/CSMACD-bounded_1.txt`
+  
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/CSMACD-bounded_4.txt`
+  
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop1.txt`
+  
+  * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop2.txt`
+  
+---
 ## Running the image on a test file
 ---
 We will show how to run our tool on `./examples_from_the_paper/table_verify_gta/ABP-prop1.txt` which is the 11<sup>th</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
@@ -60,23 +89,7 @@ This command prints a TA equivalent (according to alur and dill to the ECA)
 In general, to run a file with name `file_name` (containing a ECA) that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
 
     `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 eca /usr/src/file_name`
----
-## Testing Table 1 using the Docker Image
-### Commands to verify the `GTA reach` column
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Dining_Phi_6.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/FDDI_10.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Fischer_10.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/toy_ECA_10000_4.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/toy_ECA_5000_6.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/toy_ECA_1000_100.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/toy_ECA_50000_120.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Fire-alarm-pattern_5.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/CSMACD-bounded_1.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/CSMACD-bounded_4.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Dining_Phi_6.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop1.txt`
-  * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop2.txt`
----
+
 <!-- sudo docker run -v ./examples_from_the_paper/table_verify_gta/ABP-prop1.txt:/usr/src/abp_prop1.txt -t gta:2 gta_gsim /usr/src/abp_prop1.txt -->
 
 <!-- sudo docker run -v ./examples_from_the_paper/table_verify_gsim/FDDI_10.txt:/usr/src/fddi_10.txt -t gta:2 gsim /usr/src/fddi_10.txt -->
