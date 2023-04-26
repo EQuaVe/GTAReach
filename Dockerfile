@@ -9,12 +9,18 @@ RUN	apt-get install -y git;
 RUN	apt-get install -y libboost-all-dev;
 RUN	apt-get install -y doxygen;
 
+RUN apt-get install -y software-properties-common;
+RUN add-apt-repository ppa:deadsnakes/ppa;
+RUN apt-get install -y python3;
+RUN apt-get update;
+
 RUN	mkdir -p /usr/catch2_git/
 WORKDIR /usr/catch2_git/
 RUN	git clone https://github.com/catchorg/Catch2.git -b v2.x;
 WORKDIR	/usr/catch2_git/Catch2/
 RUN	cmake -Bbuild -H. -DBUILD_TESTING=OFF;
 RUN	cmake --build build/ --target install;
+
 
 
 COPY . /usr/src/tchecker3_gta

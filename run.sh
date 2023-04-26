@@ -16,4 +16,16 @@ if [ $# -eq 2 ]; then
 	if [ "$1" == "gsim" ]; then
 		./install_dir/bin/tck-reach -a gsim $2
 	fi
+		
+	if [ "$1" == "eca" ]; then
+		python3 eca_wrapper/main_prog.py $2
+	fi
+
 fi
+
+if [ $# -eq 3 ]; then
+	if [ "$1" == "eca" ]; then
+		python3 eca_wrapper/main_prog.py $2 > $3
+	fi
+fi
+
