@@ -94,11 +94,11 @@ The command should create a `build_dir` directory and an `install_dir` directory
         
         ./run.sh gta_gsim file_path
 
-To run the G-simulation tool on a `input_file` with path `file_path` containing a Timed Automata, execute the following command:
+* To run the G-simulation tool on a `input_file` with path `file_path` containing a Timed Automata, execute the following command:
         
         ./run.sh gsim file_path
 
-To run the parser that takes input an ECA file with name `input_file` and path `input_file_path`, and outputs a Timed Automata (according to Alur & Dill) in `output_file` execute the following command:
+* To run the parser that takes input an ECA file with name `input_file` and path `input_file_path`, and outputs a Timed Automata (according to Alur & Dill) in `output_file` execute the following command:
 
         ./run.sh eca input_file_path/input_file output_file
 
