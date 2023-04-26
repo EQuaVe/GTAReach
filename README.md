@@ -1,4 +1,43 @@
-# Installation using Docker
+# Docker Image
+
+## Downloading the Docker Image
+DOI: `10.6084/m9.figshare.22698373`
+
+Link for accessing the docker image: `https://doi.org/10.6084/m9.figshare.22698373.v1`
+
+Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22698373.v1).
+
+## Requirements for running the Docker Image
+* [Docker](https://docs.docker.com/engine/release-notes/23.0/) (version >=23.0.4)
+
+
+## Instructions to load the docker image:
+Run the following command to load the docker image:
+
+`sudo docker load < gta_v1.tar`
+
+
+The terminal should then display:
+
+`Loaded image: ani_cpp_test:5`
+
+
+## Running the image on a test file
+We will show how to run our tool on `./table_verify_gta/ABP-prop1.txt` which is the i<sup>th</sup> entry in Table .... in the paper ...
+
+To run the tool on the file `./table_verify_gta/ABP-prop1.txt`, run the command: 
+
+`sudo docker run -v ./table_verify_gta/ABP-prop1.txt:/usr/src/ABP1.txt -t ani_cpp_test:5 /usr/src/ABP1.txt`
+
+In general, to run a file with name `file_name` that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
+
+`sudo docker run -v file_location/file_name:/usr/src/file_name -t ani_cpp_test:5 /usr/src/file_name`
+
+
+---
+
+
+<!-- # Installation using Docker
 To install using docker run the command:
 `sudo docker build --progress=plain -t gta:1 .`
 
@@ -7,7 +46,7 @@ To run use the following command:
 `sudo docker run gta:1`
 
 To run with an input example use the command:
-`sudo docker run gta:1 [local file path]`
+`sudo docker run gta:1 [local file path]` -->
 
 
 
@@ -20,23 +59,36 @@ To run with an input example use the command:
 * boost library (version >=1.65.0) 
 * Catch2 (version 2)
 
-Catch2 version 2 can be obtained from [Catch2 github repository](https://github.com/catchorg/Catch2). Please download the `v2.x` branch or use the command: `$ git clone https://github.com/catchorg/Catch2.git -b v2.x`.
+Catch2 version 2 can be obtained from [Catch2 github repository](https://github.com/catchorg/Catch2). Please download the `v2.x` branch, it can be downloaded using the command: 
+
+    `git clone https://github.com/catchorg/Catch2.git -b v2.x`.
 
 Please, refer to Catch2 tutorial for [installation instructions](https://github.com/catchorg/Catch2/blob/master/docs/cmake-integration.md#installing-catch2-from-git-repository).
 
 ## Compile
    
-To compile run the following command 
+To compile the tool, run the following command 
 `./compile.sh`
 
 The command should create a `build_dir` directory and an `install_dir` directory.
 
 ---
 # Run
-To run the tool on a `file` exectute the following command:
+To run the tool on a `input_file` with path `file_path` execute the following command:
+        
         `./run.sh file_path`
 
-Simply executing `./run.sh` will run the tool on `example1_gen.txt` file.
+To run the G-simulation tool on a `input_file` with path `file_path` containing a General Timed Automata (Note: this is also the default option with `./run.sh`), execute the following command:
+        
+        `./run.sh gta_gsim file_path`
+
+
+To run the G-simulation tool on a `input_file` with path `file_path` containing a Timed Automata, execute the following command:
+        
+        `./run.sh gsim file_path`
+
+
+
 
 ---
 ---

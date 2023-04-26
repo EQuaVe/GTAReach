@@ -53,7 +53,8 @@ void usage(char * progname)
   std::cerr << "          covreach:  reachability algorithm with covering over the zone graph" << std::endl;
   std::cerr << "          alu:       reachability algorithm with LU-simulation over the zone graph" << std::endl;
   std::cerr << "          gsim:      reachability algorithm with g-simulation over the zone graph" << std::endl;
-  std::cerr << "          eca_gsim_gen:      reachability algorithm for ECA with g-simulation over the zone graph of generic model" << std::endl; //ani:-100
+  // std::cerr << "          eca_gsim_gen:      reachability algorithm for ECA with g-simulation over the zone graph of generic model" << std::endl; //ani:-100
+  std::cerr << "          gta_gsim:      reachability algorithm for General Timed Automata with G-simulation over the zone graph" << std::endl; //ani:-100
   std::cerr << "   -C out_file   output a certificate (as a graph) in out_file" << std::endl;
   std::cerr << "   -h            help" << std::endl;
   std::cerr << "   -l l1,l2,...  comma-separated list of searched labels" << std::endl;
@@ -117,7 +118,9 @@ int parse_command_line(int argc, char * argv[])
           algorithm = ALGO_LU;
         else if (strcmp(optarg, "gsim") == 0)
           algorithm = ALGO_GSIM;
-        else if (strcmp(optarg, "eca_gsim_gen") == 0) //ani:-100
+        // else if (strcmp(optarg, "eca_gsim_gen") == 0) //ani:-100
+        //   algorithm = ALGO_ECA_GSIM_GEN;  
+        else if (strcmp(optarg, "gta_gsim") == 0) //ani:-100
           algorithm = ALGO_ECA_GSIM_GEN;  
         else
           throw std::runtime_error("Unknown algorithm: " + std::string(optarg));
