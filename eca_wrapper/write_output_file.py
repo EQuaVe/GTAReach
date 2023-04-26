@@ -37,7 +37,8 @@ def write_op(system, events, process, states, orig_states, labels,edges):
 	None
 	"""
 	#states = [(state, bots_from_era, set_of_obligations_from_epa)]
-	print("system",system, sep=":")
+	print("#####START OF FILE#######")
+	print("system",str(system), sep=":")
 	print('\n',end="")
 
 	clocks = get_clocks(edges)

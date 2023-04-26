@@ -71,17 +71,23 @@ The terminal should then display:
 
   
 ---
+
 ## Running the image on a test file
 ---
+
+### Running GTA
+
+In general, to run a file with name `file_name` (containing a GTA) that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
+
+    `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 gta_gsim /usr/src/file_name`
+
 We will show how to run our tool on `./examples_from_the_paper/table_verify_gta/ABP-prop1.txt` which is the 11<sup>th</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
 
 To run the tool on the file `./examples_from_the_paper/table_verify_gta/ABP-prop1.txt` that contains a GTA model, run the command: 
 
     sudo docker run -v ./examples_from_the_paper/table_verify_gta/ABP-prop1.txt:/usr/src/ABP1.txt -t gta:3 gta_gsim /usr/src/ABP1.txt
 
-In general, to run a file with name `file_name` (containing a GTA) that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
 
-    `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 gta_gsim /usr/src/file_name`
 
 ---
 We will show how to run our tool on `./examples_from_the_paper/table_verify_gsim/Dining_Phi_6.txt` which is the 1<sup>st</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
