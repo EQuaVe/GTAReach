@@ -1,11 +1,15 @@
 # Docker Image
 
 ## Downloading the Docker Image
-DOI: `10.6084/m9.figshare.22698373`
+<!-- DOI: `10.6084/m9.figshare.22698373` -->
+DOI: `10.6084/m9.figshare.22701187`
 
-Link for accessing the docker image: `https://doi.org/10.6084/m9.figshare.22698373.v1`
+<!-- Link for accessing the docker image: `https://doi.org/10.6084/m9.figshare.22698373.v1` -->
+Link for accessing the docker image: `https://doi.org/10.6084/m9.figshare.22701187`
 
-Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22698373.v1).
+<!-- Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22698373.v1). -->
+
+Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22701187).
 
 ## Requirements for running the Docker Image
 * [Docker](https://docs.docker.com/engine/release-notes/23.0/) (version >=23.0.4)
@@ -14,24 +18,24 @@ Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22
 ## Instructions to load the docker image:
 Run the following command to load the docker image:
 
-    `sudo docker load < gta_v1.tar`
+    `sudo docker load < gta_v3.tar`
 
 
 The terminal should then display:
 
-    `Loaded image: ani_cpp_test:5`
+    `Loaded image: gta:3`
 
 
 ## Running the image on a test file
 We will show how to run our tool on `./table_verify_gta/ABP-prop1.txt` which is the 11<sup>th</sup> entry in Table 1 in the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
 
-To run the tool on the file `./table_verify_gta/ABP-prop1.txt`, run the command: 
+To run the tool on the file `./examples_from_the_paper/table_verify_gta/ABP-prop1.txt`, run the command: 
 
-    `sudo docker run -v ./table_verify_gta/ABP-prop1.txt:/usr/src/ABP1.txt -t ani_cpp_test:5 /usr/src/ABP1.txt`
+    `sudo docker run -v ./examples_from_the_paper/table_verify_gta/ABP-prop1.txt:/usr/src/ABP1.txt -t gta:3 gta_gsim /usr/src/ABP1.txt`
 
 In general, to run a file with name `file_name` that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
 
-    `sudo docker run -v file_location/file_name:/usr/src/file_name -t ani_cpp_test:5 /usr/src/file_name`
+    `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 gta_gsim /usr/src/file_name`
 
 
 ---
