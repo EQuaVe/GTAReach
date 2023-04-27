@@ -356,7 +356,7 @@ int main(int argc, char * argv[])
     std::string input_file = (optindex == argc ? "" : argv[optindex]);
 
     std::shared_ptr<tchecker::parsing::system_declaration_t> sysdecl{load_system_declaration(input_file)};
-    std::cout << "system parsed: \n" << *sysdecl  << std::endl << "System parsing error count: "<< tchecker::log_error_count() << std::endl;
+    // std::cout << "system parsed: \n" << *sysdecl  << std::endl << "System parsing error count: "<< tchecker::log_error_count() << std::endl;
     // exit(1);
     if (tchecker::log_error_count() > 0)
       return EXIT_FAILURE;

@@ -37,21 +37,20 @@ def write_op(system, events, process, states, orig_states, labels,edges):
 	None
 	"""
 	#states = [(state, bots_from_era, set_of_obligations_from_epa)]
-	print("#####START OF FILE#######")
-	print("system",str(system), sep=":")
-	print('\n',end="")
+	print("system",system, sep=":")
+	print()
 
 	clocks = get_clocks(edges)
 	for i in clocks:
 		print("clock:1",i, sep=":")
-	print('\n',end="")
+	print()
 	
 	for i in events:
 		print("event",i,sep=":")
-	print('\n',end="")
+	print()
 	
 	print("process:", process, sep="")
-	print('\n',end="")
+	print()
 
 
 	init_str_state = states[0][0] + str(states[0][1])[1:-1].replace("-1","0")
@@ -73,7 +72,7 @@ def write_op(system, events, process, states, orig_states, labels,edges):
 		print("{"+op_label+"}")
 
 	
-	print('\n',end="")
+	print()
 	edge_pre_no=0
 	edge_post_no=1
 	edge_action_no=2

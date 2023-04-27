@@ -8,7 +8,88 @@ DOI: `10.6084/m9.figshare.22701187`
 Link for accessing the docker image: `https://doi.org/10.6084/m9.figshare.22701187`
 
 <!-- Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22698373.v1). -->
-
+<!-- 1699  docker --version
+ 1704  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+ 1706  git clone https://github.com/CiscoIOx/docker-demo-apps.git -b master
+ 1708  cd docker-demo-apps/
+ 1719  sudo docker build . -t ani_cpp_test:1
+ 1720  docker
+ 1721  docker images
+ 1722  sudo docker images
+ 1723  sudo docker build . -t ani_cpp_test:1
+ 1724  sudo docker build ./ -t ani_cpp_test:1
+ 1727  sudo docker build ./ -t ani_cpp_test:1
+ 1729  sudo docker build ./ -t ani_cpp_test:1
+ 1730  docker images
+ 1731  sudo docker images
+ 1732  docker run ani_cpp_teset
+ 1733  docker run ani_cpp_test
+ 1734  sudo docker run ani_cpp_test
+ 1735  sudo docker run ani_cpp_test:1
+ 1737  sudo docker build ./ -t ani_cpp_test:2
+ 1738  sudo docker run ani_cpp_test:2 hello
+ 1739  sudo docker run ani_cpp_test:2 
+ 1741  sudo docker run ani_cpp_test:3
+ 1742  sudo docker build ./ -t ani_cpp_test:3
+ 1743  sudo docker run ani_cpp_test:3
+ 1744  sudo docker run ani_cpp_test:3 skfjndf kj
+ 1747  sudo docker build ./ -t ani_cpp_test:4
+ 1749  sudo docker run ani_cpp_test:4 fsdf
+ 1750  sudo docker build ./ -t ani_cpp_test:5
+ 1751  sudo docker run ani_cpp_test:4 fsdf
+ 1752  sudo docker build ./ -t ani_cpp_test:5
+ 1757  sudo docker build ./ -t ani_cpp_test:5
+ 1761  git commit -m "docker file added, readme changed, run.sh"
+ 1769  docker
+ 1770  sudo apt-get install docker
+ 1771  docker
+ 1772  docker --version
+ 1773  docker
+ 1774  docker image
+ 1775  docker images
+ 1776  sudo docker images
+ 1777  docker save ani_cpp_test:5 -o gta_v1.tar
+ 1778  sudo docker save ani_cpp_test:5 -o gta_v1.tar
+ 1780  sudo docker run gta_v1.tar
+ 1781  sudo docker run ./gta_v1.tar
+ 1789  sudo docker run ./gta_v1.tar
+ 1790  sudo docker run gta_v1.tar
+ 1791  docker pull gta_v1.tar
+ 1792  sudo docker pull gta_v1.tar
+ 1793  sudo docker pull ./gta_v1.tar
+ 1794  docker
+ 1795  sudo docker images
+ 1809  sudo docker build ./ -t ani_cpp_test:5
+ 1817  sudo docker build ./ -t ani_cpp_test:5
+ 1819  sudo docker build ./ -t ani_cpp_test:5
+ 1820  sudo docker build --no-cache -t ani_cpp_test:5 .
+ 1821  sudo docker build -t ani_cpp_test:5 .
+ 1822  sudo docker build --progress=plain -t ani_cpp_test:5 .
+ 1823  sudo docker images
+ 1824  sudo docker run ani_cpp_test:5 example1_gen.txt
+ 1826  sudo docker run ani_cpp_test:1
+ 1827  sudo docker run ani_cpp_test:5
+ 1828  sudo docker build -t ani_cpp_test:5 .
+ 1829  sudo docker run ani_cpp_test:5
+ 1830  sudo docker run ani_cpp_test:5 example1_gen.txt
+ 1831  sudo docker run ani_cpp_test:5 example2_gen.txt
+ 1832  sudo docker run ani_cpp_test:5 example3_gen.txt
+ 1833  sudo docker run ani_cpp_test:5 example5_gen.txt
+ 1925  sudo docker images
+ 1926  sudo docker run ani_cpp_test:5 table_verify_gta/abp_prop1.txt
+ 1927  sudo docker run ani_cpp_test:5 ./table_verify_gta/abp_prop1.txt
+ 1929  sudo docker run ani_cpp_test:5 ./table_verify_gta/abp_prop1.txt
+ 1930  sudo docker run ani_cpp_test:5 table_verify_gta/abp_prop1.txt
+ 1931  sudo docker run ani_cpp_test:5 examples_to_verify_table/abp_prop1.txt
+ 1932  sudo docker run ani_cpp_test:5 abp_prop1.txt
+ 1933  sudo docker run -v ./abp_prop1.txt:./abp_prop1.txt ani_cpp_test:5 abp_prop1.txt
+ 1934  sudo docker run -v ./abp_prop1.txt:./abp_prop1.txt -t ani_cpp_test:5 abp_prop1.txt
+ 1935  sudo docker run -v ./abp_prop1.txt:abp_prop1.txt -t ani_cpp_test:5 abp_prop1.txt
+ 1936  sudo docker run -v ./abp_prop1.txt:/usr/src/abp_prop1.txt -t ani_cpp_test:5 abp_prop1.txt
+ 1937  sudo docker run -v ./abp_prop1.txt:/usr/src/abp_prop1.txt -t ani_cpp_test:5 /usr/src/abp_prop1.txt
+ 2002  docker --version
+ 2003  history | grep docker
+-->
 Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22701187).
 
 ## Requirements for running the Docker Image
@@ -26,8 +107,18 @@ The terminal should then display:
     Loaded image: gta:3
 
 
-
+<!-- sudo docker cp 92cd2758ba7a:/usr/src/tchecker3_gta/tmp.sh ./tmp2.sh -->
 ---
+## Running Docker Image:
+
+Run the following command to start the interactive terminal:
+
+    sudo docker run -it gta:3
+
+
+
+
+
 ## Testing Table 1 using the Docker Image
 ### Commands to verify the `GTA reach` column
   * `sudo docker run gta:3 gta_gsim examples_from_the_paper/table_verify_gta/Dining_Phi_6.txt`
@@ -76,7 +167,6 @@ The terminal should then display:
 ---
 
 ### Running GTA
-
 In general, to run a file with name `file_name` (containing a GTA) that is at a location `file_location` (i.e. the file's path is `file_location/file_name`), run the command:
 
     `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 gta_gsim /usr/src/file_name`

@@ -212,7 +212,7 @@ integer   [-+]?[0-9]+
 "!="            {return system::parser_t::make_TOK_NEQ(loc);}
 "/"             {return system::parser_t::make_TOK_DIV(loc);}
 
-"\*"             {std::cout << " ANI:STAR\n"; return system::parser_t::make_TOK_MUL(loc);}
+"\*"             {/*std::cout << " ANI:STAR\n";*/ return system::parser_t::make_TOK_MUL(loc);}
 "%"             {return system::parser_t::make_TOK_MOD(loc);}
 
 [[:space:]]|[[:space:]]+ {}

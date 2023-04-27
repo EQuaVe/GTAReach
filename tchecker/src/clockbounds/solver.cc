@@ -1807,7 +1807,7 @@ namespace amap {
 
     if (tchecker::amap::compute_amap(system, *amap))
     {
-      std::cout << *amap << std::endl;
+      // std::cout << *amap << std::endl;
       return amap;
     }
 
@@ -3286,8 +3286,8 @@ namespace eca_amap_gen2 {
 
     if (tchecker::eca_amap_gen2::compute_eca_amap(system, *amap))
     {
-      std::cout << "\nPrinting Amap:\n";
-      std::cout << *amap << std::endl;
+      // std::cout << "\nPrinting Amap:\n";
+      // std::cout << *amap << std::endl;
       return amap;
     }
 

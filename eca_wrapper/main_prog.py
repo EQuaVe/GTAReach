@@ -4,7 +4,7 @@ import sys
 import re
 import functools
 import epa_helper as ph
-import erc_helper as rh
+import era_helper as rh
 import read_input_file as rif
 import write_output_file as wof
 

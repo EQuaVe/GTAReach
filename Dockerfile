@@ -28,4 +28,4 @@ WORKDIR /usr/src/tchecker3_gta
 
 RUN ./compile.sh
 
-ENTRYPOINT [ "./run.sh" ]
+#ENTRYPOINT [ "./run.sh" ]

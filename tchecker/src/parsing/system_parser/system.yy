@@ -1809,14 +1809,14 @@ predicate_expr: "(" predicate_expr ")"
 
 int_term: int_term TOK_PLUS int_term{
   $$ = $1 + "+" + $3;
-  std::cout << "ANI:1812:" << $$ << std::endl;
+  // std::cout << "ANI:1812:" << $$ << std::endl;
 }
 | int_term TOK_MINUS int_term{
   $$ = $1 + "-" + $3;
 }
 | int_term TOK_MUL int_term{
   $$ = $1 + "*" + $3;
-  std::cout << "ANI:1819:" << $$ << std::endl;
+  // std::cout << "ANI:1819:" << $$ << std::endl;
 }
 | int_term TOK_DIV int_term{
   $$ = $1 + "/" + $3;
