@@ -1,4 +1,11 @@
-# Installation wit Docker
+# Contents
+1. [Installation with Docker](#installation-with-Docker)
+1. [Installation without Docker](#installation-without-Docker)
+1. [Running the tool(s)](#running-the-tool(s))
+1. [Testing Table 1 of the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`](#Testing-Table-1-of-the-paper-A-Unified-Model-for-Real-Time-Systems:-Symbolic Techniques-and-Implementation)
+1. [File Format](#File-Format)
+---
+# Installation with Docker
 
 ## Downloading the Docker Image
 
@@ -31,7 +38,7 @@ Run the following command to start the interactive terminal:
 
     sudo docker run -it gta:3
 
-For running the tool go to (SOME SECTION)
+For running the tool go to (Running the tool(s))[#Running-the-tool(s)]
 
 
 
@@ -119,9 +126,7 @@ In general, to run a file with name `file_name` (containing a ECA) that is at a 
 
     `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 eca /usr/src/file_name`
  -->
-
-
-
+---
 # Installation without Docker
 ## Requirements for installing TChecker Tool
 * g++ (version >=9.3.0)
@@ -150,9 +155,9 @@ To compile the TChecker tool, run the following command
       ./compile.sh
 
 The command should create a `build_dir` directory and an `install_dir` directory.
-
 ---
-# Run
+
+# Running the tool(s)
 * To run the tool on a `input_file` with path `file_path` execute the following command:
         
         `./run.sh file_path`
@@ -168,12 +173,10 @@ The command should create a `build_dir` directory and an `install_dir` directory
 * To run the parser that takes input an ECA file with name `input_file` and path `input_file_path`, and outputs a Timed Automata (according to Alur & Dill) in `output_file` execute the following command:
 
         ./run.sh eca input_file_path/input_file output_file
-
-
 ---
 
-# Testing Table 1 of the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation` .
----
+# Testing Table 1 of the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
+
 
 ## File Structure
 The directory `examples_from_the_paper` contains all the benchmarks used in the paper.
@@ -244,10 +247,10 @@ It contains three sub-directories as follows:
   * `./verify_table_g-sim.sh`
 ---
 
-
+--
 # File Format
 Please, refer to [Using TChecker](https://github.com/anirjoshi/TIMED_AUTOMATA_GTA_MODEL_LATEST/blob/general_model/tchecker/doc/file-format-combined.md) or to file `tchecker/doc/file-format-combined.md` in the repository.
 
 
-# Benchmarks:
-        TODO: Add file mapping corresponding to the benchmarks used in the paper.
+<!-- # Benchmarks:
+        TODO: Add file mapping corresponding to the benchmarks used in the paper. -->
