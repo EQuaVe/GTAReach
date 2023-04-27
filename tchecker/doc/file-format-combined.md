@@ -273,7 +273,7 @@ attribute is associated to the location (or it can be empty:
 `{}`). See section [Attributes](#attributes) for details.
 
 
-# The `edge` declaration
+# The `edge` declaration for TA and ECA
 
 ```
 edge:p:source:target:e{attributes}
@@ -289,6 +289,65 @@ declared.
 The `{attributes}` part of the declaration can be omitted if no
 attribute is associated to the location (or it can be empty:
 `{}`). See section [Attributes](#attributes) for details.
+
+
+# The `edge` declaration for GTA
+
+```
+edge:p:source:target:e{{edge_program}}
+```
+
+declares an edge in process `p` from location `source` to location
+`target` and labelled with event `e`.  The process `p` shall have been
+declared previously. The two locations `source` and `target` shall
+have been declared as well, and they shall both belong to process
+`p`. The event `e` shall have been declared before the edge is
+declared.
+
+The `edge_program` part of the `{{edge_program}}` in the declaration can be omitted if no
+attribute is associated to the location (so it looks like
+`{{}}`).
+
+##  `edge_program` for GTA
+
+An `edge_program` is a sequence of `provided:`, `do:` operations separated by a semi-colon `;`. 
+
+`provided:` operation correponds to guard(s).
+
+`do:` operation corresponds to update(s).
+
+
+```
+edge_program ::= provided: guard_expr; do: update_expr;
+                | provided: guard_expr; do: update_expr; edge_program
+
+guard_expr ::= clock_expr
+       | clock_expr && guard_expr
+
+update_expr ::= clock_lvalue
+              | clock_lvalue=INTEGER
+              | clock_lvalue, update_expr
+              | clock_lvalue=INTEGER, update_expr
+
+clock_expr ::= clock_term == INTEGER
+             | clock_term < INTEGER
+	     | clock_term <= INTEGER
+	     | clock_term >= INTEGER
+	     | clock_term > INTEGER
+
+clock_term ::= clock_lvalue
+             | clock_lvalue - clock_lvalue
+
+clock_lvalue ::= CLOCK_ID
+```
+Note that to use `clock_lvalue=INTEGER` for update_expr, the `clock_lvalue` must be a timer. 
+
+A `clock_lvalue` in the `update_expr` releases the clock if its a `prophecy clock` or an `event-prophecy clock`.
+
+ A `clock_lvalue` in the `update_expr` resets the clock if its a `history clock` or an `event-history clock` or a `normal clock`.
+
+For now we are only allowing `INTEGER` to be compared with `clock_term`, but there is a rudimentry implementation that allows `int_term` expression as well. Though we do not guarantee whether it works perfectly. We have used these in the `CSMACD` examples as we have verified that these work there.
+
 
 
 # The `sync` declaration
