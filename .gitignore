@@ -1,5 +1,5 @@
-install_dir/*
-build_dir/*
+install_dir/**
+build_dir/**
 *dot
 script_to_compare.sh
 script_to_debug.sh
@@ -10,3 +10,4 @@ gta_v1.tar
 .tmp
 gta_v3.tar
 tmp.txt
+**/.**
