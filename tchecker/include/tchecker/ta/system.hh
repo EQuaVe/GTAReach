@@ -99,7 +99,6 @@ public:
   using tchecker::syncprod::system_t::is_clock;
 
   
-  //ani:-100
   using tchecker::syncprod::system_t::history_clock_ids;
   using tchecker::syncprod::system_t::history_clock_events;
   using tchecker::syncprod::system_t::prophecy_clock_ids;

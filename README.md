@@ -2,7 +2,7 @@
 1. [Installation with Docker](#installation-with-Docker)
 1. [Installation without Docker](#installation-without-Docker)
 1. [Running the tool(s)](#running-the-tool(s))
-1. [Testing Table 1 of the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`](#Testing-Table-1-of-the-paper-A-Unified-Model-for-Real-Time-Systems:-Symbolic Techniques-and-Implementation)
+1. [Testing Table 1 of the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`](#testing-table-1-of-the-paper-`A-Unified-Model-For-Real-Time-Systems:-Symbolic Techniques-And-Implementation`)
 1. [File Format](#File-Format)
 ---
 # Installation with Docker

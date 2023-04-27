@@ -1,0 +1,21 @@
+system:eca_example
+# A system declaration, every file must have a system declaration of the form `system:system_name`. Here system_name can be arbitrary
+
+event:a:1:1
+# An event declaration, and event-clocks declaration. Events are declared with the syntax `event:event_name:bit_history:bit_prophecy` where `event_name` is the name of the event, `bit_history` and `bit_prophecy` are bits. Setting `bit_history` to 1 declares a history clock with name `event_name`_h, which in this case is a_h, otherwise it is 0 and history clock corresponding to `a` is not declared. Similarly, setting `bit_prophecy` to 1 declares a prophecy clock with name `event_name`_p, which in this case is a_p, otherwise it is 0 and history clock corresponding to `a` is not declared.
+
+event:b:1:0
+# An event b, and a history clock b_h corresponding to b is declared.
+
+process:P
+
+location:P:q0{initial:}
+location:P:q1{}
+location:P:q2{}
+
+edge:P:q0:q0:b{{ provided: b_p==-1 && a_p<-1; do:; }}
+# A looping edge from q0 to q0 on label b, and on the program  provided: b_p==-1 && a_p<-1; do:; , implicitly there is a provided:b_p==0; do:b_p; at the end of the program due to semantics of event-prophecy clocks, see paper for more details.
+
+edge:P:q0:q1:a{{ provided: a_p==-1; do:; }}
+# An edge from q0 to q1 on label a, and on the program  provided: a_p==-1; do:; , implicitly there is a provided:a_h==0; do:; at the start of the program and a provided:a_p==0; do:a_p; at the end of the program due to semantics of event-history and event-prophecy clocks respectively, see paper for more details.
+

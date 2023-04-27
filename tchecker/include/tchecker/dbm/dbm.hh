@@ -105,7 +105,7 @@ void universal_positive(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim);
  */
 void empty(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim);
 
-//ani:-100
+
 /*!
  \brief Initial zone in ECA. All history clocks are set to +inf and all
  prophecy clocks x_p are non deterministically set to any value between [-inf, 0]
@@ -149,7 +149,7 @@ void zero(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim);
  */
 bool is_consistent(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim);
 
-//ani:-100
+
 /*!
  \brief Consistency checking in ECA
  \param dbm : a dbm
@@ -185,7 +185,7 @@ bool eca_is_consistent(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim
  */
 bool is_empty_0(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim);
 
-//ani:-100
+
 /*!
  \brief Fast ECA final zone predicate
  \param dbm : a DBM
@@ -249,7 +249,7 @@ bool is_universal_positive(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t
  */
 bool is_tight(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim);
 
-//ani:-100
+
 /*!
  \brief Tightness predicate
  \param dbm : a DBM
@@ -261,7 +261,7 @@ bool is_tight(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim);
  */
 bool eca_is_tight(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim);
 
-//ani:-100
+
 /*!
  \brief Tighten an ECA DBM
  \param dbm : a DBM
@@ -300,7 +300,7 @@ enum tchecker::dbm::status_t eca_tighten(tchecker::dbm::db_t * dbm, tchecker::cl
  */
 enum tchecker::dbm::status_t tighten(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim);
 
-//ani:-100
+
 /*!
  \brief Tighten an ECA DBM w.r.t. a constraint
  \param dbm : a DBM

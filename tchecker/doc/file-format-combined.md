@@ -319,6 +319,7 @@ An `edge_program` is a sequence of `provided:`, `do:` operations separated by a 
 
 ```
 edge_program ::= provided: guard_expr; do: update_expr;
+                | provided: guard_expr;
                 | provided: guard_expr; do: update_expr; edge_program
 
 guard_expr ::= clock_expr

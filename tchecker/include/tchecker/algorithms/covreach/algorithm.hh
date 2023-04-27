@@ -72,17 +72,16 @@ public:
 
     stats.set_start_time();
 
-    // std::cout << "ani:--2 expanding initial nodes\n";
     expand_initial_nodes(ts, graph, nodes, stats);
-    // std::cout << "ani:--3 expanded initial nodes\n";
+
 
     for (node_sptr_t const & n : nodes)
       waiting->insert(n);
     nodes.clear();
 
     while (!waiting->empty()) {
-      // std::cout << "ani:84 stored states: " << graph.nodes_count() << " \n";
-      // std::cout << "ani:--4 exploring waiting q\n"; 
+
+
       node_sptr_t node = waiting->first();
       waiting->remove_first();
 
@@ -93,9 +92,9 @@ public:
         break;
       }
 
-      // std::cout << "ani:--5 expanding next nodes\n";
+      
       expand_next_nodes(node, ts, graph, nodes, stats);
-      // std::cout << "ani:--6 expanded next nodes\n";
+      
       //nodes is the set of successor which are not covered by a
       //node in the graph
 
@@ -108,7 +107,7 @@ public:
         //tchecker code
         //also note that we are removing nodes from the waiting set which are covered by
         //next_node
-        remove_covered_nodes(graph, next_node, covered_nodes, stats); //ani:-100
+        remove_covered_nodes(graph, next_node, covered_nodes, stats);
         for (node_sptr_t const & covered_node : covered_nodes)
           waiting->remove(covered_node);
         covered_nodes.clear();
@@ -178,7 +177,7 @@ public:
     ts.next(node->state_ptr(), sst, tchecker::STATE_OK);
     for (auto && [status, s, t] : sst) {
       typename GRAPH::node_sptr_t next_node = graph.add_node(s);
-      // std::cout << "ani:--7 checking if next_node is covered!\n";
+
       if (graph.is_covered(next_node, covering_node)) {
         graph.add_edge(node, covering_node, tchecker::graph::subsumption::EDGE_SUBSUMPTION, *t);
         graph.remove_node(next_node);

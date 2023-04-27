@@ -55,7 +55,7 @@ enum comparator_t {
 static_assert(static_cast<int>(tchecker::clock_constraint_t::LE) == static_cast<int>(tchecker::dbm::LE), "");
 static_assert(static_cast<int>(tchecker::clock_constraint_t::LT) == static_cast<int>(tchecker::dbm::LT), "");
 
-//ani:-100
+
 tchecker::dbm::db_t const INF_VALUE = tchecker::int_maxval >> 1; /*!< Infinity value */
 tchecker::dbm::db_t const MAX_VALUE = INF_VALUE - 1;             /*!< Maximum value */
 // tchecker::dbm::db_t const MIN_VALUE = tchecker::int_minval >> 1; /*!< Minimum value */
@@ -97,11 +97,9 @@ inline tchecker::dbm::db_t db(enum tchecker::dbm::comparator_t cmp, tchecker::in
 //   if ((value < MIN_VALUE) || (value > MAX_VALUE))
 //     throw std::invalid_argument("value out of bounds");
 // #endif // DBM_UNSAFE
-//ani:-100
-  // std::cout << "ani:-15869\n";
+
     #if !defined(DBM_UNSAFE)
     if ((value < MINUS_INF_VALUE) || (value > INF_VALUE)){
-      // std::cout << "-inf value:" << MINUS_INF_VALUE << " inf value:" << INF_VALUE << " value:" << value << std::endl;
       throw std::invalid_argument("value out of bounds");
     }
     #endif // DBM_UNSAFE
@@ -144,8 +142,8 @@ inline tchecker::dbm::db_t sum(tchecker::dbm::db_t db1, tchecker::dbm::db_t db2)
  is not set)
  */
 inline tchecker::dbm::db_t eca_sum(tchecker::dbm::db_t db1, tchecker::dbm::db_t db2)
-{ //ani:-100
-  // std::cout << "ani:-1586 " << db1 << ":" << (db1>>1) << " " << db2 <<":"<< (db2>>1) << " " << (tchecker::dbm::INF_VALUE) << " "<< (tchecker::dbm::MINUS_INF_VALUE) << std::endl;
+{
+
   if ((db1 == tchecker::dbm::LE_INFINITY) || (db2 == tchecker::dbm::LE_INFINITY))
     return tchecker::dbm::LE_INFINITY;
   
@@ -175,7 +173,6 @@ inline tchecker::dbm::db_t eca_sum(tchecker::dbm::db_t db1, tchecker::dbm::db_t 
  */
 inline tchecker::dbm::db_t add(tchecker::dbm::db_t db, tchecker::integer_t value)
 {
-  //ani:-100 doubt! should we have two DBM_UNSAFE one for normal TA and the other for ECA?
   if (db == tchecker::dbm::LT_INFINITY)
     return tchecker::dbm::LT_INFINITY;
 #if defined(DBM_UNSAFE)
@@ -196,7 +193,7 @@ inline tchecker::dbm::db_t add(tchecker::dbm::db_t db, tchecker::integer_t value
  DBM_UNSAFE is not set)
  */
 inline tchecker::dbm::db_t eca_add(tchecker::dbm::db_t db, tchecker::integer_t value)
-{ //ani:-100
+{ 
   if (db==tchecker::dbm::LE_INFINITY)
     return tchecker::dbm::LE_INFINITY;
   

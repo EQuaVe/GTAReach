@@ -1,0 +1,39 @@
+#### Now we will explain a GTA input file. This represents a GTA.
+#### We will give comments below each line which explain that line. 
+#### Comments start with #.
+
+
+
+system:example1
+# A system declaration, every file must have a system declaration of the form `system:system_name`. Here system_name can be arbitrary.
+
+clock:history:x
+# We declare a history clock with identifier x. Declaration of clocks is of the form `clock:clock_type:clock_id`, where `clock_id` is the identifier of the clock, and `clock_type` is among history, prophecy, timer, normal. See paper or tchecker/doc/file-format-combined.md for more details.
+
+clock:prophecy:y
+# Similar to above clock declaration we define a prophecy clock y.
+
+event:a
+# We declare an event a. Syntax to declare an event is `event:event_id` where `event_id` is the identifier corresponding to the event.
+
+event:b
+# Similar to above event declaration we define another event b.
+
+process:P
+# We declare a process P. The syntax for declaring a process is `process:P`. A system can have multiple processes and we can define synchronizations between these processes. For more details we refer the reader to tchecker/doc/file-format-combined.md.
+
+location:P:q0{initial:}
+# We define an initial state q0 in the process P. The syntax to define an inital state is `location:process_name:state_name{initial:}, where `state_name` is the name of the state, and `process_name` is the name of the process in which we define the state. 
+
+location:P:q1{}
+# We define a state q1 in the process P. The syntax to define a state is `location:process_name:state_name{}, where `state_name` is the name of the state, and `process_name` is the name of the process in which we define the state.
+
+edge:P:q0:q1:b{{ provided:x-y<300; do:x; provided:y>-9 && x<=7; do:x,y; }}
+# We define an edge in process P from the state q0 to the state q1 with the label b, and the program `provided:x-y<=-300; do:x; provided:y>-9 && x<=7; do:x,y;`. The syntax to define an edge is `edge:process_name:pre_state_name:post_state_name:edge_label{{edge_program}}`, where `process_name` is the name of the process in which we want the edge, `pre_state_name` is the name of the state from which the edge starts, `post_state_name` is the name to which the edge finishes, `edge_label` is the label on the edge, and `edge_program` is the program on the edge. See what are programs on the edges in the paper. An `edge_program` is an alternation of `provided:` and `do:` operations separated by a `;`. An `edge_program` can be empty, if it is not empty then the edge program should always start with a `provided:`. A guard is written after the `provided:`. After finishing the guard we write `;`, followed by a `do:` operation, all clocks to release and reset are listed after that, depending on whether the clock is a history clock or a prophecy clock, the operation executed by the tool is either a reset or a release respectively (see paper for more details on the release and reset operations). Note that the guard and the operations can be empty as well. The program on this edge starts with x-y<=300 which says that valuation of history clock x minus prophecy clock y must be less than 300. This is followed by a do:x, since x is a history clock this means to reset the clock x. This is followed by another guard `y>-9 && x<=7`, which is followed by a `do:x,y;` that says to reset the clock x followed by a release to the clock y. 
+
+edge:P:q0:q1:b{{ provided:; do:x; provided:y>-9 && x<=7; do:; }}
+# We define an edge in the process P from the state q0 to the state q1 with label b, and the program provided:; do:x; provided:y>-9 && x<=7; do:;. Note that the first guard and the last update is empty in the program.
+
+
+edge:P:q0:q0:a{{ provided:x==1;do:x;}}
+# We define an edge from state q0 to the state q0 (so it is a loop).
