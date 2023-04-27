@@ -77,6 +77,21 @@ event:id
 where `id` is the identifier of the event. No other event shall have the
 same identifier.
 
+# The `event` and `event-clocks` declaration for GTA
+
+
+```
+event:id:b1:b2
+```
+
+where `id` is the identifier of the event, `b1` and `b2` are bits (from {`0`,`1`}) representing whether an event-history clock and an event-prophecy clock corresponding to the event is declared. 
+
+If `b1` is `1` then an event-history clock `id_h` is declared corresponding to the event `id`, otherwise if b1 is `0` no event-history clock is declared for the event `id`.
+
+If `b2` is `1`, then an event-prophecy clock `id_p` is declared corresponding to the event `id`, otherwise if `b2` is `0` no event-prophecy clock is declared for the event `id`.
+
+No other event shall have the same identifier. If any event-clock is declared then no other clock shall have the same identifier.
+
 # The `event` and `event-clock(s)` declaration(s) for ECA
 
 ```
@@ -131,20 +146,6 @@ for zone abstractions are harder to compute (and often much less precise)
 when using clock arrays. This may result in exponentially bigger zone
 graphs. We thus recommend to avoid using clock arrays when possible.
 
-# The `event` and `event-clocks` declaration for GTA
-
-
-```
-event:id:b1:b2
-```
-
-where `id` is the identifier of the event, `b1` and `b2` are bits (from {`0`,`1`}) representing whether an event-history clock and an event-prophecy clock corresponding to the event is declared. 
-
-If `b1` is `1` then an event-history clock `id_h` is declared corresponding to the event `id`, otherwise if b1 is `0` no event-history clock is declared for the event `id`.
-
-If `b2` is `1`, then an event-prophecy clock `id_p` is declared corresponding to the event `id`, otherwise if `b2` is `0` no event-prophecy clock is declared for the event `id`.
-
-No other event shall have the same identifier. If any event-clock is declared then no other clock shall have the same identifier.
 
 
 # The `clock` declaration for GTA
