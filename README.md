@@ -1,4 +1,4 @@
-# Docker Image
+# Installation wit Docker
 
 ## Downloading the Docker Image
 
