@@ -68,7 +68,7 @@ A `process` declaration declares a process name. It does not declare a new scope
 There is no way to declare a type of process, and instantiate it in TChecker. In order to specify several instances of the same process type, the process declaration and all the related declarations (locations, edges, etc) shall be duplicated. This can be solved by writing a script that generates the TChecker model and that handles process instantiation smoothly.
 
 
-# The `event` declaration
+# The `event` declaration for TA
 
 ```
 event:id
@@ -77,6 +77,18 @@ event:id
 where `id` is the identifier of the event. No other event shall have the
 same identifier.
 
+# The `event` and `event-clock(s)` declaration(s) for ECA
+
+```
+event:id
+```
+
+where `id` is the identifier of the event. 
+
+Along with the event an event-history clock of the form `xid` and an event-prophecy clock of the form `yid` is declared. These clocks can be directly used in the edge attributes.
+
+No other event shall have the
+same identifier.
 
 # The `clock` declaration for TA
 
