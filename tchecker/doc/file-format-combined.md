@@ -1,4 +1,4 @@
-The TChecker GTA file format is used to describe a generalised timed automata. A file
+The TChecker file format is used to describe timed automata, event-clock automata, general timed automata. A file
 consists in a sequence of declarations of processes, clocks,
 locations, edges, etc, as described below. Declarations can appear in any order, as soon as
 these two rules are respected:
@@ -26,7 +26,11 @@ Identifiers are any string containing letters, numbers, underscore
 1. [The `system` declaration](#the-system-declaration)
 1. [The `process` declaration](#the-process-declaration)
 1. [The `event` declaration](#the-event-declaration)
+1. [The `event` and `event-clocks` declaration for GTA](#the-event-and-event-clocks-declaration-for-GTA)
 1. [The `clock` declaration](#the-clock-declaration)
+    1. [The `clock` declaration for TA](#the-clock-declaration-for-TA)
+    1. [The `clock` declaration for GTA](#the-clock-declaration-for-GTA)
+    1. [The `clock` declaration for ECA](#the-clock-declaration-for-ECA)
 1. [The `int` declaration](#the-int-declaration)
 1. [The `location` declaration](#the-location-declaration)
 1. [The `edge` declaration](#the-edge-declaration)
@@ -64,23 +68,17 @@ A `process` declaration declares a process name. It does not declare a new scope
 There is no way to declare a type of process, and instantiate it in TChecker. In order to specify several instances of the same process type, the process declaration and all the related declarations (locations, edges, etc) shall be duplicated. This can be solved by writing a script that generates the TChecker model and that handles process instantiation smoothly.
 
 
-# The `event` and `event-clock(s)` declaration(s) for ECA
+# The `event` declaration
 
 ```
 event:id
 ```
 
-where `id` is the identifier of the event. 
-
-Along with the event an event-history clock of the form `xid` and an event-prophecy clock of the form `yid` is declared. These clocks can be directly used in the edge attributes.
-
-No other event shall have the
+where `id` is the identifier of the event. No other event shall have the
 same identifier.
 
 
-
-
-# The `clock` declaration
+# The `clock` declaration for TA
 
 ```
 clock:size:id
@@ -120,6 +118,89 @@ make some analysis harder. In particular, the clock bounds that are used
 for zone abstractions are harder to compute (and often much less precise)
 when using clock arrays. This may result in exponentially bigger zone
 graphs. We thus recommend to avoid using clock arrays when possible.
+
+# The `event` and `event-clocks` declaration for GTA
+
+
+```
+event:id:b1:b2
+```
+
+where `id` is the identifier of the event, `b1` and `b2` are bits (from {`0`,`1`}) representing whether an event-history clock and an event-prophecy clock corresponding to the event is declared. 
+
+If `b1` is `1` then an event-history clock `id_h` is declared corresponding to the event `id`, otherwise if b1 is `0` no event-history clock is declared for the event `id`.
+
+If `b2` is `1`, then an event-prophecy clock `id_p` is declared corresponding to the event `id`, otherwise if `b2` is `0` no event-prophecy clock is declared for the event `id`.
+
+No other event shall have the same identifier. If any event-clock is declared then no other clock shall have the same identifier.
+
+
+# The `clock` declaration for GTA
+
+All clocks are one of prophecy clock, history clock, timers, normal clocks, event-history clocks, and event-prophecy clocks.
+
+## Declaring Prophecy Clocks
+```
+clock:prophecy:id
+```
+
+declares a prophecy clock with identifier `id`. No other clock shall
+have the same identifier.
+
+For instance:
+
+```
+clock:prophecy:x
+```
+
+declares a single prophecy clock `x`. 
+
+Prophecy clocks have an implicit domain of values ranging from 0 to -infinity. These clocks are non-deterministically set to any value between 0 to -infinity in the initial state, and the final state is accepting only if the valuation of all prophecy clocks is -infinity.
+
+## Declaring History Clocks
+```
+clock:history:id
+```
+
+declares a prophecy clock with identifier `id`. No other clock shall
+have the same identifier.
+
+For instance:
+
+```
+clock:history:y
+```
+
+declares a single history clock `y`. 
+
+History clocks have an implicit domain of values ranging from 0 to +infinity. These clocks are set to +infinity in the initial state.
+
+
+## Declaring Normal Clocks
+```
+clock:history:id
+```
+
+declares a prophecy clock with identifier `id`. No other clock shall
+have the same identifier.
+
+For instance:
+
+```
+clock:history:z
+```
+
+declares a single history clock `z`. 
+
+History clocks have an implicit domain of values ranging from 0 to +infinity. These clocks can never take the +infinity value, and are set to 0 in the initial state.
+
+## Declaring Event-Prophecy and Event-History Clocks
+
+These clocks are declared along with the event.
+Please see [The Event and Event-Clocks Declaration for GTA](#the-event-and-event-clocks-declaration-for-GTA)
+
+---
+
 
 
 # The `int` declaration
@@ -182,7 +263,7 @@ attribute is associated to the location (or it can be empty:
 # The `edge` declaration
 
 ```
-edge:p:source:target:e{{gta_progam}}
+edge:p:source:target:e{attributes}
 ```
 
 declares an edge in process `p` from location `source` to location
@@ -192,7 +273,9 @@ have been declared as well, and they shall both belong to process
 `p`. The event `e` shall have been declared before the edge is
 declared.
 
-The `gta_progam` part of `{{gta_program}}` of the declaration can be omitted if no program is associated to the location (`{{}}`). See section [Attributes](#attributes) for details.
+The `{attributes}` part of the declaration can be omitted if no
+attribute is associated to the location (or it can be empty:
+`{}`). See section [Attributes](#attributes) for details.
 
 
 # The `sync` declaration

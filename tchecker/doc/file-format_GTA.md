@@ -71,7 +71,11 @@ There is no way to declare a type of process, and instantiate it in TChecker. In
 event:id:b1:b2
 ```
 
-where `id` is the identifier of the event, `b1` and `b2` are bits (from {`0`,`1`}) representing whether an event-history clock and an event-prophecy clock corresponding to the event is declared. If `b1` is `1` then an event-history clock `id_h` is declared corresponding to the event `id`, otherwise if b1 is `0` no event-history clock is declared for the event `id`. If `b2` is `1`, then an event-prophecy clock `id_p` is declared corresponding to the event `id`, otherwise if `b2` is `0` no event-prophecy clock is declared for the event `id`.
+where `id` is the identifier of the event, `b1` and `b2` are bits (from {`0`,`1`}) representing whether an event-history clock and an event-prophecy clock corresponding to the event is declared. 
+
+If `b1` is `1` then an event-history clock `id_h` is declared corresponding to the event `id`, otherwise if b1 is `0` no event-history clock is declared for the event `id`.
+
+If `b2` is `1`, then an event-prophecy clock `id_p` is declared corresponding to the event `id`, otherwise if `b2` is `0` no event-prophecy clock is declared for the event `id`.
 
 No other event shall have the same identifier. If any event-clock is declared then no other clock shall have the same identifier.
 
@@ -202,10 +206,10 @@ attribute is associated to the location (or it can be empty:
 `{}`). See section [Attributes](#attributes) for details.
 
 
-# The `edge` declaration
+# The `edge` declaration for GTA
 
 ```
-edge:p:source:target:e{attributes}
+edge:p:source:target:e{{edge_program}}
 ```
 
 declares an edge in process `p` from location `source` to location
@@ -215,10 +219,49 @@ have been declared as well, and they shall both belong to process
 `p`. The event `e` shall have been declared before the edge is
 declared.
 
-The `{attributes}` part of the declaration can be omitted if no
-attribute is associated to the location (or it can be empty:
-`{}`). See section [Attributes](#attributes) for details.
+The `edge_program` part of the `{{edge_program}}` in the declaration can be omitted if no
+attribute is associated to the location (so it looks like
+`{{}}`).
 
+##  `edge_program` for GTA
+
+An `edge_program` is a sequence of `provided:`, `do:` operations separated by a semi-colon `;`. 
+
+`provided:` operation correponds to guard(s).
+
+`do:` operation corresponds to update(s).
+
+
+```
+edge_program ::= provided: guard_expr; do: update_expr;
+                | provided: guard_expr; do: update_expr; edge_program
+
+guard_expr ::= clock_expr
+       | clock_expr && guard_expr
+
+update_expr ::= clock_lvalue
+              | clock_lvalue=INTEGER
+              | clock_lvalue, update_expr
+              | clock_lvalue=INTEGER, update_expr
+
+clock_expr ::= clock_term == INTEGER
+             | clock_term < INTEGER
+	     | clock_term <= INTEGER
+	     | clock_term >= INTEGER
+	     | clock_term > INTEGER
+
+clock_term ::= clock_lvalue
+             | clock_lvalue - clock_lvalue
+
+clock_lvalue ::= CLOCK_ID
+```
+Note that to use `clock_lvalue=INTEGER` for update_expr, the `clock_lvalue` must be a timer. 
+
+A `clock_lvalue` in the `update_expr` releases the clock if its a `prophecy clock` or an `event-prophecy clock`.
+
+ A `clock_lvalue` in the `update_expr` resets the clock if its a `history clock` or an `event-history clock` or a `normal clock`.
+
+For now we are only allowing `INTEGER` to be compared with `clock_term`, but there is a rudimentry implementation that allows `int_term` expression as well. Though we do not guarantee whether it works perfectly. We have used these in the `CSMACD` examples as we have verified that these work there.
 
 # The `sync` declaration
 
@@ -348,16 +391,17 @@ Supported location attributes:
 - `invariant: expression` declares the invariant of the the
   location. See section [Expressions](#expressions) for details on expressions
 
-Supported edge attributes:
+Supported edge attributes for GTA:
 
+<!-- 
 - `provided: expression` declares the guard of the edge. See section
   [Expressions](#expressions) for details on expressions.
 
 - `do: statement` declares the statement of the edge. See section
-  [Statements](#statements) for details on statements.
+  [Statements](#statements) for details on statements. -->
 
-NB: finite-state models shall have no `clock` declaration. As a
-result, expression and statements shall not involve clocks.
+<!-- NB: finite-state models shall have no `clock` declaration. As a
+result, expression and statements shall not involve clocks. -->
 
 
 ## Timed automata
@@ -382,34 +426,21 @@ variables and arithmetic operators applied to terms. Expressions are
 defined by the following grammar:
 
 ```
-expr ::= atomic_expr
-       | atomic_expr && expr
+expr ::= clock_expr
+       | clock_expr && expr
 
-atomic_expr ::= int_term
-              | predicate_expr
-	      | ! atomic_expr
-	      | clock_expr
+clock_expr ::= clock_term == int_term
+             | clock_term < int_term
+	     | clock_term <= int_term
+	     | clock_term >= int_term
+	     | clock_term > int_term
 
-predicate_expr ::= ( predicate_expr )
-                 | int_term == int_term
-		 | int_term != int_term
-		 | int_term < int_term
-		 | int_term <= int_term
-		 | int_term >= int_term
-		 | int_term > int_term
+clock_term ::= clock_lvalue
+             | clock_lvalue - clock_lvalue
 
-int_term ::= INTEGER
-           | lvalue_int
-           | - int_term
-           | int_term + int_term
-           | int_term - int_term
-           | int_term * int_term
-           | int_term / int_term
-           | int_term % int_term
-           | (if expr then int_term else int_term)
+clock_lvalue ::= CLOCK_ID
+               | CLOCK_ID [ int_term ]
 
-lvalue_int ::= INT_VAR_ID
-             | INT_VAR_ID [ term ]
 ```
 
 where `INT_VAR_ID` is a bounded integer variable identifier, and
