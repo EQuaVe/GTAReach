@@ -28,10 +28,8 @@ Identifiers are any string containing letters, numbers, underscore
 1. [The `event` declaration for TA](#the-event-declaration-for-TA)
 1. [The `event` and `event-clocks` declaration for GTA](#the-event-and-event-clocks-declaration-for-GTA)
 1. [The `event` and `event-clocks` declaration for ECA](#the-event-and-event-clocks-declaration-for-ECA)
-<!-- 1. [The `clock` declaration ](#the-clock-declaration) -->
 1. [The `clock` declaration for TA](#the-clock-declaration-for-TA)
 1. [The `clock` declaration for GTA](#the-clock-declaration-for-GTA)
-<!-- 1. [The `clock` declaration for ECA](#the-clock-declaration-for-ECA) -->
 1. [The `int` declaration](#the-int-declaration)
 1. [The `location` declaration](#the-location-declaration)
 1. [The `edge` declaration for TA and ECA](#the-edge-declaration-for-TA-and-ECA)
