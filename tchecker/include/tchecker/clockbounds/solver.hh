@@ -408,7 +408,6 @@ namespace amap {
 } // end of namespace amap
 
 
-//ani:-100 new eca_amap_gen2 namespace created!
 namespace eca_amap_gen2 {
 
   /*!

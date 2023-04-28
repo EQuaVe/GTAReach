@@ -54,14 +54,6 @@ public:
   bool is_empty() const;
 
   /*!
-   \brief ECA can be a final zone?
-   \return true if in this zone for every prophecy clock a_p, a_p-0#c implies (#,c)=(<=,-inf), 
-    false otherwise
-  */
-  //ani:-100
-  // bool eca_is_final(std::vector<int> history_clock_ids, std::vector<int> prophecy_clock_ids,std::vector<int> normal_clock_ids) const;
-
-  /*!
    \brief Universal-positive check
    \return true if this zone is universal-positive (i.e. no constraint on clocks except x>=0), false otherwise
    */
@@ -132,7 +124,6 @@ public:
                   std::unordered_set<tchecker::integer_t> & history_clock_ids,
                   std::unordered_set<tchecker::integer_t> & prophecy_clock_ids,
                   std::unordered_set<tchecker::integer_t> & normal_clock_ids) const;
-  //ani:-100
   
   /*!
    \brief Lexical ordering

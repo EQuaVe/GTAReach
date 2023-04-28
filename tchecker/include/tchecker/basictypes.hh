@@ -177,8 +177,6 @@ state_status_t const STATE_CLOCKS_EMPTY_SPREAD = 1024; /*!< state computation fa
 state_status_t const STATE_ZONE_EMPTY = 2048;          /*!< state computation result in an empty zone (no details provided) */
 state_status_t const STATE_ZONE_EMPTY_SYNC = 4096;     /*!< state computation result in a ref zone that has no sync valuation */
 state_status_t const ECA_PROPHECY_CLOCK_VIOLATED = 8192; /*<state computation result due to ECA prophecy clock not allowed 0 value>*/
-//ani:-100
-
 } // end of namespace tchecker
 
 #endif // TCHECKER_BASICTYPES_HH

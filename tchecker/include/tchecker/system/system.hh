@@ -110,13 +110,13 @@ public:
   using tchecker::system::clocks_t::clock_variables;
   using tchecker::system::clocks_t::clocks_count;
   using tchecker::system::clocks_t::is_clock;
-  //ani:-100
+
   std::vector <int> history_clock_ids;
   std::vector <std::string> history_clock_events;
   std::vector <int> prophecy_clock_ids;
   std::vector <std::string> prophecy_clock_events;
   std::vector <int> normal_clock_ids;
-  // std::vector<std::tuple<int,int>> history_prophecy_map;
+
 
   
 

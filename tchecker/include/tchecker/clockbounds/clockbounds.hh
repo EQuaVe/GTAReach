@@ -1022,7 +1022,6 @@ std::ostream & operator<<(std::ostream & os, tchecker::amap::a_map_t const & map
 } // namespace amap
 
 
-//ani:-100
 namespace eca_amap_gen2 {
 
 /*!

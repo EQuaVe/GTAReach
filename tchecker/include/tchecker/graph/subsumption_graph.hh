@@ -385,7 +385,6 @@ public:
    */
   bool is_covered(node_sptr_t const & n, node_sptr_t & covering_node) const
   {
-    // std::cout << "ani:1\n";
     return _cover_graph.is_covered(n, covering_node);
   }
 

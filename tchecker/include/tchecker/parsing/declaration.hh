@@ -381,7 +381,6 @@ public:
    */
   clock_declaration_t(std::string const & name, unsigned int size, tchecker::parsing::attributes_t && attr, 
                       unsigned int type, std::string const & event_name);
-  //ani:-100
 
   /*!
    \brief Destructor
@@ -439,10 +438,9 @@ private:
   std::string const _name;  /*!< Name */
   unsigned int const _size; /*!< Size */
 
-  //tchecker::CLOCK_TYPE _clock_type; /*< Clock Type for ECA history clocks, prophecy clocks, normal clocks*/ 
-  //ani:-100 added a type here!
-  unsigned int const _clock_type;
-  std::string const _event_name;
+
+  unsigned int const _clock_type; /*!< Clock Type for ECA history clocks, prophecy clocks, normal clocks */ 
+  std::string const _event_name; /*!< String giving the name of the event */
 };
 
 /*!

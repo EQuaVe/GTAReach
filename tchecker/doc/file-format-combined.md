@@ -347,7 +347,7 @@ A `clock_lvalue` in the `update_expr` releases the clock if its a `prophecy cloc
 
  A `clock_lvalue` in the `update_expr` resets the clock if its a `history clock` or an `event-history clock` or a `normal clock`.
 
-For now we are only allowing `INTEGER` to be compared with `clock_term`, but there is a rudimentry implementation that allows `int_term` expression as well. Though we do not guarantee whether it works perfectly. We have used these in the `CSMACD` examples as we have verified that these work there.
+<!--For now we are only allowing `INTEGER` to be compared with `clock_term`, but there is a rudimentry implementation that allows `int_term` expression as well. Though we do not guarantee whether it works perfectly. We have used these in the `CSMACD` examples as we have verified that these work there.-->
 
 
 

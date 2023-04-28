@@ -16,7 +16,7 @@ namespace tchecker {
 namespace dbm {
 
 std::ostream & output(std::ostream & os, tchecker::dbm::db_t db)
-{ //ani:-100
+{ 
   if (db == tchecker::dbm::LE_INFINITY)
     os << "<=inf";
   else if (db == tchecker::dbm::LT_INFINITY)

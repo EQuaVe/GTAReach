@@ -88,7 +88,8 @@ public:
   using tchecker::system::system_t::clock_variables;
   using tchecker::system::system_t::clocks_count;
   using tchecker::system::system_t::is_clock;
-  //ani:-100
+
+  //Clock identifiers
   using tchecker::system::system_t::history_clock_ids;
   using tchecker::system::system_t::history_clock_events;
   using tchecker::system::system_t::prophecy_clock_ids;

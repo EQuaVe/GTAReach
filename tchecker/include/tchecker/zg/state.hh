@@ -170,7 +170,6 @@ bool g_le(tchecker::zg::state_t const & s1, tchecker::zg::state_t const & s2,
           std::vector<tchecker::typed_diagonal_clkconstr_expression_t const *>  & G, 
           std::vector<tchecker::typed_simple_clkconstr_expression_t const *> const & Gdf);
 
-//ani:-100
 /*!
  \brief G-simulation check
  \param G   : a vector of diagonal constraints

@@ -72,7 +72,7 @@ public:
                                         tchecker::clock_constraint_container_t const & tgt_invariant,
                                         const std::unordered_set<int> & history_clock_ids,
                                         const std::unordered_set<int> & prophecy_clock_ids,
-                                        const std::unordered_set<int> & normal_clock_ids) = 0;//ani:-100
+                                        const std::unordered_set<int> & normal_clock_ids) = 0;
   
   /*!
   \brief Determine if current zone can be a final zone
@@ -83,7 +83,7 @@ public:
   virtual bool is_final_dbm(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim,
                                         const std::unordered_set<int> & history_clock_ids,
                                         const std::unordered_set<int> & prophecy_clock_ids,
-                                        const std::unordered_set<int> & normal_clock_ids)//ani:-100
+                                        const std::unordered_set<int> & normal_clock_ids)
                                         {
                                           return true;
                                         }
@@ -147,7 +147,7 @@ public:
                                         tchecker::clock_constraint_container_t const & tgt_invariant,
                                         const std::unordered_set<int> & history_clock_ids,
                                         const std::unordered_set<int> & prophecy_clock_ids,
-                                        const std::unordered_set<int> & normal_clock_ids);//ani:-100;
+                                        const std::unordered_set<int> & normal_clock_ids);
 
   /*!
   \brief Determine if current zone can be a final zone
@@ -158,7 +158,7 @@ public:
   virtual bool is_final_dbm(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim,
                                         const std::unordered_set<int> & history_clock_ids,
                                         const std::unordered_set<int> & prophecy_clock_ids,
-                                        const std::unordered_set<int> & normal_clock_ids);//ani:-100
+                                        const std::unordered_set<int> & normal_clock_ids);
 };
 
 /*!
@@ -219,7 +219,7 @@ public:
                                         tchecker::clock_constraint_container_t const & tgt_invariant,
                                         const std::unordered_set<int> & history_clock_ids,
                                         const std::unordered_set<int> & prophecy_clock_ids,
-                                        const std::unordered_set<int> & normal_clock_ids);//ani:-100;
+                                        const std::unordered_set<int> & normal_clock_ids);
   
   /*!
   \brief Determine if current zone can be a final zone
@@ -230,7 +230,7 @@ public:
   virtual bool is_final_dbm(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim,
                                         const std::unordered_set<int> & history_clock_ids,
                                         const std::unordered_set<int> & prophecy_clock_ids,
-                                        const std::unordered_set<int> & normal_clock_ids);//ani:-100
+                                        const std::unordered_set<int> & normal_clock_ids);
 };
 
 
@@ -298,7 +298,6 @@ public:
                                         const std::unordered_set<int> & prophecy_clock_ids,
                                         const std::unordered_set<int> & normal_clock_ids
                                         );
-//ani:-100;
 
 /*!
   \brief Determine if current zone can be a final zone
@@ -309,7 +308,7 @@ public:
   virtual bool is_final_dbm(tchecker::dbm::db_t const * dbm, tchecker::clock_id_t dim,
                                         const std::unordered_set<int> & history_clock_ids,
                                         const std::unordered_set<int> & prophecy_clock_ids,
-                                        const std::unordered_set<int> & normal_clock_ids);//ani:-100
+                                        const std::unordered_set<int> & normal_clock_ids);
 
 };
 
@@ -320,7 +319,7 @@ public:
 enum semantics_type_t {
   STANDARD_SEMANTICS, /*!< see tchecker::zg::standard_semantics_t */
   ELAPSED_SEMANTICS,  /*!< see tchecker::zg::elapsed_semantics_t */
-  eca_gen2_SEMANTICS, /*!< see tchecker::zg::eca_gen_semantics_t */ //ani:-100
+  eca_gen2_SEMANTICS, /*!< see tchecker::zg::eca_gen_semantics_t */ 
   
 };
 

@@ -9,7 +9,7 @@
 #define TCHECKER_zg_eca_gsim_gen_ALGORITHM_HH
 
 /*!
- \file zg-covreach.hh
+ \file zg-eca_gsim_gen.hh
  \brief Covering reachability algorithm over the zone graph with zone inclusion
 */
 
@@ -140,9 +140,9 @@ private:
   tchecker::eca_amap_gen2::eca_a_map_t const & _amap; /*!< an a-map */
   std::vector<tchecker::typed_diagonal_clkconstr_expression_t const *> * _G; /*!< a vector of diagonal constraints */
   std::vector<tchecker::typed_simple_clkconstr_expression_t const *> * _Gdf; /*!< a vector of non-diagonal constraints */
-  std::unordered_set <int> const & _history_clock_ids;
-  std::unordered_set <int> const & _prophecy_clock_ids;
-  std::unordered_set <int> const & _normal_clock_ids;
+  std::unordered_set <int> const & _history_clock_ids; /*!< history clock ids */
+  std::unordered_set <int> const & _prophecy_clock_ids; /*!< prophecy clock ids */
+  std::unordered_set <int> const & _normal_clock_ids; /*!< normal clock ids */
 };
 
 /*!
@@ -240,7 +240,6 @@ public:
   using tchecker::algorithms::covreach::algorithm_t<tchecker::zg::zg_t, tchecker::tck_reach::zg_eca_gsim_gen::graph_t>::algorithm_t;
 };
 
-//ani:-100
 /*!
  \brief Run covering reachability algorithm on the zone graph of a system
  \param sysdecl : system declaration

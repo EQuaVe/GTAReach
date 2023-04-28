@@ -390,7 +390,6 @@ private:
   bool is_covered(NODE_PTR const & n, nodes_container_t const & c, NODE_PTR & covering_node) const
   {
     for (NODE_PTR const & node : c) {
-      // std::cout << " ani:393 " << (n!=node)   << " "  << std::endl ;
       if ((n != node) && _node_le(n, node)) {
         covering_node = node;
         return true;

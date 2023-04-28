@@ -68,7 +68,6 @@ tchecker::state_status_t next(tchecker::ta::system_t const & system,
                               tchecker::clock_constraint_container_t & tgt_invariant,
                               tchecker::ta::outgoing_edges_value_t const & edges)
 {
-  // std::cout << "ani:702 " << std::endl;
 
   tchecker::vm_t & vm = system.vm();
 
@@ -96,7 +95,6 @@ tchecker::state_status_t next(tchecker::ta::system_t const & system,
   for (tchecker::loc_id_t loc_id : *vloc)
     if (vm.run(system.invariant_bytecode(loc_id), *intval, tgt_invariant, throw_clkreset) == 0)
       return tchecker::STATE_INTVARS_TGT_INVARIANT_VIOLATED;
-  // std::cout << "ani:712 " << std::endl;
 
   return tchecker::STATE_OK;
 }

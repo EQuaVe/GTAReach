@@ -112,8 +112,8 @@ add_executable(tck-reach
                ${CMAKE_CURRENT_SOURCE_DIR}/tck-reach/zg-lu.hh
                ${CMAKE_CURRENT_SOURCE_DIR}/tck-reach/zg-reach.cc
                ${CMAKE_CURRENT_SOURCE_DIR}/tck-reach/zg-reach.hh
-               ${CMAKE_CURRENT_SOURCE_DIR}/tck-reach/zg-eca_gsim_gen.hh #[[ani:-100]]
-               ${CMAKE_CURRENT_SOURCE_DIR}/tck-reach/zg-eca_gsim_gen.cc)#[[ani:-100]]
+               ${CMAKE_CURRENT_SOURCE_DIR}/tck-reach/zg-eca_gsim_gen.hh 
+               ${CMAKE_CURRENT_SOURCE_DIR}/tck-reach/zg-eca_gsim_gen.cc)
                
 target_link_libraries(tck-reach libtchecker_static)
 set_property(TARGET tck-reach PROPERTY CXX_STANDARD 17)

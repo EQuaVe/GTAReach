@@ -20,7 +20,7 @@
 #include "zg-reach.hh"
 #include "zg-gsim.hh"
 #include "zg-lu.hh"
-#include "zg-eca_gsim_gen.hh"//ani:-100
+#include "zg-eca_gsim_gen.hh"
 
 
 
@@ -53,8 +53,7 @@ void usage(char * progname)
   std::cerr << "          covreach:  reachability algorithm with covering over the zone graph" << std::endl;
   std::cerr << "          alu:       reachability algorithm with LU-simulation over the zone graph" << std::endl;
   std::cerr << "          gsim:      reachability algorithm with g-simulation over the zone graph" << std::endl;
-  // std::cerr << "          eca_gsim_gen:      reachability algorithm for ECA with g-simulation over the zone graph of generic model" << std::endl; //ani:-100
-  std::cerr << "          gta_gsim:      reachability algorithm for General Timed Automata with G-simulation over the zone graph" << std::endl; //ani:-100
+  std::cerr << "          gta_gsim:      reachability algorithm for General Timed Automata with G-simulation over the zone graph" << std::endl; 
   std::cerr << "   -C out_file   output a certificate (as a graph) in out_file" << std::endl;
   std::cerr << "   -h            help" << std::endl;
   std::cerr << "   -l l1,l2,...  comma-separated list of searched labels" << std::endl;
@@ -70,9 +69,9 @@ enum algorithm_t {
   ALGO_COVREACH, /*!< Covering reachability algorithm */
   ALGO_LU,       /*!< Covering reachability algorithm with LU-simulation */
   ALGO_GSIM,     /*!< Covering reachability algorithm with G-simulation */
-  ALGO_ECA_GSIM,     /*!< Covering reachability algorithm on ECA with G-simulation */ //ani:-100
-  ALGO_ECA_GSIM_GEN,     /*!< Covering reachability algorithm on ECA with G-simulation */ //ani:-100
-  ALGO_ECA_NEW,     /*!< Covering reachability algorithm on ECA with G-simulation */ //ani:-100
+  ALGO_ECA_GSIM,     /*!< Covering reachability algorithm on ECA with G-simulation */ 
+  ALGO_ECA_GSIM_GEN,     /*!< Covering reachability algorithm on ECA with G-simulation */ 
+  ALGO_ECA_NEW,     /*!< Covering reachability algorithm on ECA with G-simulation */ 
   ALGO_NONE,     /*!< No algorithm */
 };
 
@@ -118,9 +117,7 @@ int parse_command_line(int argc, char * argv[])
           algorithm = ALGO_LU;
         else if (strcmp(optarg, "gsim") == 0)
           algorithm = ALGO_GSIM;
-        // else if (strcmp(optarg, "eca_gsim_gen") == 0) //ani:-100
-        //   algorithm = ALGO_ECA_GSIM_GEN;  
-        else if (strcmp(optarg, "gta_gsim") == 0) //ani:-100
+        else if (strcmp(optarg, "gta_gsim") == 0) 
           algorithm = ALGO_ECA_GSIM_GEN;  
         else
           throw std::runtime_error("Unknown algorithm: " + std::string(optarg));
@@ -305,7 +302,6 @@ void gsim(std::shared_ptr<tchecker::parsing::system_declaration_t> const & sysde
 }
 
 
-//ani:-100
 /*!
  \brief Perform covering reachability analysis with G-simulation for GENERAL MODEL ECA
  \param sysdecl : system declaration
@@ -315,8 +311,7 @@ void gsim(std::shared_ptr<tchecker::parsing::system_declaration_t> const & sysde
 */
 void eca_gsim_gen(std::shared_ptr<tchecker::parsing::system_declaration_t> const & sysdecl)
 {
-  //ani:-100
-  // std::cout << "inside eca_gsim_gen" << std::endl;
+  
   auto && [stats, graph] = tchecker::tck_reach::zg_eca_gsim_gen::run(sysdecl, labels, search_order, block_size, table_size);
   
   // stats
@@ -331,7 +326,6 @@ void eca_gsim_gen(std::shared_ptr<tchecker::parsing::system_declaration_t> const
     tchecker::tck_reach::zg_eca_gsim_gen::dot_output(ofs, *graph, sysdecl->name());
     ofs.close();
   }
-  // std::cout << "ani:3031 ran eca_gsim_gen reach\n"; 
 }
 
 /*!
@@ -377,7 +371,7 @@ int main(int argc, char * argv[])
     case ALGO_GSIM:
       gsim(sysdecl);
       break;
-    case ALGO_ECA_GSIM_GEN: //ani:-100
+    case ALGO_ECA_GSIM_GEN:
       eca_gsim_gen(sysdecl);
       break;
     default:

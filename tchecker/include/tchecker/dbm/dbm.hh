@@ -374,7 +374,6 @@ enum tchecker::dbm::status_t constrain(tchecker::dbm::db_t * dbm, tchecker::cloc
                                        tchecker::clock_id_t y, tchecker::dbm::comparator_t cmp, tchecker::integer_t value);
 
 
-//ani:-100
 /*!
  \brief Constrain an ECA DBM
  \param dbm : a dbm
@@ -430,7 +429,6 @@ enum tchecker::dbm::status_t constrain(tchecker::dbm::db_t * dbm, tchecker::cloc
 
 
 
-//ani:-100
 /*!
  \brief Constrain an ECA DBM w.r.t. clock constraint
  \param dbm : a dbm
@@ -610,7 +608,6 @@ void reset_to_sum(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim, tchecker:
 void reset_to_subtraction(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim, tchecker::clock_id_t x, tchecker::clock_id_t y,
                   tchecker::integer_t value);
 
-//ani:-100
 /*!
  \brief Reset from a history clock in ECA according to clock reset
  \param dbm : a dbm
@@ -635,7 +632,6 @@ void eca_reset_caller(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim, tchec
 
 
 
-//ani:-100
 /*!
  \brief Reset from a history clock in ECA according to clock reset
  \param dbm : a dbm
@@ -674,7 +670,6 @@ void eca_reset(tchecker::dbm::db_t * dbm,
  */
 void open_up(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim);
 
-//ani:-100
 /*!
  \brief ECA open up (delay)
  \param dbm : a dbm
@@ -695,7 +690,6 @@ void eca_open_up(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim,
                   const std::unordered_set<int> &prophecy_clock_ids, 
                   const std::unordered_set<int> &normal_clock_ids);
 
-//ani:-100
 /*!
  \brief Release a prophecy clock with index
  \param dbm : a dbm
@@ -718,7 +712,6 @@ void eca_release_caller(tchecker::dbm::db_t * dbm, tchecker::clock_id_t dim,
                 const std::unordered_set<int> &prophecy_clock_ids, 
                 const std::unordered_set<int> &normal_clock_ids);
 
-//ani:-100
 /*!
  \brief Release a prophecy clock with index
  \param dbm : a dbm
@@ -969,7 +962,6 @@ bool is_g_le(tchecker::dbm::db_t const * dbm1, tchecker::dbm::db_t const * dbm2,
  dim >= 1 (checked by assertion)
  \return true if dbm1 <=_Gdf dbm2, false otherwise
  */
-//ani:-100
 bool is_eca_g_le_nd(tchecker::dbm::db_t const * dbm1, tchecker::dbm::db_t const * dbm2, tchecker::clock_id_t dim,
                 std::vector<tchecker::typed_simple_clkconstr_expression_t const *> const & Gdf, 
                 const std::unordered_set<tchecker::integer_t> & history_clock_ids,
@@ -977,7 +969,6 @@ bool is_eca_g_le_nd(tchecker::dbm::db_t const * dbm1, tchecker::dbm::db_t const 
                 const std::unordered_set<tchecker::integer_t> & normal_clock_ids);
 
 
-//ani:-100 i don't know what to write here as there is no such function declaration in dbm.hh!
 bool is_eca_g_le_star(tchecker::dbm::db_t const * dbm1, tchecker::dbm::db_t const * dbm2, tchecker::clock_id_t dim, 
                       std::vector<tchecker::typed_diagonal_clkconstr_expression_t const *> & G,
                       std::vector<tchecker::typed_simple_clkconstr_expression_t const *> const & Gdf, 
@@ -1003,7 +994,6 @@ bool is_eca_g_le_star(tchecker::dbm::db_t const * dbm1, tchecker::dbm::db_t cons
  dim >= 1 (checked by assertion)
  \return true if dbm1 <=_(G U Gdf) dbm2, false otherwise (see "Fast Algorithms for Handling Diagonal Constraints in Timed Automata", Paul Gastin, Sayan Mukherjee, B Srivathsan, in proceedings of CAV 2019)
  */
-//ani:-100
 bool is_eca_g_le(tchecker::dbm::db_t const * dbm1, tchecker::dbm::db_t const * dbm2, tchecker::clock_id_t dim,
             std::vector<tchecker::typed_diagonal_clkconstr_expression_t const *> & G,
             std::vector<tchecker::typed_simple_clkconstr_expression_t const *> const & Gdf, 

@@ -230,10 +230,6 @@ inline tchecker::state_status_t next(tchecker::ta::system_t const & system, tche
                                      tchecker::zg::extrapolation_t & extrapolation,
                                      tchecker::zg::outgoing_edges_value_t const & v)
 {
-  // std::cout << "ani:554" << std::endl;
-  // for(auto tmp_guard: t.guard_container())
-  //   std::cout << "ani:47 " << tmp_guard << std::endl;
-  // std::cout << "ani:700" << std::endl;
   return tchecker::zg::next(system, s.vloc_ptr(), s.intval_ptr(), s.zone_ptr(), t.vedge_ptr(), t.src_invariant_container(),
                             t.guard_container(), t.reset_container(), t.tgt_invariant_container(), semantics, extrapolation, v);
 }
@@ -248,10 +244,6 @@ inline tchecker::state_status_t next(tchecker::ta::system_t const & system, tche
 */
 bool satisfies(tchecker::ta::system_t const & system, tchecker::zg::state_t const & s, boost::dynamic_bitset<> const & labels);
 
-/*
-//ani:-100
-bool eca_final(tchecker::zg::state_t const & s);
-*/
 
 /*!
  \brief Accessor to state attributes as strings

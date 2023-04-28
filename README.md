@@ -180,7 +180,12 @@ The command should create a `build_dir` directory and an `install_dir` directory
 
 ## File Structure
 The directory `examples_from_the_paper` contains all the benchmarks used in the paper.
+It contains three sub-directories as follows:
+* `table_verify_gsim`: Files in this directory are TChecker Timed Automata Files.
+* `table_verify_gta`: Files in this directory are TChecker GTA Model Files.
+* `toyECA_ECA`: This folder contains file in ECA format.
 
+<!--
 It contains three sub-directories as follows:
 * `table_verify_gsim`: Files in this directory are TChecker Timed Automata Files. These are as follows:
   1. Dining_Phi_6.txt: This file corresponds to table entry 1.
@@ -208,8 +213,8 @@ It contains three sub-directories as follows:
   1. toyECA_ECA_10000_4.txt: This file corresponds to table entry 4.
   1. toyECA_ECA_50000_120.txt: This file corresponds to table entry 7.
 
-## Commands to verify the table:
-  ### Commands to verify the `GTA reach` column
+## Commands to run benchmarks:
+  ### Commands to run `GTA` benchmarks
   * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Dining_Phi_6.txt`
   * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/FDDI_10.txt`
   * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/Fischer_10.txt`
@@ -224,10 +229,10 @@ It contains three sub-directories as follows:
   * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop1.txt`
   * `./run.sh gta_gsim examples_from_the_paper/table_verify_gta/ABP-prop2.txt`
   
-  ### Script to verify the `GTA reach` column
-  * `./verify_table_gta_reach.sh`
+<!-- ### Commands to run `GTA` column
+  * `./verify_table_gta_reach.sh`-->
 
-  ### Commands to verify the `G-Sim` column
+  ### Commands to run the `GTA` benchmarks
   * `./run.sh gsim examples_from_the_paper/table_verify_gsim/Dining_Phi_6.txt`
   * `./run.sh gsim examples_from_the_paper/table_verify_gsim/FDDI_10.txt`
   * `./run.sh gsim examples_from_the_paper/table_verify_gsim/Fischer_10.txt`
@@ -243,9 +248,10 @@ It contains three sub-directories as follows:
 
     The above command will not terminate in 15 minutes, so we report TIMEOUT.
 
-  ### Script to verify the `G-Sim` column
-  * `./verify_table_g-sim.sh`
+<!--  ### Script to verify the `G-Sim` column
+  * `./verify_table_g-sim.sh`-->
 ---
+-->
 
 --
 # File Format

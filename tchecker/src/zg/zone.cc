@@ -28,13 +28,6 @@ tchecker::zg::zone_t & zone_t::operator=(tchecker::zg::zone_t const & zone)
 
 bool zone_t::is_empty() const { return tchecker::dbm::is_empty_0(dbm_ptr(), _dim); }
 
-//ani:-100
-/*
-bool zone_t::eca_is_final(std::vector<int> history_clock_ids, 
-                          std::vector<int> prophecy_clock_ids,
-                          std::vector<int> normal_clock_ids ) const {
-  return tchecker::dbm::eca_is_final_dbm(dbm_ptr(), _dim,history_clock_ids, prophecy_clock_ids, normal_clock_ids);
-}*/
 
 bool zone_t::is_universal_positive() const { return tchecker::dbm::is_universal_positive(dbm_ptr(), _dim); }
 
@@ -91,7 +84,6 @@ bool zone_t::g_le(tchecker::zg::zone_t const & zone,
   return tchecker::dbm::is_g_le(dbm_ptr(), zone.dbm_ptr(), _dim, G, Gdf);
 }
 
-//ani:-100
 bool zone_t::eca_g_le(tchecker::zg::zone_t const & zone, 
                   std::vector<tchecker::typed_diagonal_clkconstr_expression_t const *> & G,
                   std::vector<tchecker::typed_simple_clkconstr_expression_t const *> const & Gdf,
@@ -103,21 +95,7 @@ bool zone_t::eca_g_le(tchecker::zg::zone_t const & zone,
     return true;
   if (zone.is_empty())
     return false;
-  // std::unordered_set<int> history_clock_id_map;
-  // std::unordered_set<int> prophecy_clock_id_map;
-  // std::unordered_set<int> normal_clock_id_map;
 
-  // for(auto i:history_clock_ids){
-  //   history_clock_id_map.insert(i);
-  // }
-  // for(auto i:prophecy_clock_ids){
-  //   prophecy_clock_id_map.insert(i);
-  // }
-  // for(auto i:normal_clock_ids){
-  //   normal_clock_id_map.insert(i);
-  // }
-  // std::cout << "ani:-342\n";
-  //ani:-10001
   return tchecker::dbm::is_eca_g_le(dbm_ptr(), zone.dbm_ptr(), _dim, G, Gdf, history_clock_id_map, prophecy_clock_id_map, normal_clock_id_map);
 }
 

@@ -211,7 +211,6 @@ typed_simple_clkconstr_expression_t::typed_simple_clkconstr_expression_t(enum tc
 }
 
 void typed_simple_clkconstr_expression_t::do_visit(tchecker::typed_expression_visitor_t & v) const { 
-  // std::cout << "ani:39 printing from simple clock constraint do_visit \n"; 
   v.visit(*this); 
 }
 
