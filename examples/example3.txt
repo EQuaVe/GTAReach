@@ -12,7 +12,7 @@ location:P:q0{initial:}
 location:P:q1{}
 location:P:q2{}
 
-edge:P:q0:q0:b{{ provided: b_h==1 && a_p<-1; do:y; provided: a_p-y<-4;}}
+edge:P:q0:q0:b{{ provided: b_h==1 && a_p<-1; do:y; provided: a_h-y<4;}}
 #using both prophecy clocks and event-clocks. Semantics of event-clocks are still true.
 
 edge:P:q0:q1:a{{ provided: a_p==-1; do:; }}

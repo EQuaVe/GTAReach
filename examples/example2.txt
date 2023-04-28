@@ -13,7 +13,7 @@ location:P:q0{initial:}
 location:P:q1{}
 location:P:q2{}
 
-edge:P:q0:q0:b{{ provided: b_p==-1 && a_p<-1; do:; }}
+edge:P:q0:q0:b{{ provided: b_h==-1 && a_p<-1; do:; }}
 # A looping edge from q0 to q0 on label b, and on the program  provided: b_p==-1 && a_p<-1; do:; , implicitly there is a provided:b_p==0; do:b_p; at the end of the program due to semantics of event-prophecy clocks, see paper for more details.
 
 edge:P:q0:q1:a{{ provided: a_p==-1; do:; }}

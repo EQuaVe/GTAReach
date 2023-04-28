@@ -2,7 +2,7 @@
 1. [Installation with Docker](#installation-with-Docker)
 1. [Installation without Docker](#installation-without-Docker)
 1. [Running the tool(s)](#running-the-tool(s))
-1. [Testing Table 1 of the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`](#testing-table-1-of-the-paper-`A-Unified-Model-For-Real-Time-Systems:-Symbolic Techniques-And-Implementation`)
+1. [Benchmarks](#benchmarks`)
 1. [File Format](#File-Format)
 ---
 # Installation with Docker
@@ -155,6 +155,7 @@ To compile the TChecker tool, run the following command
       ./compile.sh
 
 The command should create a `build_dir` directory and an `install_dir` directory.
+
 ---
 
 # Running the tool(s)
@@ -175,8 +176,7 @@ The command should create a `build_dir` directory and an `install_dir` directory
         ./run.sh eca input_file_path/input_file output_file
 ---
 
-# Testing Table 1 of the paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`
-
+# Benchmarks
 
 ## File Structure
 The directory `examples_from_the_paper` contains all the benchmarks used in the paper.
@@ -249,7 +249,7 @@ It contains three sub-directories as follows:
 
 --
 # File Format
-Please, refer to [Using TChecker](https://github.com/anirjoshi/TIMED_AUTOMATA_GTA_MODEL_LATEST/blob/general_model/tchecker/doc/file-format-combined.md) or to file `tchecker/doc/file-format-combined.md` in the repository.
+Please, refer to [Using GTA-Model](https://github.com/anirjoshi/GTA-Model/blob/general_model/tchecker/doc/file-format-combined.md) or to file `tchecker/doc/file-format-combined.md` in the repository.
 
 
 <!-- # Benchmarks:
