@@ -2,7 +2,7 @@
 1. [Installation with Docker](#installation-with-Docker)
 1. [Installation without Docker](#installation-without-Docker)
 1. [Running the tool(s)](#running-the-tool(s))
-1. [Benchmarks](#benchmarks`)
+1. [Benchmarks](#benchmarks)
 1. [File Format](#File-Format)
 ---
 # Installation with Docker
