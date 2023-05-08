@@ -9,11 +9,11 @@
 
 ## Downloading the Docker Image
 
-DOI: `10.6084/m9.figshare.22701187`
+DOI: `10.6084/m9.figshare.22734839.v1`
 
-Link for accessing the docker image: `https://doi.org/10.6084/m9.figshare.22701187`
+Link for accessing the docker image: `https://doi.org/10.6084/m9.figshare.22734839.v1`
 
-Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22701187).
+Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22734839.v1).
 
 ## Requirements for running the Docker Image
 * [Docker](https://docs.docker.com/engine/release-notes/23.0/) (version >=23.0.4)
