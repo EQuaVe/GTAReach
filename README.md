@@ -251,9 +251,8 @@ It contains three sub-directories as follows:
 <!--  ### Script to verify the `G-Sim` column
   * `./verify_table_g-sim.sh`-->
 ---
--->
 
---
+
 # File Format
 Please, refer to [Using GTA-Model](https://github.com/anirjoshi/GTA-Model/blob/general_model/tchecker/doc/file-format-combined.md) or to file `tchecker/doc/file-format-combined.md` in the repository.
 
