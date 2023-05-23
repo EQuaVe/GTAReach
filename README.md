@@ -1,9 +1,21 @@
 # Contents
+1. [Introduction to the Tool](#introduction-to-the-tool)
 1. [Installation with Docker](#installation-with-Docker)
 1. [Installation without Docker](#installation-without-Docker)
-1. [Running the tool(s)](#running-the-tool(s))
+1. [Running the tool](#running-the-tool)
 1. [Benchmarks](#benchmarks)
 1. [File Format](#File-Format)
+---
+# Introduction to the Tool
+
+This artifact is a prototype implementation of the reachability procedure for the model `Generalized Timed Automata (GTA)` proposed in the CAV paper `A Unified Model for Real-Time Systems: Symbolic Techniques and Implementation`. 
+
+Generalized Timed Automata (GTA) unifies the features of various models such as timed automata, event-clock automata (with and without diagonal constraints), and automata with timers. We implement the new simulation-based zone algorithm for checking reachability in this unified model as given in the paper. 
+
+Given a Generalized Timed Automata and an initial state, we compute all the states reachable from the initial state. For details regarding the algorithm please refer to the paper.
+
+Our tool is built on the tool [TChecker](https://github.com/ticktac-project/tchecker) (version 3), and uses many operations that are present in the tool. For more details on [TChecker](https://github.com/ticktac-project/tchecker) please visit, https://github.com/ticktac-project/tchecker. 
+
 ---
 # Installation with Docker
 
@@ -13,7 +25,7 @@ DOI: `10.6084/m9.figshare.22734839.v1`
 
 Link for accessing the docker image: `https://doi.org/10.6084/m9.figshare.22734839.v1`
 
-Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22734839.v1).
+<!-- Download the docker image from [DOI LINK](https://doi.org/10.6084/m9.figshare.22734839.v1). -->
 
 ## Requirements for running the Docker Image
 * [Docker](https://docs.docker.com/engine/release-notes/23.0/) (version >=23.0.4)
@@ -38,8 +50,9 @@ Run the following command to start the interactive terminal:
 
     sudo docker run -it gta:3
 
-For running the tool go to (Running the tool(s))[#Running-the-tool(s)]
+For running the tool go to (Running the tool)[#Running-the-tool]
 
+<!-- this will compute the zone-graph with subsumption of the GTA model in the input file-->
 
 
 
@@ -136,6 +149,9 @@ In general, to run a file with name `file_name` (containing a ECA) that is at a 
 * boost library (version >=1.65.0) 
 * Catch2 (version 2)
 
+> **_NOTE:_**  Our tool with the above requirements, but it may also work with older versions as well.
+
+
 Catch2 version 2 can be obtained from [Catch2 github repository](https://github.com/catchorg/Catch2). Please download the `v2.x` branch, it can be downloaded using the command: 
 
     git clone https://github.com/catchorg/Catch2.git -b v2.x
@@ -178,12 +194,16 @@ The command should create a `build_dir` directory and an `install_dir` directory
 
 # Benchmarks
 
-## File Structure
-The directory `examples_from_the_paper` contains all the benchmarks used in the paper.
+The directory `examples_gta` contains GTA benchmarks.
+
+<!-- ## File Structure -->
+
+
+<!-- The directory `examples_from_the_paper` contains all the benchmarks used in the paper.
 It contains three sub-directories as follows:
 * `table_verify_gsim`: Files in this directory are TChecker Timed Automata Files.
 * `table_verify_gta`: Files in this directory are TChecker GTA Model Files.
-* `toyECA_ECA`: This folder contains file in ECA format.
+* `toyECA_ECA`: This folder contains file in ECA format. -->
 
 <!--
 It contains three sub-directories as follows:
@@ -232,7 +252,7 @@ It contains three sub-directories as follows:
 <!-- ### Commands to run `GTA` column
   * `./verify_table_gta_reach.sh`-->
 
-  ### Commands to run the `GTA` benchmarks
+  <!-- ### Commands to run the `GTA` benchmarks
   * `./run.sh gsim examples_from_the_paper/table_verify_gsim/Dining_Phi_6.txt`
   * `./run.sh gsim examples_from_the_paper/table_verify_gsim/FDDI_10.txt`
   * `./run.sh gsim examples_from_the_paper/table_verify_gsim/Fischer_10.txt`
@@ -246,7 +266,7 @@ It contains three sub-directories as follows:
 
   * `./run.sh eca examples_from_the_paper/toyECA_ECA/toyECA_ECA_50000_120.txt > examples_from_the_paper/table_verify_gsim/toyECA_50000_120.txt`
 
-    The above command will not terminate in 15 minutes, so we report TIMEOUT.
+    The above command will not terminate in 15 minutes, so we report TIMEOUT. -->
 
 <!--  ### Script to verify the `G-Sim` column
   * `./verify_table_g-sim.sh`-->
@@ -254,7 +274,7 @@ It contains three sub-directories as follows:
 
 
 # File Format
-Please, refer to [Using GTA-Model](https://github.com/anirjoshi/GTA-Model/blob/general_model/tchecker/doc/file-format-combined.md) or to file `tchecker/doc/file-format-combined.md` in the repository.
+Please, refer to [Using GTA-Model](https://github.com/anirjoshi/GTA-Model/blob/general_model/tchecker/doc/file-format-combined.md) or to file `tchecker/doc/file-format-combined.md`.
 
 
 <!-- # Benchmarks:
