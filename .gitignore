@@ -11,3 +11,9 @@ gta_v1.tar
 gta_v3.tar
 tmp.txt
 **/.**
+Dockerfile
+verify_table_gta_reach.sh
+verify_table_g-sim.sh
+output/
+eca_wrapper/
+examples_gsim/
