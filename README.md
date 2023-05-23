@@ -175,7 +175,7 @@ The command should create a `build_dir` directory and an `install_dir` directory
 
 ---
 
-# Running the tool(s)
+# Running the tool
 * To run the tool on a `input_file` with path `file_path` execute the following command:
         
         `./run.sh file_path`
