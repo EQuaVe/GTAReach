@@ -18,3 +18,4 @@ output/
 eca_wrapper/
 examples_gsim/
 .dockerignore
+.gitignore
