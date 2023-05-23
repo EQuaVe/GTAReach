@@ -17,3 +17,4 @@ verify_table_g-sim.sh
 output/
 eca_wrapper/
 examples_gsim/
+.dockerignore
