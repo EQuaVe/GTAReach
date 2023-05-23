@@ -139,6 +139,7 @@ In general, to run a file with name `file_name` (containing a ECA) that is at a 
 
     `sudo docker run -v file_location/file_name:/usr/src/file_name -t gta:3 eca /usr/src/file_name`
  -->
+
 ---
 # Installation without Docker
 ## Requirements for installing TChecker Tool
@@ -149,7 +150,7 @@ In general, to run a file with name `file_name` (containing a ECA) that is at a 
 * boost library (version >=1.65.0) 
 * Catch2 (version 2)
 
-> **_NOTE:_**  Our tool with the above requirements, but it may also work with older versions as well.
+> **_NOTE:_**  Our tool works with the above requirements, but it may also work with older versions as well.
 
 
 Catch2 version 2 can be obtained from [Catch2 github repository](https://github.com/catchorg/Catch2). Please download the `v2.x` branch, it can be downloaded using the command: 
