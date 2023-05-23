@@ -17,7 +17,7 @@ A comment starts with symbol `#` and runs till the end of the line.
 
 Symbols `:`, `@` and `#` have a special meaning in TChecker files,
 and are thus reserved. Keywords: `clock`, `edge`, `event`, `int`,
-`location`, `process`, `sync` and `system` are reserved.
+`location`, `process`, `sync`, `tmp` and `system` are reserved.
 
 Identifiers are any string containing letters, numbers, underscore
 (`_`) and dot (`.`) and starting with either a letter or underscore

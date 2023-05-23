@@ -3278,7 +3278,8 @@ namespace eca_amap_gen2 {
 
     return fix_point;
   }
-
+  
+  // this is the topmost function that computes the amap for a GTA
   tchecker::eca_amap_gen2::eca_a_map_t * compute_eca_amap(tchecker::ta::system_t const & system)
   {
     tchecker::eca_amap_gen2::eca_a_map_t * amap =

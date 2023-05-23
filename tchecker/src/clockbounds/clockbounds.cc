@@ -718,7 +718,6 @@ std::ostream & operator<<(std::ostream & os, tchecker::amap::a_map_t const & map
 }
 
 
-//ani:-100
 namespace eca_amap_gen2 {
 
 /* a_map_t */
