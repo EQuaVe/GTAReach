@@ -14,6 +14,7 @@
 #include <iostream>
 #include <limits>
 #include <vector>
+#include <map>
 
 #include "tchecker/basictypes.hh"
 #include "tchecker/variables/clocks.hh"
